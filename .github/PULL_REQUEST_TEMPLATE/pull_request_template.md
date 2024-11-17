@@ -26,5 +26,13 @@ close #issue_number
 -->
 - 
 
+## 참고 자료 📖 (선택)
+> 참고했던 문서들 공유하기!
+<!-- 예시:
+- React Query의 staleTime 설정 방법 : https://velog.io/@oimne/React-Query-staleTime%EA%B3%BC-cacheTime-%EB%8B%A4%EB%A3%A8%EA%B8%B0
+-->
+- 
+
+
 ## 스크린샷 📸 (선택)
 <!-- 작업한 내용의 스크린샷을 첨부하고 싶다면 작성하세요 -->
