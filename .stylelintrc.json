@@ -287,6 +287,11 @@
 					"stroke"
 				]
 			}
-		]
+		],
+
+        "declaration-property-unit-allowed-list": {
+            "/^border/": ["px"], 
+            "font-size": ["rem", "%"]
+        }
 	}
 }
