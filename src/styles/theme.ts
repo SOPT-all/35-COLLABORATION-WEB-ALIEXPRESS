@@ -140,6 +140,114 @@ const FONT = {
             text-transform: lowercase;
         `,
     },
+    eng: {
+        // Head
+        headBold48: css`
+            font-weight: 700;
+            font-size: 4.8rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 52px;
+        `,
+        headBold32: css`
+            font-weight: 700;
+            font-size: 3.2rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 52px;
+        `,
+        // Title
+        titleBold24: css`
+            font-weight: 700;
+            font-size: 2.4rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 30px;
+        `,
+        titleBold20: css`
+            font-weight: 700;
+            font-size: 2rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 30px;
+        `,
+        titleBold18: css`
+            font-weight: 700;
+            font-size: 1.8rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 22px;
+        `,
+        // Body
+        bodyBold16: css`
+            font-weight: 700;
+            font-size: 1.6rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 20px;
+        `,
+        bodyBold13: css`
+            font-weight: 700;
+            font-size: 1.3rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 16px;
+        `,
+        bodyMedium13: css`
+            font-weight: 500;
+            font-size: 1.3rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 16px;
+        `,
+        // Caption
+        captionBold12: css`
+            font-weight: 700;
+            font-size: 1.2rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 16px;
+        `,
+        captionMedium12: css`
+            font-weight: 500;
+            font-size: 1.2rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 16px;
+        `,
+        captionRegular12: css`
+            font-weight: 400;
+            font-size: 1.2rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 16px;
+        `,
+        captionBold11: css`
+            font-weight: 700;
+            font-size: 1.1rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 13px;
+        `,
+        captionMedium11: css`
+            font-weight: 500;
+            font-size: 1.1rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 13px;
+        `,
+        captionBold10: css`
+            font-weight: 700;
+            font-size: 1rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 12px;
+        `,
+        captionMedium10: css`
+            font-weight: 500;
+            font-size: 1rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 12px;
+        `,
+        captionBold9: css`
+            font-weight: 700;
+            font-size: 0.9rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 9px;
+        `,
+        captionBold8: css`
+            font-weight: 700;
+            font-size: 0.8rem;
+            font-family: "TT Norms Pro", sans-serif;
+            line-height: 8px;
+        `,
+    },
 };
 
 export const Theme = {
