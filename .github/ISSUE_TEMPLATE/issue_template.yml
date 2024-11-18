@@ -25,6 +25,8 @@ body:
       value: |
         - [ ] 
         - [ ]
+    validations:
+      required: true    
   - type: markdown
     attributes:
       value: "## 📚 참고할만한 자료 (선택)"
