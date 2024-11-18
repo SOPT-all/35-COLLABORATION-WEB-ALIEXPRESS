@@ -290,8 +290,60 @@
 		],
 
         "declaration-property-unit-allowed-list": {
-            "/^border/": ["px"], 
-            "font-size": ["rem", "%"]
-        }
+			"width": [
+				"%",
+				"vw",
+				"rem"
+			],
+			"height": [
+				"%",
+				"vh",
+				"rem"
+			],
+			"font-size": [
+				"rem",
+				"%"
+			],
+			"margin": [
+				"rem"
+			],
+			"margin-left": [
+				"rem"
+			],
+			"margin-right": [
+				"rem"
+			],
+			"margin-top": [
+				"rem"
+			],
+			"margin-bottom": [
+				"rem"
+			],
+			"padding-left": [
+				"rem"
+			],
+			"padding-right": [
+				"rem"
+			],
+			"padding-top": [
+				"rem"
+			],
+			"padding-bottom": [
+				"rem"
+			],
+			"letter-spacing": [
+				"em",
+				"rem",
+				"%"
+			],
+			"word-spacing": [
+				"em",
+				"rem"
+			],
+			"/^border/": [
+				"px",
+				"%"
+			]
+		}
 	}
 }
