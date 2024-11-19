@@ -8,7 +8,7 @@
     "parserOptions": {
       "ecmaVersion": 2020,
       "sourceType": "module",
-      "project": "./tsconfig.json"
+      "project": ["./tsconfig.app.json", "./tsconfig.node.json"]
     },
     "extends": [
       "eslint:recommended",
@@ -41,8 +41,7 @@
       "func-style": ["error", "expression"],
       "camelcase": ["error", { "properties": "always" }],
       "space-infix-ops": ["warn"],
-      "@typescript-eslint/no-explicit-any": "error",
-      "react/jsx-no-inline-styles": "error"
+      "@typescript-eslint/no-explicit-any": "error"
     },
     "overrides": [
       {
