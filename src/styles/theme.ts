@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 
-const COLOR = {
+const COLORS = {
     // Solid Colors
     black: "#000000",
     white: "#FFFFFF",
@@ -49,7 +49,7 @@ const COLOR = {
     gradientOrange: "linear-gradient(90deg, #EE6930 0%, #EC4726 100%)",
 };
 
-const FONT = {
+const FONTS = {
     kor: {
         // Title
         titleBold20: css`
@@ -300,6 +300,6 @@ const FONT = {
 };
 
 export const Theme = {
-    COLOR,
-    FONT,
+    COLORS,
+    FONTS,
 };

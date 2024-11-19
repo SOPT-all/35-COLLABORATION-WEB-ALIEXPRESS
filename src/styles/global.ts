@@ -71,6 +71,8 @@ const GLOBALSTYLE = css`
     html,
     body {
         width: 100%;
+
+        font-size: 62.5%;
         scroll-behavior: smooth;
     }
 `;
