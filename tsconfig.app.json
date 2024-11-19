@@ -20,7 +20,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Emotion의 css prop을 JSX에서 사용하기 위해서 jsxImportSource 추가 */
+    "jsxImportSource": "@emotion/react"
   },
   "include": ["src"]
 }

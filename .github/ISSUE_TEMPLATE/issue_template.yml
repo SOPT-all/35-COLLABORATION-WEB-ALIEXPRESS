@@ -1,39 +1,38 @@
-name: "ISSUE_TEMPLATE"
+name: "기능 요청 템플릿"
 description: "기능, UI, 문서 개선 및 추가 요청을 위한 이슈 템플릿입니다."
-title: ""
-labels: []
-assignees: []
+title: "제목을 입력해주세요"
 
 body:
   - type: markdown
     attributes:
-      value: "## 어떤 기능인가요?\n> 추가하려는 기능에 대해 간결하게 설명해주세요."
+      value: "## 🧞 어떤 기능인가요?"
   - type: textarea
     id: description
     attributes:
       label: "기능 설명"
       description: "추가하려는 기능에 대해 자세히 설명해주세요."
-      placeholder: "여기에 기능에 대한 설명을 적어주세요."
-      value: ""
+      placeholder: "ex) - UI 구현 완료"
     validations:
       required: true
   - type: markdown
     attributes:
-      value: "## 작업 상세 내용"
-  - type: checkboxes
+      value: "## 🛠️ 작업 상세 내용"
+  - type: textarea
     id: tasks
     attributes:
       label: "작업 목록"
-      description: "완료해야 할 작업 목록을 체크해주세요."
-      options:
-        - label: "TODO 1"
-        - label: "TODO 2"
-        - label: "TODO 3"
+      description: "작업 항목을 한 줄씩 입력하세요. 엔터를 눌러 다음 줄로 넘어갈 수 있습니다."
+      value: |
+        - [ ] 
+        - [ ]
     validations:
-      required: true
+      required: true    
+  - type: markdown
+    attributes:
+      value: "## 📚 참고할만한 자료 (선택)"
   - type: textarea
     id: reference
     attributes:
       label: "참고 자료"
       description: "참고할만한 자료의 링크나 설명을 추가해주세요 (선택 사항)."
-      placeholder: "참고 자료를 여기에 입력해주세요."
+      placeholder: "ex) - tanstack-query stale time: (링크)"
