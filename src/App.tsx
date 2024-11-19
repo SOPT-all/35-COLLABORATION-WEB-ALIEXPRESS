@@ -1,5 +1,7 @@
+import { DividerGray, IcArrowbottomGray12 } from './assets/icons';
+
 function App() {
-  return <></>;
+  return <><DividerGray /></>;
 }
 
 export default App;
