@@ -25,7 +25,6 @@ export const contentContainer = css`
 	gap: 0.5rem;
 `;
 
-// 폰트적용해야함
 export const fontStyle = (theme: Theme) => css`
 	${theme.fonts.eng.captionBold12};
 `;
