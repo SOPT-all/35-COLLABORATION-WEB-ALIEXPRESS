@@ -84,3 +84,44 @@ export const searchStyle = (theme: Theme) => css`
 	background-color: ${theme.colors.black};
 	border-radius: 99px;
 `;
+
+export const appLogLayout = css`
+	display: flex;
+	gap: 0.4rem;
+	align-items: center;
+	padding: 1rem 0.8rem;
+`;
+
+export const textContainer = (theme: Theme) => css`
+	display: flex;
+	flex-direction: column;
+
+	color: ${theme.colors.white};
+`;
+
+export const fontEnAppStyle = (theme: Theme) => css`
+	${theme.fonts.eng.captionMedium10};
+`;
+
+export const fontKoAppStyle = (theme: Theme) => css`
+	${theme.fonts.kor.captionMedium10};
+`;
+
+export const flagLayout = css`
+	display: flex;
+	gap: 0.2rem;
+	align-items: center;
+	padding: 1rem 0.8rem;
+`;
+
+export const flagContainer = css`
+	display: flex;
+`;
+
+export const fontKRWStyle = (theme: Theme) => css`
+	${theme.fonts.eng.captionBold10};
+`;
+
+export const arrowStyle = css`
+	align-self: flex-end;
+`;

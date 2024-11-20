@@ -1,4 +1,12 @@
-import { ImgLogotypeL, IcHamburgermenuWhite14, IcSearchWhite24, IcImagesearchBlack24 } from '@assets/icons/index';
+import {
+	ImgLogotypeL,
+	IcHamburgermenuWhite14,
+	IcSearchWhite24,
+	IcImagesearchBlack24,
+	IcQrcodeWhite24,
+	ImgFlagKorL,
+	IcArrowbottomSWhite12,
+} from '@assets/icons/index';
 
 import {
 	relativeStyle,
@@ -10,6 +18,14 @@ import {
 	inputStyle,
 	IconContainer,
 	searchStyle,
+	appLogLayout,
+	textContainer,
+	fontEnAppStyle,
+	fontKoAppStyle,
+	flagLayout,
+	flagContainer,
+	fontKRWStyle,
+	arrowStyle,
 } from './HeaderStyle';
 
 const Header = () => (
@@ -32,7 +48,27 @@ const Header = () => (
 				<IcSearchWhite24 css={searchStyle} />
 			</div>
 		</div>
-		<div>오른쪽 박스구역</div>
+		<div>
+			<div css={appLogLayout}>
+				<IcQrcodeWhite24 />
+				<div css={textContainer}>
+					<p css={fontEnAppStyle}>AliExpress</p>
+					<p css={fontKoAppStyle}>앱 다운로드</p>
+				</div>
+			</div>
+			<div css={flagLayout}>
+				<ImgFlagKorL />
+				<div css={flagContainer}>
+					<div css={textContainer}>
+						<p css={fontEnAppStyle}>KO/</p>
+						<p css={fontKRWStyle}>KRW</p>
+					</div>
+					<IcArrowbottomSWhite12 css={arrowStyle} />
+				</div>
+			</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
 	</div>
 );
 
