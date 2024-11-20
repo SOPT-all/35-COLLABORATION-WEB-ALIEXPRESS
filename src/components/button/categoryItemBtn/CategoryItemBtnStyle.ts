@@ -21,21 +21,21 @@ export const defaultBtnStyle = (theme: Theme) => css`
 	}
 `;
 
-export const SmallBtnContainerStyle = css`
+export const smallBtnContainerStyle = css`
 	gap: 0.3rem;
 	width: 17rem;
 	height: 2.5rem;
 	padding: 0 0.4rem;
 `;
 
-export const MediumBtnContainerStyle = css`
+export const mediumBtnContainerStyle = css`
 	gap: 0.6rem;
 	width: 19.3rem;
 	height: 3rem;
 	padding: 0 0.6rem;
 `;
 
-export const BtnSizeMap = {
-	small: SmallBtnContainerStyle,
-	medium: MediumBtnContainerStyle,
+export const btnSizeMap = {
+	small: smallBtnContainerStyle,
+	medium: mediumBtnContainerStyle,
 };

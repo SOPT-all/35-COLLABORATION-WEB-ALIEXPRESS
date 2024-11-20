@@ -1,6 +1,6 @@
 import { css, Theme } from '@emotion/react';
 
-export const BlackBtnStyle = (theme: Theme) => css`
+export const blackBtnStyle = (theme: Theme) => css`
 	color: ${theme.colors.black};
 
 	background-color: transparent;
@@ -11,7 +11,7 @@ export const BlackBtnStyle = (theme: Theme) => css`
 	}
 `;
 
-export const RedBtnStyle = (theme: Theme) => css`
+export const redBtnStyle = (theme: Theme) => css`
 	color: ${theme.colors.white};
 
 	background-color: ${theme.colors.red};
@@ -22,7 +22,7 @@ export const RedBtnStyle = (theme: Theme) => css`
 	}
 `;
 
-export const GrayBtnStyle = (theme: Theme) => css`
+export const grayBtnStyle = (theme: Theme) => css`
 	color: ${theme.colors.black};
 
 	background-color: ${theme.colors.gray2};
@@ -33,20 +33,20 @@ export const GrayBtnStyle = (theme: Theme) => css`
 	}
 `;
 
-export const BtnStyleMap = {
-	red: RedBtnStyle,
-	black: BlackBtnStyle,
-	gray: GrayBtnStyle,
+export const btnStyleMap = {
+	red: redBtnStyle,
+	black: blackBtnStyle,
+	gray: grayBtnStyle,
 };
 
-export const LargeBtnContainerStyle = css`
+export const largeBtnContainerStyle = css`
 	width: 27.5rem;
 	height: 3.6rem;
 
 	border-radius: 18.5px;
 `;
 
-export const MediumBtnContainerStyle = css`
+export const mediumBtnContainerStyle = css`
 	width: 12.7rem;
 	height: 3.4rem;
 
@@ -59,7 +59,7 @@ export const defaultBtnStyle = (theme: Theme) => css`
 	${theme.fonts.kor.captionBold12};
 `;
 
-export const BtnSizeMap = {
-	medium: MediumBtnContainerStyle,
-	large: LargeBtnContainerStyle,
+export const btnSizeMap = {
+	medium: mediumBtnContainerStyle,
+	large: largeBtnContainerStyle,
 };

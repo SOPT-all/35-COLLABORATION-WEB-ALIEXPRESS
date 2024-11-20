@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { defaultBtnStyle, BtnSizeMap } from './CategoryItemBtnStyle';
+import { defaultBtnStyle, btnSizeMap } from './CategoryItemBtnStyle';
 
 interface CategoryItemBtnProps {
 	btnText: string;
@@ -10,7 +10,7 @@ interface CategoryItemBtnProps {
 }
 
 const CategoryItemBtn = ({ btnText, onClick, size, icon }: CategoryItemBtnProps) => (
-	<button type="button" css={[defaultBtnStyle, BtnSizeMap[size]]} onClick={onClick}>
+	<button type="button" css={[defaultBtnStyle, btnSizeMap[size]]} onClick={onClick}>
 		{icon}
 		{btnText}
 	</button>

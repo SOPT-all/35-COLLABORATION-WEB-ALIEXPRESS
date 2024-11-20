@@ -1,4 +1,4 @@
-import { defaultBtnStyle, BtnSizeMap } from './OutlineTextBtnStyle';
+import { defaultBtnStyle, btnSizeMap } from './OutlineTextBtnStyle';
 
 interface OutlineTextBtnProps {
 	btnText: string;
@@ -7,7 +7,7 @@ interface OutlineTextBtnProps {
 }
 
 const OutlineTextBtn = ({ btnText, onClick, size }: OutlineTextBtnProps) => (
-	<button type="button" css={[defaultBtnStyle, BtnSizeMap[size]]} onClick={onClick}>
+	<button type="button" css={[defaultBtnStyle, btnSizeMap[size]]} onClick={onClick}>
 		{btnText}
 	</button>
 );

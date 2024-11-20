@@ -1,4 +1,4 @@
-import { BtnStyleMap, BtnSizeMap, defaultBtnStyle } from './TextBtnStyle';
+import { btnStyleMap, btnSizeMap, defaultBtnStyle } from './TextBtnStyle';
 
 interface TextBtnProps {
 	btnText: string;
@@ -8,7 +8,7 @@ interface TextBtnProps {
 }
 
 const TextBtn = ({ btnText, onClick, color, size }: TextBtnProps) => (
-	<button css={[BtnSizeMap[size], BtnStyleMap[color], defaultBtnStyle]} onClick={onClick} type="button">
+	<button css={[btnSizeMap[size], btnStyleMap[color], defaultBtnStyle]} onClick={onClick} type="button">
 		{btnText}
 	</button>
 );
