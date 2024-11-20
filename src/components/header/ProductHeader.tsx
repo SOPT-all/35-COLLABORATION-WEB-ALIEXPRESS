@@ -31,9 +31,9 @@ import {
 	fontBStyle,
 	cartLayout,
 	numBackStyle,
-} from './HeaderStyle';
+} from './ProductHeaderStyle';
 
-const Header = () => (
+const ProductHeader = () => (
 	<header css={[relativeStyle, headerStyle]}>
 		{/* 로고섹션 */}
 		<div role="banner">
@@ -103,4 +103,4 @@ const Header = () => (
 	</header>
 );
 
-export default Header;
+export default ProductHeader;
