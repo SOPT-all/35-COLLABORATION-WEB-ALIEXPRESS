@@ -1,4 +1,7 @@
-import { ImageContainer, PriceContainer, ProductContainer, ProductDiscountStyle, ProductInfoContainer, ProductNameStyle, ProductPriceStyle } from './ProductCardStyle';
+import { IcArrowrightGray12 } from '@assets/icons';
+
+import FreeTag from './FreeTag';
+import { couponBtnStyle, imageContainer, imageStyle, priceContainer, productContainer, productDiscountStyle, productInfoContainer, productInfoWrapper, productNameStyle, productPriceStyle, productWonStyle, tagContainer } from './ProductCardStyle';
 
 interface ProductProps {
     image: string;
@@ -8,22 +11,29 @@ interface ProductProps {
     hasCoupon?: boolean;
 }
 
-const ProductCard = ({ image, name, price, discountRate }: ProductProps) => {
-    return (
-        <section css={ProductContainer}>
-            <article css={ImageContainer}>
-                <img src={image} alt={name} />
+const ProductCard = ({ image, name, price, discountRate, hasCoupon }: ProductProps) => (
+        <section css={productContainer}>
+            <article css={imageContainer}>
+                <img css={imageStyle} src={image} alt={name} />
             </article>
-            <article css={ProductInfoContainer}>
-                <p css={ProductNameStyle}>{name}</p>
-                <div css={PriceContainer}>
-                    <p css={ProductPriceStyle}>₩{price.toLocaleString()}</p>
-                    <span css={ProductDiscountStyle}>{discountRate}%</span>
-                </div>
+            <article css={productInfoContainer}>
+                <article css={productInfoWrapper}>
+                    <p css={productNameStyle}>{name}</p>
+                    <div css={priceContainer}>
+                        <p css={productWonStyle}>₩</p>
+                        <p css={productPriceStyle}>{price.toLocaleString()}</p>
+                        <span css={productDiscountStyle}>{discountRate}%</span>
+                    </div>
+                </article>               
+                <article css={tagContainer}>
+                    <FreeTag text='무료 배송' color='red'/>
+                    <FreeTag text='무료 반품' color='gray'/>
+                </article>
             </article>
+            {hasCoupon && <button css={couponBtnStyle}>쿠폰 받기<IcArrowrightGray12/></button>}
+            
 
         </section>
-    );
-};
+);
 
 export default ProductCard;
