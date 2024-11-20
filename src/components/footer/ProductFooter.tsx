@@ -3,7 +3,7 @@ import MESSAGE from '@constants/footerMsg';
 import { grayLayout, footerStyle, subtitleStyle, desc } from './ProductFooterStyle';
 
 const ProductFooter = () => (
-	<div>
+	<footer>
 		<div css={grayLayout}>
 			<section css={subtitleStyle}>
 				도움말
@@ -25,7 +25,7 @@ const ProductFooter = () => (
 		<div css={footerStyle}>
 			<p>{MESSAGE.FOOTER}</p>
 		</div>
-	</div>
+	</footer>
 );
 
 export default ProductFooter;
