@@ -8,10 +8,13 @@ import {
 	proudctImgLayoutStyle,
 	detailImgBoxStyle,
 } from '@components/ProductInfo/ProductInfoStyle';
+import ProductInfoType from 'types/ProductInfoType';
 
 const productSubImages = [productSubImg1, productSubImg2, productSubImg3, productSubImg4, productSubImg5];
 
-const ProductInfo = () => (
+interface ProductInfoProps extends ProductInfoType {}
+
+const ProductInfo = (props: ProductInfoProps) => (
 	<article css={productInfoContainerStyle}>
 		<section css={proudctImgLayoutStyle}>
 			<div css={detailImgBoxStyle}>
