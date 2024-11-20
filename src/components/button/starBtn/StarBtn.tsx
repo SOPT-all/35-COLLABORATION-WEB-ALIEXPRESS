@@ -4,10 +4,10 @@ import {
 	IcCometReviewStarBlankBlack10,
 } from '@assets/icons/index';
 import {
-	StarBtnContainerStyle,
-	StartIconBoxStyle,
-	RatingStyle,
-	ReviewCountSTyle,
+	starBtnContainerStyle,
+	startIconBoxStyle,
+	ratingStyle,
+	reviewCountSTyle,
 } from '@components/button/starBtn/StarBtnStyle';
 
 interface StarBtnProps {
@@ -29,10 +29,10 @@ const StarBtn = ({ rating, reviewCount, isRatingVisible = true }: StarBtnProps) 
 	});
 
 	return (
-		<button type="button" css={StarBtnContainerStyle}>
-			<div css={StartIconBoxStyle}>{generateStarIcons}</div>
-			{isRatingVisible && <p css={RatingStyle}>{rating.toFixed(1)}</p>}
-			<p css={ReviewCountSTyle}>({reviewCount})</p>
+		<button type="button" css={starBtnContainerStyle}>
+			<div css={startIconBoxStyle}>{generateStarIcons}</div>
+			{isRatingVisible && <p css={ratingStyle}>{rating.toFixed(1)}</p>}
+			<p css={reviewCountSTyle}>({reviewCount})</p>
 		</button>
 	);
 };
