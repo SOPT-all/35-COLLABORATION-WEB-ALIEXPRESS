@@ -9,6 +9,7 @@ import {
 	IcUserWhite24,
 	IcCartWhite24,
 } from '@assets/icons/index';
+// import CATEGORIES from '@constants/headerList';
 
 import {
 	relativeStyle,
