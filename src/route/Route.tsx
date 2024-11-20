@@ -1,6 +1,7 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import OrderPage from '@pages/OrderPage';
 import ProductPage from '@pages/ProductPage';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import NotFoundPage from '@pages/NotFoundPage';
 
 const router = createBrowserRouter([
 	{
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
 	{
 		path: '/order',
 		element: <OrderPage />,
+	},
+	{
+		path: '*',
+		element: <NotFoundPage />,
 	},
 ]);
 
