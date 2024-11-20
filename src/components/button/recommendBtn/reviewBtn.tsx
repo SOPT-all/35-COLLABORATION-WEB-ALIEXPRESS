@@ -1,4 +1,4 @@
-import { FlexStyle, BtnStyleMap } from './reviewBtnStyle';
+import { FlexStyle, BtnStyleMap, CountStyle } from './reviewBtnStyle';
 import { useState } from 'react';
 
 import {
@@ -24,6 +24,8 @@ const ReviewBtn = ({ type, clickedCount }: ReviewBtnProps) => {
 		setIsClicked(!isClicked); // 버튼 클릭 상태 바꾸기
 	};
 
+	const formatCount = (value: number) => (value > 999 ? '999+' : value);
+
 	const buttonType = {
 		useful: {
 			icon: isClicked ? <IcGoodBlue16 /> : <IcGoodGray16 />,
@@ -46,7 +48,7 @@ const ReviewBtn = ({ type, clickedCount }: ReviewBtnProps) => {
 			<div css={FlexStyle}>
 				<div css={FlexStyle}>{icon}</div>
 				<div css={FlexStyle}>{btnText}</div>
-				<div css={FlexStyle}>({count})</div>
+				<div css={CountStyle}>({formatCount(count)})</div>
 			</div>
 		</button>
 	);
