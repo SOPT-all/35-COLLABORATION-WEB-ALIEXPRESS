@@ -1,17 +1,15 @@
-import { defaultBtnStyle, BtnSizeMap } from './OutlineTextBtnStyle';
+import { defaultBtnStyle, btnSizeMap } from './OutlineTextBtnStyle';
 
 interface OutlineTextBtnProps {
 	btnText: string;
-	onClick: () => void;
+	onClick?: () => void;
 	size: 'small' | 'medium';
 }
 
-const OutlineTextBtn = ({ btnText, onClick, size }: OutlineTextBtnProps) => {
-	return (
-		<button css={[defaultBtnStyle, BtnSizeMap[size]]} onClick={onClick}>
-			{btnText}
-		</button>
-	);
-};
+const OutlineTextBtn = ({ btnText, onClick, size }: OutlineTextBtnProps) => (
+	<button type="button" css={[defaultBtnStyle, btnSizeMap[size]]} onClick={onClick}>
+		{btnText}
+	</button>
+);
 
 export default OutlineTextBtn;

@@ -1,61 +1,65 @@
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
-export const BlackBtnStyle = css`
-	color: black;
+export const blackBtnStyle = (theme: Theme) => css`
+	color: ${theme.colors.black};
 
 	background-color: transparent;
-	border: 1px solid black;
+	border: 1px solid ${theme.colors.black};
 
 	:hover {
-		color: red;
+		color: ${theme.colors.magenta};
 	}
 `;
 
-export const RedBtnStyle = css`
-	color: white;
+export const redBtnStyle = (theme: Theme) => css`
+	color: ${theme.colors.white};
 
-	background-color: red;
+	background-color: ${theme.colors.red};
+	border: none;
 
 	:hover {
-		background-color: pink;
+		background-color: ${theme.colors.brandPrimary};
 	}
 `;
 
-export const GrayBtnStyle = css`
-	color: black;
+export const grayBtnStyle = (theme: Theme) => css`
+	color: ${theme.colors.black};
 
-	background-color: white;
+	background-color: ${theme.colors.gray2};
+	border: none;
 
 	:hover {
-		background-color: gray;
+		background-color: ${theme.colors.gray4};
 	}
 `;
 
-export const BtnStyleMap = {
-	red: RedBtnStyle,
-	black: BlackBtnStyle,
-	gray: GrayBtnStyle,
+export const btnStyleMap = {
+	red: redBtnStyle,
+	black: blackBtnStyle,
+	gray: grayBtnStyle,
 };
 
-export const LargeBtnContainerStyle = css`
-	box-sizing: border-box;
+export const largeBtnContainerStyle = css`
 	width: 27.5rem;
 	height: 3.6rem;
 
-	border: none;
 	border-radius: 18.5px;
 `;
 
-export const MediumBtnContainerStyle = css`
-	box-sizing: border-box;
+export const mediumBtnContainerStyle = css`
 	width: 12.7rem;
 	height: 3.4rem;
 
-	border: none;
 	border-radius: 36px;
 `;
 
-export const BtnSizeMap = {
-	medium: MediumBtnContainerStyle,
-	large: LargeBtnContainerStyle,
+export const defaultBtnStyle = (theme: Theme) => css`
+	box-sizing: border-box;
+
+	${theme.fonts.kor.captionBold12};
+`;
+
+export const btnSizeMap = {
+	medium: mediumBtnContainerStyle,
+	large: largeBtnContainerStyle,
 };
