@@ -1,16 +1,29 @@
 import { Theme, css } from '@emotion/react';
 
 export const productContainer = (theme: Theme) => css`
+
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    align-items: center;
     width: 20.2rem;
-
+    
     background-color: ${theme.colors.white};
     border-radius: 12px;
+
+    &:hover {
+        width: 22.8rem;
+        padding: 1.3rem;
+
+        box-shadow: 0 6px 12px 0 rgb(0 0 0 / 12%), 0 4px 8px 0 rgb(0 0 0 / 8%), 0 0 4px 0 rgb(0 0 0 / 8%);
+        transform-origin: top center; /* 상단의 시작 지점을 고정 */
+        border-radius: 16px;
+    }
 `;
 
 export const imageContainer = css`
+    position: relative;
     width: 20.2rem;
     height: 20.2rem;
     overflow: hidden;
