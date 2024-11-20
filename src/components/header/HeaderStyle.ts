@@ -53,9 +53,6 @@ export const inputStyle = (theme: Theme) => css`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
-	/* width: 100%; */
-
 	width: 67.7rem;
 	height: 3.2rem;
 	padding: 0.3rem 2rem;
@@ -103,10 +100,9 @@ export const fontEnAppStyle = (theme: Theme) => css`
 	${theme.fonts.eng.captionMedium10};
 `;
 
-export const fontKoAppStyle = (theme: Theme) => css`
+export const fontMStyle = (theme: Theme) => css`
 	${theme.fonts.kor.captionMedium10};
 `;
-
 export const flagLayout = css`
 	display: flex;
 	gap: 0.2rem;
@@ -124,4 +120,27 @@ export const fontKRWStyle = (theme: Theme) => css`
 
 export const arrowStyle = css`
 	align-self: flex-end;
+`;
+
+export const fontBStyle = (theme: Theme) => css`
+	${theme.fonts.kor.captionBold10};
+`;
+
+export const cartLayout = css`
+	display: flex;
+	gap: 0.3rem;
+	align-items: center;
+	padding: 1rem 0.8rem;
+`;
+
+export const numBackStyle = (theme: Theme) => css`
+	display: flex;
+	justify-content: center;
+	width: 1.9rem;
+	height: 1.2rem;
+
+	color: ${theme.colors.gray10};
+
+	background-color: ${theme.colors.white};
+	border-radius: 999px;
 `;

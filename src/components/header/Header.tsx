@@ -6,6 +6,8 @@ import {
 	IcQrcodeWhite24,
 	ImgFlagKorL,
 	IcArrowbottomSWhite12,
+	IcUserWhite24,
+	IcCartWhite24,
 } from '@assets/icons/index';
 
 import {
@@ -21,11 +23,14 @@ import {
 	appLogLayout,
 	textContainer,
 	fontEnAppStyle,
-	fontKoAppStyle,
 	flagLayout,
 	flagContainer,
 	fontKRWStyle,
 	arrowStyle,
+	fontMStyle,
+	fontBStyle,
+	cartLayout,
+	numBackStyle,
 } from './HeaderStyle';
 
 const Header = () => (
@@ -53,7 +58,7 @@ const Header = () => (
 				<IcQrcodeWhite24 />
 				<div css={textContainer}>
 					<p css={fontEnAppStyle}>AliExpress</p>
-					<p css={fontKoAppStyle}>앱 다운로드</p>
+					<p css={fontMStyle}>앱 다운로드</p>
 				</div>
 			</div>
 			<div css={flagLayout}>
@@ -66,8 +71,23 @@ const Header = () => (
 					<IcArrowbottomSWhite12 css={arrowStyle} />
 				</div>
 			</div>
-			<div>3</div>
-			<div>4</div>
+			<div css={appLogLayout}>
+				<IcUserWhite24 />
+				<div css={flagContainer}>
+					<div css={textContainer}>
+						<p css={fontMStyle}>환영합니다!/</p>
+						<p css={fontBStyle}>로그인/회원가입</p>
+					</div>
+					<IcArrowbottomSWhite12 css={arrowStyle} />
+				</div>
+			</div>
+			<div css={cartLayout}>
+				<IcCartWhite24 />
+				<div css={textContainer}>
+					<p css={[fontKRWStyle, numBackStyle]}>0</p>
+					<p css={fontMStyle}>장바구니</p>
+				</div>
+			</div>
 		</div>
 	</div>
 );
