@@ -1,7 +1,10 @@
 import { Theme, css } from '@emotion/react';
 
-export const headerStyle = (theme: Theme) => css`
+export const relativeStyle = css`
 	position: relative;
+`;
+
+export const headerStyle = (theme: Theme) => css`
 	display: flex;
 	gap: 1.6rem;
 	justify-content: space-between;
@@ -11,7 +14,7 @@ export const headerStyle = (theme: Theme) => css`
 
 	background-color: ${theme.colors.gray10};
 
-	& > div:not(:first-child) {
+	& > *:not(:first-child) {
 		display: flex;
 		align-items: center;
 	}
@@ -44,4 +47,40 @@ export const hambergerStyle = (theme: Theme) => css`
 
 	background-color: ${theme.colors.gray7};
 	border-radius: 999px;
+`;
+
+export const inputStyle = (theme: Theme) => css`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	/* width: 100%; */
+
+	width: 67.7rem;
+	height: 3.2rem;
+	padding: 0.3rem 2rem;
+
+	border: none;
+	border-radius: 999px;
+
+	&::placeholder {
+		color: ${theme.colors.gray4};
+		${theme.fonts.kor.captionBold11}
+	}
+`;
+
+export const IconContainer = css`
+	position: absolute;
+	right: 0.3rem;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+`;
+
+export const searchStyle = (theme: Theme) => css`
+	width: 4.4rem;
+	height: 2.6rem;
+
+	background-color: ${theme.colors.black};
+	border-radius: 99px;
 `;

@@ -1,9 +1,19 @@
-import { ImgLogotypeL, IcHamburgermenuWhite14 } from '@assets/icons/index';
+import { ImgLogotypeL, IcHamburgermenuWhite14, IcSearchWhite24, IcImagesearchBlack24 } from '@assets/icons/index';
 
-import { headerStyle, logoDescStyle, fontEnStyle, fontKoStyle, hambergerStyle } from './HeaderStyle';
+import {
+	relativeStyle,
+	headerStyle,
+	logoDescStyle,
+	fontEnStyle,
+	fontKoStyle,
+	hambergerStyle,
+	inputStyle,
+	IconContainer,
+	searchStyle,
+} from './HeaderStyle';
 
 const Header = () => (
-	<div css={[headerStyle]}>
+	<div css={[relativeStyle, headerStyle]}>
 		<div>
 			<ImgLogotypeL />
 			<div css={logoDescStyle}>
@@ -14,7 +24,14 @@ const Header = () => (
 		<div css={hambergerStyle}>
 			<IcHamburgermenuWhite14 />
 		</div>
-		<div>검색창구역</div>
+		<div css={relativeStyle}>
+			<input type="text" css={inputStyle} placeholder="충전기" />
+
+			<div css={IconContainer}>
+				<IcImagesearchBlack24 />
+				<IcSearchWhite24 css={searchStyle} />
+			</div>
+		</div>
 		<div>오른쪽 박스구역</div>
 	</div>
 );
