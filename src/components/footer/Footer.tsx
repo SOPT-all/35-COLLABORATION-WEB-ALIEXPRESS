@@ -1,8 +1,8 @@
 import MESSAGE from '@constants/footerMsg';
 
-import { grayLayout, footerStyle, subtitleStyle, desc } from './ProductFooterStyle';
+import { grayLayout, footerStyle, subtitleStyle, desc } from './FooterStyle';
 
-const ProductFooter = () => (
+const Footer = () => (
 	<footer>
 		<div css={grayLayout}>
 			<section css={subtitleStyle}>
@@ -28,4 +28,4 @@ const ProductFooter = () => (
 	</footer>
 );
 
-export default ProductFooter;
+export default Footer;
