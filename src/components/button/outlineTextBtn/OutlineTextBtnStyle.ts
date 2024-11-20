@@ -1,18 +1,21 @@
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
-export const defaultBtnStyle = css`
-	color: black;
+export const defaultBtnStyle = (theme: Theme) => css`
+	box-sizing: border-box;
+
+	color: ${theme.colors.black};
 
 	background-color: transparent;
-	border: 1px solid gray;
+	border: 1px solid ${theme.colors.gray7};
+
+	${theme.fonts.kor.bodySemibold13};
 
 	:hover {
-		color: red;
+		color: ${theme.colors.brandPrimary};
 	}
 `;
 
 export const SmallBtnContainerStyle = css`
-	box-sizing: border-box;
 	width: 10.4rem;
 	height: 3rem;
 
@@ -20,7 +23,6 @@ export const SmallBtnContainerStyle = css`
 `;
 
 export const MediumBtnContainerStyle = css`
-	box-sizing: border-box;
 	width: 14.2rem;
 	height: 3.4rem;
 
