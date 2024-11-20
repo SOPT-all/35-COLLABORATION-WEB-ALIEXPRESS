@@ -1,4 +1,4 @@
-import { BtnClickedMap } from "./ReivewBtnStyle";
+import { BtnStyleMap } from "./reviewBtnStyle";
 import {useState} from "react";
 
 import { IcGoodGray16, IcHandshakeGray16, IcCometGray16  } from '@assets/icons';
@@ -28,7 +28,7 @@ const ReviewBtn = ({type, clickedCount}: ReviewBtnProps) => {
     
     
     return(
-        <button css = {BtnClickedMap[isClicked]}, onClick={handleClick} >
+        <button css = {BtnStyleMap[isClicked ? "true" : "false"]}, onClick={handleClick}>
             <span>{icon}</span>
             <span>{btnText}</span>
             <span>{count}</span>
