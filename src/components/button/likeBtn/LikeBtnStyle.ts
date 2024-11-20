@@ -9,7 +9,7 @@ export const defaultStyle = css`
 export const buttonStyle = (theme: Theme) => css`
 	width: 10rem;
 	height: 3.6rem;
-	padding: 1.1rem 1rem;
+	padding: 0.6rem 2.45rem;
 
 	background: none;
 	background-color: ${theme.colors.gray2};

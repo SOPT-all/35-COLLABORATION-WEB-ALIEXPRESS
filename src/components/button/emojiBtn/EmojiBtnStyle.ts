@@ -6,7 +6,7 @@ const defaultStyle = (theme: Theme) => css`
 	justify-content: center;
 	width: 8rem;
 	height: 3.6rem;
-	padding: 1.1rem 1rem;
+	padding: 0.6rem 2.8rem;
 
 	background: none;
 	background-color: ${theme.colors.gray2};
