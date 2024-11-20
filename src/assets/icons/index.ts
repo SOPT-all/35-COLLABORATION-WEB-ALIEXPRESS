@@ -130,3 +130,4 @@ export { default as IcUserWhite24 } from './ic_user_white_24.svg';
 export { default as IcWarningBrandYellow16 } from './ic_warning_brand_yellow_16.svg';
 export { default as IcWatchBlack16 } from './ic_watch_black_16.svg';
 export { default as IcWomanfashionBlack16 } from './ic_womanfashion_black_16.svg';
+export { default as ImgLogotypeL } from '../images/img_logotype_l.svg';
