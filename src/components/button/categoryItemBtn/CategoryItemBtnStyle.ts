@@ -1,41 +1,41 @@
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
-export const defaultBtnStyle = css`
+export const defaultBtnStyle = (theme: Theme) => css`
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	box-sizing: border-box;
 
-	color: black;
+	color: ${theme.colors.black};
 
-	background-color: white;
+	background-color: ${theme.colors.white};
 	border: none;
+	border-radius: 6px;
+
+	${theme.fonts.kor.captionSemibold11};
 
 	:hover {
-		color: red;
+		color: ${theme.colors.magenta};
+
+		background-color: ${theme.colors.gray2};
 	}
 `;
 
-export const SmallBtnContainerStyle = css`
+export const smallBtnContainerStyle = css`
 	gap: 0.3rem;
-	box-sizing: border-box;
 	width: 17rem;
 	height: 2.5rem;
 	padding: 0 0.4rem;
-
-	border-radius: 6px;
 `;
 
-export const MediumBtnContainerStyle = css`
+export const mediumBtnContainerStyle = css`
 	gap: 0.6rem;
-	box-sizing: border-box;
 	width: 19.3rem;
 	height: 3rem;
 	padding: 0 0.6rem;
-
-	border-radius: 6px;
 `;
 
-export const BtnSizeMap = {
-	small: SmallBtnContainerStyle,
-	medium: MediumBtnContainerStyle,
+export const btnSizeMap = {
+	small: smallBtnContainerStyle,
+	medium: mediumBtnContainerStyle,
 };
