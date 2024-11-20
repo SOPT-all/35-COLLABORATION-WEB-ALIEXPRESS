@@ -1,5 +1,4 @@
-import { IcShareBlack24 } from '../../../assets/icons';
-import IcShopBlack24 from '../../../assets/icons/ic_shop_black_24.svg';
+import { IcShareBlack24, IcShopBlack24 } from '../../../assets/icons';
 
 import defaultStyle from './EmojiBtnStyle';
 
