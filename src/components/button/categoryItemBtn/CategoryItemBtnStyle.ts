@@ -20,7 +20,7 @@ export const SmallBtnContainerStyle = css`
 	box-sizing: border-box;
 	width: 17rem;
 	height: 2.5rem;
-	padding: 0 0.4rem;
+	padding: 0.6rem 0 0.6rem 0.4rem;
 
 	border-radius: 6px;
 `;
