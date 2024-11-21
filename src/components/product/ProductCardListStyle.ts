@@ -21,6 +21,6 @@ export const relatedProductsStyle = (theme: Theme) => css`
 export const productListContainer = css`
     display: flex;
     flex-wrap: wrap;
-    gap: 13px;
+    gap: 24px 13px;
     width: 127.7rem;
 `;
