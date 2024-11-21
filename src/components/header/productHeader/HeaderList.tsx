@@ -4,8 +4,12 @@ import { CATEGORIES_EMOJI, CATEGORY_LABELS } from '@constants/headerList';
 import { Theme, css } from '@emotion/react';
 
 export const ListLayoutStyle = css`
+	position: absolute;
+	top: 4.9rem;
+	left: 13.45rem;
 	display: flex;
 	flex-direction: column;
+	gap: 0;
 	align-items: center;
 	justify-content: center;
 `;
