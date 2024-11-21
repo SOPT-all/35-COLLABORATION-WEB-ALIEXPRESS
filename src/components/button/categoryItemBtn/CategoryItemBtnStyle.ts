@@ -30,7 +30,7 @@ export const MediumBtnContainerStyle = css`
 	box-sizing: border-box;
 	width: 19.3rem;
 	height: 3rem;
-	padding: 0 0.6rem;
+	padding: 0.7rem 3.3rem 0.7rem 0.6rem;
 
 	border-radius: 6px;
 `;
