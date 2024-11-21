@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react';
 
 // 공통 FlexStyle
-const CommonFlexStyle = css`
+const commonFlexStyle = css`
 	display: flex;
 	gap: 0.3rem;
 	align-items: center;
@@ -11,19 +11,19 @@ const CommonFlexStyle = css`
 `;
 
 // 한글 및 아이콘 FlexStyle
-export const FlexStyle = (theme: Theme) => css`
-	${CommonFlexStyle};
+export const flexStyle = (theme: Theme) => css`
+	${commonFlexStyle};
 	${theme.fonts.kor.captionMedium12};
 `;
 
 // 영문 FlexStyle
-export const CountStyle = (theme: Theme) => css`
-	${CommonFlexStyle};
+export const countStyle = (theme: Theme) => css`
+	${commonFlexStyle};
 	${theme.fonts.eng.captionMedium12};
 `;
 
 // 공통 버튼 스타일
-const CommonBtnContainerStyle = css`
+const commonBtnContainerStyle = css`
 	display: flex;
 	box-sizing: border-box;
 	width: auto;
@@ -35,8 +35,8 @@ const CommonBtnContainerStyle = css`
 `;
 
 //버튼 클릭이 됐을때 스타일
-export const ClickedBtnContainerStyle = (theme: Theme) => css`
-	${CommonBtnContainerStyle};
+export const clickedBtnContainerStyle = (theme: Theme) => css`
+	${commonBtnContainerStyle};
 	color: ${theme.colors.notificationPrimary};
 
 	background-color: ${theme.colors.notificationBg};
@@ -48,8 +48,8 @@ export const ClickedBtnContainerStyle = (theme: Theme) => css`
 `;
 
 // 버튼 클릭이 안됐을때 스타일
-export const NonClickedBtnContainerStyle = (theme: Theme) => css`
-	${CommonBtnContainerStyle};
+export const nonClickedBtnContainerStyle = (theme: Theme) => css`
+	${commonBtnContainerStyle};
 	color: ${theme.colors.gray9};
 
 	background-color: ${theme.colors.gray2};
@@ -60,7 +60,7 @@ export const NonClickedBtnContainerStyle = (theme: Theme) => css`
 	}
 `;
 
-export const BtnStyleMap = {
-	true: ClickedBtnContainerStyle,
-	false: NonClickedBtnContainerStyle,
+export const btnStyleMap = {
+	true: clickedBtnContainerStyle,
+	false: nonClickedBtnContainerStyle,
 };

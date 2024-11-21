@@ -1,4 +1,4 @@
-import { FlexStyle, BtnStyleMap, CountStyle } from './reviewBtnStyle';
+import { flexStyle, btnStyleMap, countStyle } from './reviewBtnStyle';
 import { useState } from 'react';
 
 import {
@@ -44,11 +44,11 @@ const ReviewBtn = ({ type, clickedCount }: ReviewBtnProps) => {
 	const { icon, btnText } = buttonType[type];
 
 	return (
-		<button css={BtnStyleMap[isClicked ? 'true' : 'false']} onClick={handleClick}>
-			<div css={FlexStyle}>
-				<div css={FlexStyle}>{icon}</div>
-				<div css={FlexStyle}>{btnText}</div>
-				<div css={CountStyle}>({formatCount(count)})</div>
+		<button css={btnStyleMap[isClicked ? 'true' : 'false']} onClick={handleClick}>
+			<div css={flexStyle}>
+				<div css={flexStyle}>{icon}</div>
+				<div css={flexStyle}>{btnText}</div>
+				<div css={countStyle}>({formatCount(count)})</div>
 			</div>
 		</button>
 	);
