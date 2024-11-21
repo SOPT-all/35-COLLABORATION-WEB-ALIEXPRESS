@@ -3,27 +3,6 @@ import { Theme, css } from '@emotion/react';
 export const productContainer = (theme: Theme) => css`
 
     position: relative;
-    width: 20.2rem;
-    height: fit-content;
-    
-    background-color: ${theme.colors.white};
-    border-radius: 12px;
-
-    &:hover {
-        z-index: 1;
-
-        box-shadow: 0 6px 12px 0 rgb(0 0 0 / 12%), 0 4px 8px 0 rgb(0 0 0 / 8%), 0 0 4px 0 rgb(0 0 0 / 8%);
-        transform: scale(1.13, 1.065);
-        transform-origin: top center; /* 상단의 시작 지점을 고정 */
-        border-radius: 16px;
-    }
-    
-    &:hover > * {
-        transform: scale(0.87, 0.935); /* 내부 요소 축소 */
-    }
-`;
-
-export const productWrapper = (theme: Theme) => css`
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -32,6 +11,15 @@ export const productWrapper = (theme: Theme) => css`
     
     background-color: ${theme.colors.white};
     border-radius: 12px;
+
+    &:hover {
+        width: 22.8rem;
+        padding: 1.3rem;
+
+        box-shadow: 0 6px 12px 0 rgb(0 0 0 / 12%), 0 4px 8px 0 rgb(0 0 0 / 8%), 0 0 4px 0 rgb(0 0 0 / 8%);
+        transform-origin: top center; /* 상단의 시작 지점을 고정 */
+        border-radius: 16px;
+    }
 `;
 
 export const imageContainer = css`
