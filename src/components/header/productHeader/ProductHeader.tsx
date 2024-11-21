@@ -9,9 +9,9 @@ import {
 	IcUserWhite24,
 	IcCartWhite24,
 } from '@assets/icons/index';
+import Category from '@components/header/productHeader/Category';
 import { useState } from 'react';
 
-import CategoryPopup from './HeaderList';
 import {
 	relativeStyle,
 	headerStyle,
@@ -59,7 +59,7 @@ const ProductHeader = () => {
 			</nav>
 
 			{/* 카테고리 팝업 */}
-			{isClicked && <CategoryPopup />}
+			{isClicked && <Category />}
 
 			{/* 검색섹션 */}
 			<div role="search" css={relativeStyle}>
