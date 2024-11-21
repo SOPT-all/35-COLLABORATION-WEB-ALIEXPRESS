@@ -17,24 +17,26 @@ export const ListLayoutStyle = css`
 export const ListContainerStyle = (theme: Theme) => css`
 	display: flex;
 	flex-direction: column;
-	gap: 2px;
-	width: 19.9rem;
-	height: 42rem;
-	padding: 0 0 0.6rem 0.6rem;
+	gap: 0.2rem;
+	padding: 0 0.1rem 0.6rem 0.6rem;
+
+	background-color: ${theme.colors.white};
+	border-radius: 9px;
+`;
+
+export const ScrollStyle = (theme: Theme) => css`
+	height: 38.4rem;
 	overflow: hidden scroll;
 
+	/* 스크롤바 스타일링 */
 	&::-webkit-scrollbar {
 		width: 0.4rem;
-		height: 23.2rem;
 	}
 
 	&::-webkit-scrollbar-thumb {
-		padding: 0 0.1rem 47.8rem 0.2rem;
-
 		background-color: ${theme.colors.gray4};
 		border-radius: 999px;
 	}
-	background-color: ${theme.colors.white};
 `;
 
 export const ListTitleStyle = (theme: Theme) => css`
@@ -53,10 +55,12 @@ const CategoryList: React.FC = () => (
 				<IcHamburgermenuBlack16 />
 				<p>모든 카테고리</p>
 			</div>
-			{CATEGORY_LABELS.map((label, index) => {
-				const IconComponent = CATEGORIES_EMOJI[index];
-				return <CategoryItemBtn key={label} btnText={label} size="medium" icon={<IconComponent />} />;
-			})}
+			<div css={ScrollStyle}>
+				{CATEGORY_LABELS.map((label, index) => {
+					const IconComponent = CATEGORIES_EMOJI[index];
+					return <CategoryItemBtn key={label} btnText={label} size="medium" icon={<IconComponent />} />;
+				})}
+			</div>
 		</div>
 	</div>
 );

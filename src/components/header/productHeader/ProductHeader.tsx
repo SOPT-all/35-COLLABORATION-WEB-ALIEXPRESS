@@ -36,7 +36,11 @@ import {
 } from './ProductHeaderStyle';
 
 const ProductHeader = () => {
-	const [isHovered, setIsHovered] = useState(false);
+	const [isClicked, setIsClicked] = useState(false);
+
+	const handleBurger = () => {
+		setIsClicked(!isClicked);
+	};
 
 	return (
 		<header css={[relativeStyle, headerStyle]}>
@@ -50,16 +54,12 @@ const ProductHeader = () => {
 			</div>
 
 			{/* 햄버거 메뉴 */}
-			<nav
-				aria-label="Primary Navigation"
-				css={hambergerStyle}
-				onMouseEnter={() => setIsHovered(true)}
-				onMouseLeave={() => setIsHovered(false)}>
-				<IcHamburgermenuWhite14 />
+			<nav aria-label="Primary Navigation" css={hambergerStyle}>
+				<IcHamburgermenuWhite14 onClick={handleBurger} />
 			</nav>
 
 			{/* 카테고리 팝업 */}
-			{isHovered && <CategoryPopup />}
+			{isClicked && <CategoryPopup />}
 
 			{/* 검색섹션 */}
 			<div role="search" css={relativeStyle}>
