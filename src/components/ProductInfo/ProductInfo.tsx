@@ -30,6 +30,10 @@ import {
 	warnLayoutStyle,
 	warnTitleStyle,
 	warnDescriptionStyle,
+	priceDiscountStyle,
+	priceOriginalStyle,
+	discountPercentStyle,
+	endSaleTiemStyle,
 } from '@components/ProductInfo/ProductInfoStyle';
 import ProductInfoType from 'types/ProductInfoType';
 
@@ -83,7 +87,12 @@ const ProductInfo = ({
 				<img src={bannerRewordImg} alt="상품 리워드 배너" />
 				<div css={productDetaiWrapperStyle}>
 					<div>
-						<div css={priceBoxStyle}>7.52</div>
+						<div css={priceBoxStyle}>
+							<div css={priceDiscountStyle}>₩7.52</div>
+							<div css={priceOriginalStyle}>₩43.20</div>
+							<div css={discountPercentStyle}>82% 할인</div>
+							<div css={endSaleTiemStyle}>할인 종료시간: 12월 8일 16:59</div>
+						</div>
 						<div css={priceDescriptionStyle}>VAT가 포함된 가격 | 1% 추가 할인</div>
 					</div>
 					<div css={productNameStyle}>

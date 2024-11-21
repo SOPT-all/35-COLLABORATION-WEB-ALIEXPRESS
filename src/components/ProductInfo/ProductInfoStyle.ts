@@ -43,20 +43,62 @@ export const productDetaiWrapperStyle = css`
 `;
 
 export const priceBoxStyle = css`
+	position: relative;
+	display: flex;
 	width: 100%;
 	height: 5.2rem;
+	margin-top: -1.6rem;
+`;
+
+export const priceDiscountStyle = (theme: Theme) => css`
+	height: 100%;
+
+	${theme.fonts.eng.headBold32};
+`;
+
+export const priceOriginalStyle = (theme: Theme) => css`
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+	margin-left: 0.6rem;
+
+	color: ${theme.colors.gray7};
+	text-decoration: line-through;
+	${theme.fonts.eng.titleBold16};
+`;
+
+export const discountPercentStyle = (theme: Theme) => css`
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+	margin-left: 0.9rem;
+
+	color: ${theme.colors.red};
+
+	${theme.fonts.eng.titleBold16};
 `;
 
 export const priceDescriptionStyle = (theme: Theme) => css`
-	${theme.fonts.captionMedium11}
+	margin-top: 0.4rem;
+
 	color: ${theme.colors.gray6};
+	${theme.fonts.kor.captionMedium11}
+`;
+
+export const endSaleTiemStyle = (theme: Theme) => css`
+	position: absolute;
+	right: 0;
+	bottom: 0;
+
+	color: ${theme.colors.red};
+	${theme.fonts.kor.captionMedium10}
 `;
 
 export const productNameStyle = (theme: Theme) => css`
 	width: 100%;
 	height: 3.2rem;
 
-	${theme.fonts.captionBold12}
+	${theme.fonts.eng.captionBold12}
 `;
 
 export const mediumDividerStyle = (theme: Theme) => css`
