@@ -1,14 +1,12 @@
 import { Theme, css } from '@emotion/react';
 
-export const menuComponentStyle = (theme: Theme) => css`
+export const menuComponentStyle = css`
 	display: inline-flex;
 	flex-direction: column;
 	gap: 1.4rem;
 	align-items: center;
 	justify-content: center;
 	padding: 1.4rem 0 1.2rem;
-
-	border: 1px solid black;
 `;
 
 export const menuTitleStyle = (theme: Theme) => css`
@@ -44,4 +42,22 @@ export const menuItemStyle = (theme: Theme) => css`
 	cursor: pointer;
 
 	${theme.fonts.kor.bodyMedium14};
+`;
+
+export const selectedMenuItemStyle = (theme: Theme) => css`
+	position: relative;
+
+	background-color: ${theme.colors.gray2};
+
+	::after {
+		position: absolute;
+		left: 0;
+		display: block;
+		width: 0.4rem;
+		height: 100%;
+
+		background-color: ${theme.colors.warningPrimary};
+
+		content: '';
+	}
 `;

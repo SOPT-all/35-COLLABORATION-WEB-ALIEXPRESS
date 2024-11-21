@@ -1,11 +1,13 @@
-import React from 'react';
-import { menuComponentStyle, menuTitleStyle, inviteStyle, menuItemStyle } from './menuBar';
+import { useState } from 'react';
+import { menuComponentStyle, menuTitleStyle, inviteStyle, selectedMenuItemStyle } from './menuBarStyle';
 import { DividerSmall } from '@assets/icons';
 
 export const MenuBarComponent = () => {
+	const [currentPage, setCurrentPage] = useState('주문 & 배송');
+
 	const menuItems = [
 		'개요',
-		'주문&배송',
+		'주문 & 배송',
 		'지불',
 		'환불 & 반품',
 		'설정',
@@ -29,7 +31,10 @@ export const MenuBarComponent = () => {
 						return (
 							<div>
 								<DividerSmall />
-								<li key={item} css={inviteStyle}>
+								<li
+									key={item}
+									css={[inviteStyle, item === currentPage && selectedMenuItemStyle]}
+									onClick={() => setCurrentPage(item)}>
 									{item}
 								</li>
 								<DividerSmall />
@@ -37,7 +42,10 @@ export const MenuBarComponent = () => {
 						);
 					}
 					return (
-						<li key={item} css={menuItemStyle}>
+						<li
+							key={item}
+							css={[inviteStyle, item === currentPage && selectedMenuItemStyle]}
+							onClick={() => setCurrentPage(item)}>
 							{item}
 						</li>
 					);
