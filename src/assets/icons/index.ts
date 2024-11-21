@@ -135,3 +135,4 @@ export { default as ImgFlagKorL } from '../images/img_flag_kor_l.svg';
 export { default as IcArrowbottomSWhite12 } from './ic_arrowbottom_s_white_12.svg';
 export { default as ImgFlagKorS } from '../images/img_flag_kor_s.svg';
 export { default as ImgLine } from '../images/Line 18.svg';
+export { default as ImgVector7192 } from '../images/Vector 7192.svg';

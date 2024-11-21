@@ -1,0 +1,47 @@
+import {
+	IcPhoneBlack16,
+	IcBottleBlack16,
+	IcBeautyBlack16,
+	IcPaintBlack16,
+	IcBagBlack16,
+	IcRefrigeratorBlack16,
+	IcHomeBlack16,
+	IcHelmetBlack16,
+	IcBallBlack16,
+	IcJewelBlack16,
+	IcGameBlack16,
+	IcWatchBlack16,
+	IcUnderwearBlack16,
+} from '@assets/icons/index';
+
+export const CATEGORIES_EMOJI = [
+	IcPhoneBlack16,
+	IcBottleBlack16,
+	IcBeautyBlack16,
+	IcPaintBlack16,
+	IcBagBlack16,
+	IcRefrigeratorBlack16,
+	IcHomeBlack16,
+	IcHelmetBlack16,
+	IcBallBlack16,
+	IcJewelBlack16,
+	IcUnderwearBlack16,
+	IcGameBlack16,
+	IcWatchBlack16,
+];
+
+export const CATEGORY_LABELS: string[] = [
+	'휴대폰/통신',
+	'유아용품',
+	'뷰티/건강',
+	'시공/리모델링',
+	'가방/소품',
+	'가전',
+	'홈인테리어',
+	'자동차용품',
+	'스포츠/레저',
+	'쥬얼리/시계',
+	'속옷/잠옷',
+	'장난감/놀이',
+	'패션잡화',
+];
