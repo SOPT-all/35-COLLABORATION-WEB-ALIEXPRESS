@@ -1,6 +1,17 @@
 import { Theme, css } from '@emotion/react';
 
-export const MyLayout = (theme: Theme) => css`
+export const MyLayoutStyle = css`
+	position: absolute;
+	top: 4.9rem;
+	right: 15rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	align-items: center;
+	justify-content: center;
+`;
+
+export const MyContainerStyle = (theme: Theme) => css`
 	display: flex;
 	flex-direction: column;
 	gap: 1.2rem;
@@ -12,12 +23,12 @@ export const MyLayout = (theme: Theme) => css`
 	border-radius: 12px;
 `;
 
-export const MyContainerStyle = css`
+export const MyWrapperStyle = css`
 	display: flex;
 	gap: 0.9rem;
 `;
 
-export const MyWrapperStyle = css`
+export const infoStyle = css`
 	display: flex;
 	flex-direction: column;
 	gap: 0.3rem;
