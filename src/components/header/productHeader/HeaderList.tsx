@@ -1,6 +1,6 @@
 import { IcHamburgermenuBlack16, ImgVector7192 } from '@assets/icons/index';
 import CategoryItemBtn from '@components/button/categoryItemBtn/CategoryItemBtn';
-import { CATEGORIES_EMOJI, CATEGORY_LABELS } from '@constants/headerList';
+import { CATEGORIES_EMOJI, CATEGORY_LABELS } from '@constants/categoryList';
 import { Theme, css } from '@emotion/react';
 
 export const ListLayoutStyle = css`
