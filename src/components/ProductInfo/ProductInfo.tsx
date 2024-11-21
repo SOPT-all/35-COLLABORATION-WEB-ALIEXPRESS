@@ -34,6 +34,7 @@ import {
 	priceOriginalStyle,
 	discountPercentStyle,
 	endSaleTiemStyle,
+	reviewBoxStyle,
 } from '@components/ProductInfo/ProductInfoStyle';
 import ProductInfoType from 'types/ProductInfoType';
 
@@ -100,6 +101,7 @@ const ProductInfo = ({
 						67W
 					</div>
 				</div>
+				<div css={reviewBoxStyle}>5,000+개 판매</div>
 				<div css={mediumDividerStyle} />
 				<div css={optionStyle}>색상: 검정</div>
 				<section css={optionImgStyle}>

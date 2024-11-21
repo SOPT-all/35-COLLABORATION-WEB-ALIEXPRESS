@@ -5,6 +5,7 @@ export const productInfoContainerStyle = css`
 	gap: 1.9rem;
 	width: 96rem;
 	height: 39.7rem;
+	margin-bottom: 0.6rem;
 `;
 
 export const proudctImgLayoutStyle = css`
@@ -101,6 +102,13 @@ export const productNameStyle = (theme: Theme) => css`
 	${theme.fonts.eng.captionBold12}
 `;
 
+export const reviewBoxStyle = (theme: Theme) => css`
+	width: 100%;
+	height: 2rem;
+
+	${theme.fonts.kor.captionSemibold11}
+`;
+
 export const mediumDividerStyle = (theme: Theme) => css`
 	width: 50.9rem;
 	height: 0.1rem;
@@ -129,6 +137,7 @@ export const optionImgStyle = css`
 	grid-template-columns: repeat(9, 1fr);
 	width: 100%;
 	height: 10.7rem;
+	margin-top: -0.6rem;
 `;
 
 export const warnLayoutStyle = (theme: Theme) => css`
