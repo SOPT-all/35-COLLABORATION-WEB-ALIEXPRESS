@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import {
 	ImgLogotypeL,
 	IcHamburgermenuWhite14,
@@ -10,6 +12,7 @@ import {
 	IcCartWhite24,
 } from '@assets/icons/index';
 import Category from '@components/header/productHeader/Category';
+import MyList from '@components/header/productHeader/MyList';
 import { useState } from 'react';
 
 import {
@@ -36,12 +39,11 @@ import {
 } from './ProductHeaderStyle';
 
 const ProductHeader = () => {
-	const [isClicked, setIsClicked] = useState(false);
+	const [activePopup, setActivePopup] = useState<'burger' | 'info' | null>(null);
 
-	const handleBurger = () => {
-		setIsClicked(!isClicked);
+	const togglePopup = (popup: 'burger' | 'info') => {
+		setActivePopup(activePopup === popup ? null : popup);
 	};
-
 	return (
 		<header css={[relativeStyle, headerStyle]}>
 			{/* 로고섹션 */}
@@ -55,11 +57,11 @@ const ProductHeader = () => {
 
 			{/* 햄버거 메뉴 */}
 			<nav aria-label="Primary Navigation" css={hambergerStyle}>
-				<IcHamburgermenuWhite14 onClick={handleBurger} />
+				<IcHamburgermenuWhite14 onClick={() => togglePopup('burger')} />
 			</nav>
 
 			{/* 카테고리 팝업 */}
-			{isClicked && <Category />}
+			{activePopup === 'burger' && <Category />}
 
 			{/* 검색섹션 */}
 			<div role="search" css={relativeStyle}>
@@ -93,7 +95,7 @@ const ProductHeader = () => {
 			</section>
 
 			{/* 사용자 계정 */}
-			<section css={appLogLayout} aria-labelledby="user-account">
+			<section css={appLogLayout} aria-labelledby="user-account" onClick={() => togglePopup('info')}>
 				<IcUserWhite24 />
 				<div css={flagContainer}>
 					<div css={textContainer}>
@@ -103,6 +105,9 @@ const ProductHeader = () => {
 					<IcArrowbottomSWhite12 css={arrowStyle} />
 				</div>
 			</section>
+
+			{/* 카테고리 팝업 */}
+			{activePopup === 'info' && <MyList />}
 
 			{/* 장바구니 */}
 			<section css={cartLayout} aria-labelledby="cart">
