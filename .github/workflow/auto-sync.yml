@@ -1,0 +1,35 @@
+name: Auto Sync
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    name: Sync forked repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.AUTO_SYNC }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn run build
+
+      - name: Add remote URL
+        run: |
+          git remote add forked_repo https://seong-hui:${{ secrets.AUTO_SYNC }}@github.com/seong-hui/35-COLLABORATION-WEB-ALIEXPRESS
+          git config user.name seong-hui
+          git config user.email msh9980@naver.com
+
+      - name: Push Changes to forked_repo
+        run: |
+          git push -f forked_repo main
+
+      - name: Clean up
+        run: |
+          git remote remove forked_repo
