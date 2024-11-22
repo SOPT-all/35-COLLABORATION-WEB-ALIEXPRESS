@@ -20,7 +20,7 @@ export const headerComponentStyle = (theme: Theme) => css`
 	background-color: ${theme.colors.gray2};
 `;
 
-export const contentComponentStyle = (theme: Theme) => css`
+export const contentComponentStyle = css`
 	display: flex;
 	gap: 1.5rem;
 `;
