@@ -4,7 +4,7 @@ export const relatedProductsContainer = css`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 136.6rem;
+
 `;
 
 export const relatedProductsHeaderStyle = css`
@@ -21,6 +21,6 @@ export const relatedProductsStyle = (theme: Theme) => css`
 export const productListContainer = css`
     display: flex;
     flex-wrap: wrap;
-    gap: 24px 13px;
+    gap: 2.4rem 1.3rem;
     width: 127.7rem;
 `;

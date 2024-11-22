@@ -17,11 +17,11 @@ interface ProductCardListProps {
 
 const ProductCardList = ({ products }: ProductCardListProps ) => {
     return (
-        <main css={relatedProductsContainer}>
-            <section css={relatedProductsHeaderStyle}>
+        <section css={relatedProductsContainer}>
+            <div css={relatedProductsHeaderStyle}>
                 <p css={relatedProductsStyle}>연관 상품</p>
-            </section>
-            <section css={productListContainer}>
+            </div>
+            <article css={productListContainer}>
                 {products.map((product) => (
                     <ProductCard
                         image={product.image}
@@ -33,8 +33,8 @@ const ProductCardList = ({ products }: ProductCardListProps ) => {
                         reviewCount={123}
                     />
                 ))}
-            </section>
-        </main>
+            </article>
+        </section>
     );
 };
 
