@@ -1,11 +1,13 @@
 import { Theme, css } from '@emotion/react';
 
-export const buyerInfoComponentStyle = css`
+export const buyerInfoComponentStyle = (theme: Theme) => css`
 	display: flex;
 	gap: 1.7rem;
 	width: 44.8rem;
 	height: 10.8rem;
 	padding: 1.6rem 2.4rem;
+
+	background-color: ${theme.colors.white};
 `;
 
 export const infoDetailStyle = css`

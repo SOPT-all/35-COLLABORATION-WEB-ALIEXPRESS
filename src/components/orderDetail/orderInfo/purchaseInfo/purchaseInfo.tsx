@@ -29,9 +29,9 @@ export const PurchaseInfoComponent = () => {
 					<span css={korStringStyle}>주문일: </span>
 					<span css={engStringStyle}>{buyerInfo.orderYear}</span>
 					<span css={korStringStyle}>년</span>
-					<span css={engStringStyle}>{buyerInfo.orderMonth}</span>
+					<span css={engStringStyle}> {buyerInfo.orderMonth}</span>
 					<span css={korStringStyle}>월</span>
-					<span css={engStringStyle}>{buyerInfo.orderDay}</span>
+					<span css={engStringStyle}> {buyerInfo.orderDay}</span>
 					<span css={korStringStyle}>일</span>
 				</div>
 				<span css={korStringStyle}>결제 수단: {buyerInfo.paymentMethod}</span>
