@@ -14,7 +14,7 @@ import {
 	IcUnderwearBlack16,
 } from '@assets/icons/index';
 
-export const CATEGORIES = [
+export const CATEGORIES = Object.freeze([
 	{ icon: IcPhoneBlack16, label: '휴대폰/통신' },
 	{ icon: IcBottleBlack16, label: '유아용품' },
 	{ icon: IcBeautyBlack16, label: '뷰티/건강' },
@@ -28,4 +28,4 @@ export const CATEGORIES = [
 	{ icon: IcUnderwearBlack16, label: '속옷/잠옷' },
 	{ icon: IcGameBlack16, label: '장난감/놀이' },
 	{ icon: IcWatchBlack16, label: '패션잡화' },
-];
+] as const);

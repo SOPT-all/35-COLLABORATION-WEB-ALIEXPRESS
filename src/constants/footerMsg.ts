@@ -6,6 +6,6 @@ const MESSAGE = {
 	CATEGORY: '모든 인기 상품, 제품, 프로모션, 저렴한 가격, 높은 가치, 리뷰',
 	GROUP:
 		'Alibaba 그룹 웹사이트, AliExpress, Alimama, Alipay, Fliggy, Alibaba Cloud, Alibaba International, AliTelecom, DingTalk, Juhuasuan, Taobao 마켓플레이스, Tmall, Taobao Global, AliOS, 1688',
-};
+} as const;
 
 export default MESSAGE;

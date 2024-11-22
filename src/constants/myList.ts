@@ -7,7 +7,7 @@ import {
 	IcCoinBlack12,
 } from '@assets/icons/index';
 
-export const MY_CATEGORIES = [
+export const MY_CATEGORIES = Object.freeze([
 	{
 		icon: IcNoteBlack12,
 		label: '주문 & 배송',
@@ -32,4 +32,4 @@ export const MY_CATEGORIES = [
 		icon: IcCoinBlack12,
 		label: '내 코인',
 	},
-];
+] as const);
