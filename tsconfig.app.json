@@ -35,7 +35,8 @@
 			"@apis/*": ["apis/*"],
 			"@pages/*": ["pages/*"],
 			"@styles/*": ["styles/*"],
-			"@utils/*": ["utils/*"]
+			"@utils/*": ["utils/*"],
+			"@route/*": ["route/*"]
 		}
 	},
 	"include": ["src"]

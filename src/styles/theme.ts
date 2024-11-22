@@ -230,6 +230,12 @@ const theme = {
 				font-family: 'TT Norms Pro', sans-serif;
 				line-height: 22px;
 			`,
+			titleBold16: css`
+				font-weight: 700;
+				font-size: 1.6rem;
+				font-family: 'TT Norms Pro', sans-serif;
+				line-height: 20px;
+			`,
 			// Body
 			bodyBold16: css`
 				font-weight: 700;

@@ -1,4 +1,4 @@
-import { IcFvrBlack24 } from '../../../assets/icons/index';
+import { IcFvrBlack24 } from '@assets/icons/index';
 
 import { defaultStyle, buttonStyle, contentContainer, fontStyle } from './LikeBtnStyle';
 
