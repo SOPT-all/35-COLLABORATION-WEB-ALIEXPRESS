@@ -6,6 +6,7 @@ import Theme from '@styles/theme';
 const App = () => (
 	<ThemeProvider theme={Theme}>
 		<Global styles={GLOBALSTYLE} />
+		<Route />
 	</ThemeProvider>
 );
 
