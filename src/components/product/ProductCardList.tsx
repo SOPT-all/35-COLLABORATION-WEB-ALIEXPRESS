@@ -29,8 +29,8 @@ const ProductCardList = ({ products }: ProductCardListProps ) => {
                         price={product.price}
                         discountRate={product.discountRate}
                         hasCoupon={product.hasCoupon}
-                        rating={3.5}
-                        reviewCount={123}
+                        rating={product.rating}
+                        reviewCount={product.reviewCount}
                     />
                 ))}
             </article>
