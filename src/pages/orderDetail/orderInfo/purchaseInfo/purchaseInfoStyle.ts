@@ -29,4 +29,5 @@ export const engStringStyle = (theme: Theme) => css`
 
 export const copyStringStyle = (theme: Theme) => css`
 	${theme.fonts.kor.bodyMediumBlue14}
+	cursor: pointer;
 `;

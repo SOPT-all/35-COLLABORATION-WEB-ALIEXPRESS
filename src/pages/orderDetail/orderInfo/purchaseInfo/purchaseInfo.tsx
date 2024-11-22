@@ -10,28 +10,37 @@ import {
 	copyStringStyle,
 } from './purchaseInfoStyle';
 
-export const PurchaseInfoComponent = () => (
-	<div css={purchaseInfoComponentStyle}>
-		<IcListBlack24 />
-		<div css={infoDetailStyle}>
-			<div>
-				<span css={korStringStyle}>주문 </span>
-				<span css={engStringStyle}>ID: </span>
-				<span css={engStringStyle}>{buyerInfo.orderId}</span>
+export const PurchaseInfoComponent = () => {
+	const handleCopyClick = () => {
+		const copyText = `${buyerInfo.orderId}`;
+		navigator.clipboard.writeText(copyText);
+	};
+
+	return (
+		<div css={purchaseInfoComponentStyle}>
+			<IcListBlack24 />
+			<div css={infoDetailStyle}>
+				<div>
+					<span css={korStringStyle}>주문 </span>
+					<span css={engStringStyle}>ID: </span>
+					<span css={engStringStyle}>{buyerInfo.orderId}</span>
+				</div>
+				<div>
+					<span css={korStringStyle}>주문일: </span>
+					<span css={engStringStyle}>{buyerInfo.orderYear}</span>
+					<span css={korStringStyle}>년</span>
+					<span css={engStringStyle}>{buyerInfo.orderMonth}</span>
+					<span css={korStringStyle}>월</span>
+					<span css={engStringStyle}>{buyerInfo.orderDay}</span>
+					<span css={korStringStyle}>일</span>
+				</div>
+				<span css={korStringStyle}>결제 수단: {buyerInfo.paymentMethod}</span>
 			</div>
-			<div>
-				<span css={korStringStyle}>주문일: </span>
-				<span css={engStringStyle}>{buyerInfo.orderYear}</span>
-				<span css={korStringStyle}>년</span>
-				<span css={engStringStyle}>{buyerInfo.orderMonth}</span>
-				<span css={korStringStyle}>월</span>
-				<span css={engStringStyle}>{buyerInfo.orderDay}</span>
-				<span css={korStringStyle}>일</span>
+			<div css={copyButtonStyle}>
+				<span id="copyTxt" onClick={handleCopyClick} css={copyStringStyle}>
+					복사
+				</span>
 			</div>
-			<span css={korStringStyle}>결제 수단: {buyerInfo.paymentMethod}</span>
 		</div>
-		<div css={copyButtonStyle}>
-			<span css={copyStringStyle}>복사</span>
-		</div>
-	</div>
-);
+	);
+};
