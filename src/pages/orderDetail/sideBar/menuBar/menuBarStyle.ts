@@ -1,12 +1,15 @@
 import { Theme, css } from '@emotion/react';
 
-export const menuComponentStyle = css`
+export const menuComponentStyle = (theme: Theme) => css`
 	display: inline-flex;
 	flex-direction: column;
 	gap: 1.4rem;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 1.8rem;
 	padding: 1.4rem 0 1.2rem;
+
+	background-color: ${theme.colors.white};
 `;
 
 export const menuTitleStyle = (theme: Theme) => css`

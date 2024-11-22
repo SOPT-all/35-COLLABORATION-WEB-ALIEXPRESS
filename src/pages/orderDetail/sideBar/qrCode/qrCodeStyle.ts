@@ -1,19 +1,21 @@
 import { Theme, css } from '@emotion/react';
 
-export const qrCodeComponentStyle = css`
+export const qrCodeComponentStyle = (theme: Theme) => css`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
 	width: 28rem;
 	height: 22.6rem;
+
+	background-color: ${theme.colors.white};
 `;
 
 export const qrCodeTextStyle = css`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
 `;
 
 export const qrTitleStyle = (theme: Theme) => css`
