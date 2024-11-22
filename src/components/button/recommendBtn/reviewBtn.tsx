@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-import { flexStyle, btnStyleMap, countStyle } from './reviewBtnStyle';
-import { useState } from 'react';
-
-=======
->>>>>>> Stashed changes
 import {
 	IcGoodGray16,
 	IcHandshakeGray16,
@@ -14,7 +8,7 @@ import {
 } from '@assets/icons';
 import { useState } from 'react';
 
-import { FlexStyle, BtnStyleMap, CountStyle } from './reviewBtnStyle';
+import { flexStyle, btnStyleMap, countStyle } from './reviewBtnStyle';
 
 interface ReviewBtnProps {
 	type: 'useful' | 'recommend' | 'like';
@@ -50,19 +44,11 @@ function ReviewBtn({ type, clickedCount }: ReviewBtnProps) {
 	const { icon, btnText } = buttonType[type];
 
 	return (
-<<<<<<< Updated upstream
 		<button css={btnStyleMap[isClicked ? 'true' : 'false']} onClick={handleClick}>
 			<div css={flexStyle}>
-				<div css={flexStyle}>{icon}</div>
-				<div css={flexStyle}>{btnText}</div>
-				<div css={countStyle}>({formatCount(count)})</div>
-=======
-		<button css={BtnStyleMap[isClicked ? 'true' : 'false']} onClick={handleClick}>
-			<div css={FlexStyle}>
 				{icon}
 				<div>{btnText}</div>
-				<div css={CountStyle}>({formatCount(count)})</div>
->>>>>>> Stashed changes
+				<div css={countStyle}>({formatCount(count)})</div>
 			</div>
 		</button>
 	);

@@ -35,15 +35,9 @@ const commonBtnContainerStyle = css`
 	border-radius: 4px;
 `;
 
-<<<<<<< Updated upstream
-//버튼 클릭이 됐을때 스타일
+// 버튼 클릭이 됐을때 스타일
 export const clickedBtnContainerStyle = (theme: Theme) => css`
 	${commonBtnContainerStyle};
-=======
-// 버튼 클릭이 됐을때 스타일
-export const ClickedBtnContainerStyle = (theme: Theme) => css`
-	${CommonBtnContainerStyle};
->>>>>>> Stashed changes
 	color: ${theme.colors.notificationPrimary};
 
 	background-color: ${theme.colors.notificationBg};
