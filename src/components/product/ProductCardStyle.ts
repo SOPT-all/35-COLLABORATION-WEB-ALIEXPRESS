@@ -26,7 +26,7 @@ export const productContainer = (theme: Theme) => css`
 export const productWrapper = (theme: Theme) => css`
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 1.2rem;
     align-items: center;
     width: 20.2rem;
     
@@ -52,13 +52,13 @@ export const imageStyle = css`
 export const productInfoContainer = css`
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.8rem;
 `;
 
 export const productInfoWrapper = css`
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0.4rem;
 `;
 
 export const productNameStyle = (theme: Theme) => css`
@@ -92,12 +92,12 @@ export const productDiscountStyle = (theme: Theme) => css`
 
 export const tagContainer = css`
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 `;
 
 export const couponBtnStyle = (theme: Theme) => css`
     display: flex;
-    gap: 8px;
+    gap: 0.8rem;
     align-items: center;
     justify-content: space-between;
     width: 100%;
