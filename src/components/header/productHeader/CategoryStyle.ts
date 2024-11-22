@@ -2,8 +2,8 @@ import { Theme, css } from '@emotion/react';
 
 export const CategoryLayout = css`
 	position: absolute;
-	top: 4.9rem;
-	left: 13.45rem;
+	top: 3.5rem;
+	left: -9rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0;

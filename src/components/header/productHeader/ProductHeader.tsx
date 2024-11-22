@@ -54,12 +54,11 @@ const ProductHeader = () => {
 			</div>
 
 			{/* 햄버거 메뉴 */}
-			<nav aria-label="Primary Navigation" css={hambergerStyle}>
+			<nav aria-label="Primary Navigation" css={[hambergerStyle, relativeStyle]}>
 				<IcHamburgermenuWhite14 onClick={() => togglePopup('burger')} />
+				{/* 카테고리 팝업 */}
+				{activePopup === 'burger' && <Category />}
 			</nav>
-
-			{/* 카테고리 팝업 */}
-			{activePopup === 'burger' && <Category />}
 
 			{/* 검색섹션 */}
 			<div role="search" css={relativeStyle}>
@@ -93,7 +92,7 @@ const ProductHeader = () => {
 			</section>
 
 			{/* 사용자 계정 */}
-			<section css={appLogLayout} aria-labelledby="user-account" onClick={() => togglePopup('info')}>
+			<section css={[appLogLayout, relativeStyle]} aria-labelledby="user-account" onClick={() => togglePopup('info')}>
 				<IcUserWhite24 />
 				<div css={flagContainer}>
 					<div css={textContainer}>
@@ -102,10 +101,9 @@ const ProductHeader = () => {
 					</div>
 					<IcArrowbottomSWhite12 css={arrowStyle} />
 				</div>
+				{/* 카테고리 팝업 */}
+				{activePopup === 'info' && <MyList />}
 			</section>
-
-			{/* 카테고리 팝업 */}
-			{activePopup === 'info' && <MyList />}
 
 			{/* 장바구니 */}
 			<section css={cartLayout} aria-labelledby="cart">

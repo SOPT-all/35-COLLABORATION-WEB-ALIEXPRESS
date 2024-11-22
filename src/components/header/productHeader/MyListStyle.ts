@@ -2,8 +2,8 @@ import { Theme, css } from '@emotion/react';
 
 export const MyLayoutStyle = css`
 	position: absolute;
-	top: 4.9rem;
-	right: 15rem;
+	top: 4.5rem;
+	right: -4rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0;
