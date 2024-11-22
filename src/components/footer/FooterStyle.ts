@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react';
 
 export const grayLayout = (theme: Theme) => css`
 	display: grid;
-	grid-gap: 24px 30px;
+	grid-gap: 2.4rem 3rem;
 	grid-template-columns: 1fr 1fr;
 	width: 100%;
 	height: 18.5rem;
