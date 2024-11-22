@@ -15,7 +15,7 @@ interface ReviewBtnProps {
 	clickedCount: number;
 }
 
-function ReviewBtn({ type, clickedCount }: ReviewBtnProps) {
+const ReviewBtn = ({ type, clickedCount }: ReviewBtnProps) => {
 	const [isClicked, setIsClicked] = useState(false);
 	const [count, setCount] = useState(clickedCount);
 	const handleClick = (): void => {
