@@ -7,6 +7,8 @@ interface Product {
     price: number;
     discountRate: number;
     hasCoupon?: boolean;
+    rating: number;
+    reviewCount: number;
 }
 
 interface ProductCardListProps {
@@ -27,6 +29,8 @@ const ProductCardList = ({ products }: ProductCardListProps ) => {
                         price={product.price}
                         discountRate={product.discountRate}
                         hasCoupon={product.hasCoupon}
+                        rating={3.5}
+                        reviewCount={123}
                     />
                 ))}
             </section>
