@@ -25,10 +25,10 @@ const ProductCard = ({ image, name, price, discountRate, hasCoupon }: ProductPro
                         <span css={productDiscountStyle}>{discountRate}%</span>
                     </div>
                 </div>               
-                <div css={tagContainer}>
-                    <FreeTag text='무료 배송' color='red'/>
-                    <FreeTag text='무료 반품' color='gray'/>
-                </div>
+                <ul css={tagContainer}>
+                    <li><FreeTag text='무료 배송' color='red'/></li>
+                    <li><FreeTag text='무료 반품' color='gray'/></li>
+                </ul>
             </div>
             {hasCoupon && <button css={couponBtnStyle}>쿠폰 받기<IcArrowrightGray12/></button>}
 
