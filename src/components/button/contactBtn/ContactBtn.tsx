@@ -1,4 +1,4 @@
-import { IcMessageBlack24 } from '../../../assets/icons/index';
+import { IcMessageBlack24 } from '@assets/icons/index';
 
 import { flexStyle, buttonStyle, fontStyle } from './ContactBtnStyle';
 
