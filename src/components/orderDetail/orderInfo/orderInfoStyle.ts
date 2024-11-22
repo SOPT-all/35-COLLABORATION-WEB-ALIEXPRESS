@@ -17,7 +17,7 @@ export const headerComponentStyle = (theme: Theme) => css`
 	padding-left: 2.1rem;
 	${theme.fonts.kor.titleBold20}
 
-	background-color: ${theme.colors.white};
+	background-color: ${theme.colors.gray2};
 `;
 
 export const contentComponentStyle = (theme: Theme) => css`
