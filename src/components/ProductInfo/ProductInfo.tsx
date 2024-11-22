@@ -1,8 +1,7 @@
 import { IcInfoGray14, IcWarningBrandYellow16 } from '@assets/icons';
-
 import bannerRewordImg from '@assets/images/img_banner_reward.png';
 import productSubImg1 from '@assets/images/img_product_sub1.png';
-
+import { productOptionImages, productSubImages } from '@assets/images/productDetailImages';
 import {
 	productInfoContainerStyle,
 	proudctImgLayoutStyle,
@@ -26,24 +25,8 @@ import {
 	endSaleTiemStyle,
 	reviewBoxStyle,
 } from '@components/ProductInfo/ProductInfoStyle';
-import ProductInfoType from 'types/ProductInfoType';
 
-import { productOptionImages, productSubImages } from '@assets/images/productDetailImages';
-
-interface ProductInfoProps extends ProductInfoType {}
-
-const ProductInfo = ({
-	productId,
-	productImg,
-	detail,
-	categoryName,
-	priceOriginal,
-	percent,
-	priceDiscount,
-	isCoupon,
-	reviewCount,
-	rating,
-}: ProductInfoProps) => (
+const ProductInfo = () => (
 	<>
 		<article css={productInfoContainerStyle}>
 			<section css={proudctImgLayoutStyle}>
