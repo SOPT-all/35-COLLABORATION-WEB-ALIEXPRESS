@@ -2,7 +2,6 @@ import { css, Theme } from '@emotion/react';
 
 export const infoTableLayoutStyle = css`
 	width: 96rem;
-	height: 17.8rem;
 `;
 
 export const infoTitleStyle = (theme: Theme) => css`
