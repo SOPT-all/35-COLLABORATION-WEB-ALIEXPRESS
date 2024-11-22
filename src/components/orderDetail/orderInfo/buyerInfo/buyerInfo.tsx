@@ -1,7 +1,12 @@
 import { IcMapBlackStorke24 } from '@assets/icons';
 import { buyerInfo } from '@constants/buyerInfo';
 
-import { buyerInfoComponentStyle, korStringStyle, engStringStyle, infoDetailStyle } from './buyerInfoStyle';
+import {
+	buyerInfoComponentStyle,
+	korStringStyle,
+	engStringStyle,
+	infoDetailStyle,
+} from './buyerInfoStyle';
 
 export const BuyerInfoComponent = () => (
 	<div css={buyerInfoComponentStyle}>
