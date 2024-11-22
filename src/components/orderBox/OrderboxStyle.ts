@@ -129,3 +129,25 @@ export const countButtonsStyle = css`
 	align-items: center;
 	margin-top: 0.8rem;
 `;
+
+export const iconWrapperStyle = (theme: Theme) => css`
+	width: 1.8rem;
+	height: 1.8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	background-color: ${theme.colors.gray2};
+
+	&:hover {
+		background-color: ${theme.colors.gray4};
+	}
+
+	&:hover svg path {
+		stroke: ${theme.colors.gray6};
+	}
+`;
+
+export const engCaptionBoldStyle = (theme: Theme) => css`
+	${theme.fonts.eng.captionBold12}
+`;

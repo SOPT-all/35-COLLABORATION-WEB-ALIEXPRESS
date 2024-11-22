@@ -24,6 +24,8 @@ import {
 	privacyTitleBoxStyle,
 	orderButtonsLayoutStyle,
 	countButtonsStyle,
+	iconWrapperStyle,
+	engCaptionBoldStyle,
 } from '@components/orderBox/OrderboxStyle';
 
 const OrderBox = () => (
@@ -68,7 +70,13 @@ const OrderBox = () => (
 		<section css={orderButtonsLayoutStyle}>
 			<div css={korTitleStyle}>수량</div>
 			<div css={countButtonsStyle}>
-				<IcCountdownGray18 />1 <IcCountupGray18 />
+				<div css={iconWrapperStyle}>
+					<IcCountdownGray18 />
+				</div>
+				<p css={engCaptionBoldStyle}>1</p>
+				<div css={iconWrapperStyle}>
+					<IcCountupGray18 />
+				</div>
 			</div>
 		</section>
 	</article>
