@@ -32,18 +32,7 @@ import { productOptionImages, productSubImages } from '@assets/images/productDet
 
 interface ProductInfoProps extends ProductInfoType {}
 
-const ProductInfo = ({
-	productId,
-	productImg,
-	detail,
-	categoryName,
-	priceOriginal,
-	percent,
-	priceDiscount,
-	isCoupon,
-	reviewCount,
-	rating,
-}: ProductInfoProps) => (
+const ProductInfo = ({}: ProductInfoProps) => (
 	<>
 		<article css={productInfoContainerStyle}>
 			<section css={proudctImgLayoutStyle}>
