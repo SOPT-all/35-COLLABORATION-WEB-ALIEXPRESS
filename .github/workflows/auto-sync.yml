@@ -1,4 +1,5 @@
 name: Auto Sync
+
 on:
   push:
     branches:
@@ -8,9 +9,10 @@ on:
       - develop
 
 jobs:
-  sync:
-    name: Sync forked repository
+  sync_push:
+    name: Sync forked repository on push
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
@@ -33,6 +35,18 @@ jobs:
         run: |
           git push -f forked_repo HEAD:main
 
-      - name: Clean up
-        run: |
-          git remote remove forked_repo
+  sync_pr:
+    name: Build project on pull_request
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout develop
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.AUTO_SYNC }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn run build
