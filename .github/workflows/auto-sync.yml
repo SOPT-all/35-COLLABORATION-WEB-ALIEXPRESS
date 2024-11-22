@@ -7,12 +7,15 @@ on:
   pull_request:
     branches:
       - develop
+      - main
 
 jobs:
   sync_push:
-    name: Sync forked repository on push
+    name: Sync forked repository on push or pull_request to main
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+    if: |
+      github.event_name == 'push' || 
+      (github.event_name == 'pull_request' && github.base_ref == 'main')
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
@@ -36,9 +39,9 @@ jobs:
           git push -f forked_repo HEAD:main
 
   sync_pr:
-    name: Build project on pull_request
+    name: Build project on pull_request to develop
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' && github.base_ref == 'develop'
     steps:
       - name: Checkout develop
         uses: actions/checkout@v4
