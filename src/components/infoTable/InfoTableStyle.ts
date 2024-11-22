@@ -1,16 +1,7 @@
 import { css, Theme } from '@emotion/react';
 
-export const InfoTableContainerStyle = css`
-	margin-top: 10px;
-	width: 96rem;
-	height: 28rem;
-	display: flex;
-	flex-direction: column;
-	gap: 2.4rem;
-`;
-
 export const infoTableLayoutStyle = css`
-	width: 100%;
+	width: 96rem;
 	height: 17.8rem;
 `;
 
@@ -22,7 +13,7 @@ export const infoTitleStyle = (theme: Theme) => css`
 `;
 
 export const infoTableStyle = (theme: Theme) => css`
-	width: 100%;
+	width: 96rem;
 	height: 13.2rem;
 	border-radius: 8px;
 
@@ -30,12 +21,13 @@ export const infoTableStyle = (theme: Theme) => css`
 	td {
 		width: 34.1rem;
 		height: 4.4rem;
-		padding: 1.2rem;
-		border: 1px solid ${theme.colors.gray3};
+		padding: 0 1.2rem;
 		box-sizing: border-box;
 
 		text-align: left;
 		${theme.fonts.eng.captionMedium12}
+		display: flex;
+		align-items: center;
 	}
 
 	th {
@@ -43,5 +35,11 @@ export const infoTableStyle = (theme: Theme) => css`
 
 		background-color: ${theme.colors.gray2};
 		${theme.fonts.kor.captionSemibold12}
+		gap: 0.6rem;
+	}
+
+	tr {
+		display: flex;
+		border: 1px solid ${theme.colors.gray3};
 	}
 `;
