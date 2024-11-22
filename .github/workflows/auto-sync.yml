@@ -12,18 +12,13 @@ jobs:
     name: Sync forked repository
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.AUTO_SYNC }}
-          fetch-depth: 0
-          ref: main
 
       - name: Install dependencies
         run: yarn install
-
-      - name: Build project
-        run: yarn run build
 
       - name: Add remote URL
         run: |
