@@ -1,8 +1,10 @@
+import InfoTable from '@components/infoTable/InfoTable';
 import ProductInfo from '@components/ProductInfo/ProductInfo';
 
 const ProductPage = () => (
 	<div>
-		<ProductInfo />
+		{/* <ProductInfo /> */}
+		<InfoTable />
 	</div>
 );
 
