@@ -1,14 +1,14 @@
 import { Global, ThemeProvider } from '@emotion/react';
 import Theme from './styles/theme';
 import GLOBALSTYLE from './styles/global';
-import { MenuBarComponent } from '@pages/orderDetail/sideBar/menuBar/menuBar';
+import { QrCodeComponent } from '@pages/orderDetail/sideBar/qrCode/qrCode';
 
 const App = () => {
 	return (
 		<>
 			<ThemeProvider theme={Theme}>
 				<Global styles={GLOBALSTYLE} />
-				<MenuBarComponent />
+				<QrCodeComponent />
 			</ThemeProvider>
 		</>
 	);
