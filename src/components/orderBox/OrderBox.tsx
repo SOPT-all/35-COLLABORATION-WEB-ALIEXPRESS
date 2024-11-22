@@ -1,4 +1,11 @@
-import { IcMapBlackStorke18, IcDeliveryBlack20, IcArrowrightSBlack24, IcShieldBlack20 } from '@assets/icons';
+import {
+	IcMapBlackStorke18,
+	IcDeliveryBlack20,
+	IcArrowrightSBlack24,
+	IcShieldBlack20,
+	IcCountdownGray18,
+	IcCountupGray18,
+} from '@assets/icons';
 import {
 	dividerStyle,
 	orderBoxContinerStyle,
@@ -15,6 +22,8 @@ import {
 	descriptionBoxStyle,
 	privacyInfoLayoutStyle,
 	privacyTitleBoxStyle,
+	orderButtonsLayoutStyle,
+	countButtonsStyle,
 } from '@components/orderBox/OrderboxStyle';
 
 const OrderBox = () => (
@@ -56,6 +65,12 @@ const OrderBox = () => (
 			</div>
 		</section>
 		<div css={dividerStyle} />
+		<section css={orderButtonsLayoutStyle}>
+			<div css={korTitleStyle}>수량</div>
+			<div css={countButtonsStyle}>
+				<IcCountdownGray18 />1 <IcCountupGray18 />
+			</div>
+		</section>
 	</article>
 );
 

@@ -37,7 +37,7 @@ export const orderTitleWrapperStyle = css`
 `;
 
 export const korTitleStyle = (theme: Theme) => css`
-	${theme.fonts.kor.captionMedium12}
+	${theme.fonts.kor.captionBold12}
 `;
 
 export const engTitleStyle = (theme: Theme) => css`
@@ -114,4 +114,18 @@ export const descriptionBoxStyle = (theme: Theme) => css`
 
 	color: ${theme.colors.gray6};
 	${theme.fonts.kor.captionMedium9}
+`;
+
+export const orderButtonsLayoutStyle = css`
+	width: 100%;
+	height: 17.8rem;
+`;
+
+export const countButtonsStyle = css`
+	width: 6.7rem;
+	height: 1.8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.8rem;
 `;
