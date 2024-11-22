@@ -2,6 +2,7 @@ import { IcArrowrightGray12 } from '@assets/icons';
 
 import FreeTag from './FreeTag';
 import { couponBtnStyle, imageContainer, imageStyle, priceContainer, productContainer, productDiscountStyle, productInfoContainer, productInfoWrapper, productNameStyle, productPriceStyle, productWonStyle, tagContainer } from './ProductCardStyle';
+import StarBtn from '@components/button/starBtn/StarBtn';
 
 interface ProductProps {
     image: string;
@@ -9,9 +10,11 @@ interface ProductProps {
     price: number;
     discountRate: number;
     hasCoupon?: boolean;
+    rating: number;
+    reviewCount: number;
 }
 
-const ProductCard = ({ image, name, price, discountRate, hasCoupon }: ProductProps) => (
+const ProductCard = ({ image, name, price, discountRate, hasCoupon = false, rating, reviewCount }: ProductProps) => (
         <article css={productContainer}>
             <div css={imageContainer}>
                 <img css={imageStyle} src={image} alt={name} />
@@ -19,6 +22,7 @@ const ProductCard = ({ image, name, price, discountRate, hasCoupon }: ProductPro
             <div css={productInfoContainer}>
                 <div css={productInfoWrapper}>
                     <p css={productNameStyle}>{name}</p>
+                    <StarBtn rating={rating} reviewCount={reviewCount} isRatingVisible={false} />
                     <div css={priceContainer}>
                         <span css={productWonStyle}>₩</span>
                         <span css={productPriceStyle}>{price.toLocaleString()}</span>
