@@ -8,9 +8,9 @@ const PathInfoComponent = () => {
 	return (
 		<>
 			{pathRoutes.map((item, index) => (
-				<span key={index}>
+				<div key={index}>
 					<span>&nbsp;&gt;</span> <span className={index === pathRoutes.length - 1 ? 'last-item' : ''}>{item}</span>
-				</span>
+				</div>
 			))}
 		</>
 	);
