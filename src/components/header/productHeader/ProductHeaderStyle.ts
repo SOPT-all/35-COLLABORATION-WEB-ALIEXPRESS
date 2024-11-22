@@ -14,7 +14,7 @@ export const headerStyle = (theme: Theme) => css`
 
 	background-color: ${theme.colors.gray10};
 
-	& > *:not(:first-child) {
+	& > *:not(:first-of-type) {
 		display: flex;
 		align-items: center;
 	}
