@@ -6,6 +6,9 @@ import {
 	IcCountdownGray18,
 	IcCountupGray18,
 } from '@assets/icons';
+import EmojiBtn from '@components/button/emojiBtn/EmojiBtn';
+import LikeBtn from '@components/button/likeBtn/LikeBtn';
+import TextBtn from '@components/button/textBtn/TextBtn';
 import {
 	dividerStyle,
 	orderBoxContinerStyle,
@@ -29,22 +32,19 @@ import {
 	orderBtnWrapperStyle,
 	emojiBtnWrapperStyle,
 } from '@components/orderBox/OrderboxStyle';
-import TextBtn from '@components/button/textBtn/TextBtn';
-import EmojiBtn from '@components/button/emojiBtn/EmojiBtn';
-import LikeBtn from '@components/button/likeBtn/LikeBtn';
 
 const OrderBox = () => (
 	<article css={orderBoxContinerStyle}>
 		<section css={orderInfoLayoutStyle}>
 			<div css={orderTitleWrapperStyle}>
-				<span css={korTitleStyle}>배송지:</span>
-				<span css={adressStyle}>
+				<p css={korTitleStyle}>배송지:</p>
+				<div css={adressStyle}>
 					<IcMapBlackStorke18 />
-					<span>Gangnam-gu, Seoul, Korea</span>
-				</span>
+					<p>Gangnam-gu, Seoul, Korea</p>
+				</div>
 			</div>
 			<div css={dividerStyle} />
-			<div css={orderInfoLayouttyle}>
+			<section css={orderInfoLayouttyle}>
 				<div>
 					<div css={freeOrderInfoWrapperStyle}>
 						<div css={flexBoxStyle}>
@@ -65,16 +65,16 @@ const OrderBox = () => (
 						<span css={korTitleStyle}>개인 정보 보호</span>
 					</div>
 					<div css={descriptionBoxStyle}>
-						<div>안심 결제: 카드 정보는 안전하게 보호되며 유출되지 않습니다.</div>
-						<div>개인정보 보호: 개인정보 보안을 최우선으로 생각합니다.</div>
+						<p>안심 결제: 카드 정보는 안전하게 보호되며 유출되지 않습니다.</p>
+						<p>개인정보 보호: 개인정보 보안을 최우선으로 생각합니다.</p>
 					</div>
 				</div>
-			</div>
+			</section>
 		</section>
 		<div css={dividerStyle} />
 		<section css={orderButtonsLayoutStyle}>
 			<div css={korTitleStyle}>수량</div>
-			<div css={countButtonsStyle}>
+			<section css={countButtonsStyle}>
 				<div css={iconWrapperStyle}>
 					<IcCountdownGray18 />
 				</div>
@@ -82,7 +82,7 @@ const OrderBox = () => (
 				<div css={iconWrapperStyle}>
 					<IcCountupGray18 />
 				</div>
-			</div>
+			</section>
 			<section css={orderBtnWrapperStyle}>
 				<TextBtn btnText="바로 구매" color="red" size="large" />
 				<TextBtn btnText="장바구니 담기" color="black" size="large" />
