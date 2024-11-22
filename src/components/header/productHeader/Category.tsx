@@ -6,7 +6,7 @@ import {
 	TitleStyle,
 	ScrollStyle,
 } from '@components/header/productHeader/CategoryStyle';
-import { CATEGORIES_EMOJI, CATEGORY_LABELS } from '@constants/categoryList';
+import { CATEGORIES } from '@constants/categoryList';
 
 const Category = () => (
 	<div css={CategoryLayout}>
@@ -17,8 +17,7 @@ const Category = () => (
 				<p>모든 카테고리</p>
 			</div>
 			<div css={ScrollStyle}>
-				{CATEGORY_LABELS.map((label, index) => {
-					const IconComponent = CATEGORIES_EMOJI[index];
+				{CATEGORIES.map(({ icon: IconComponent, label }) => {
 					return <CategoryItemBtn key={label} btnText={label} size="medium" icon={<IconComponent />} />;
 				})}
 			</div>
