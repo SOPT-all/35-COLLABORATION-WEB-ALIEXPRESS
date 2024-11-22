@@ -99,6 +99,7 @@ export const privacyTitleBoxStyle = css`
 	display: flex;
 	align-items: center;
 	height: 4rem;
+	margin-top: 1.2rem;
 `;
 
 export const descriptionBoxStyle = (theme: Theme) => css`

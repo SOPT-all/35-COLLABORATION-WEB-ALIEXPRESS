@@ -54,8 +54,8 @@ const OrderBox = () => (
 					</div>
 				</div>
 			</div>
-			<div css={dividerStyle} />
 		</section>
+		<div css={dividerStyle} />
 	</article>
 );
 
