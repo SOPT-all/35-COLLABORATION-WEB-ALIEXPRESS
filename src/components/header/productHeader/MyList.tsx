@@ -10,7 +10,7 @@ import {
 	mFontColorStyle,
 	dividerStyle,
 } from '@components/header/productHeader/MyListStyle';
-import { CATEGORIES_EMOJI, MY_LABELS } from '@constants/myList';
+import { MY_CATEGORIES } from '@constants/myList';
 
 const MyList = () => (
 	<div css={MyLayoutStyle}>
@@ -26,10 +26,9 @@ const MyList = () => (
 			</section>
 			<div css={dividerStyle} />
 			<section>
-				{MY_LABELS.map((label, index) => {
-					const IconComponent = CATEGORIES_EMOJI[index];
-					return <CategoryItemBtn key={label} btnText={label} size="small" icon={<IconComponent />} />;
-				})}
+				{MY_CATEGORIES.map(({ icon: IconComponent, label }) => (
+					<CategoryItemBtn key={label} btnText={label} size="small" icon={<IconComponent />} />
+				))}
 			</section>
 		</div>
 	</div>
