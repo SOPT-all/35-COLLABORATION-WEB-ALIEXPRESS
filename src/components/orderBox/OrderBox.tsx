@@ -26,7 +26,12 @@ import {
 	countButtonsStyle,
 	iconWrapperStyle,
 	engCaptionBoldStyle,
+	orderBtnWrapperStyle,
+	emojiBtnWrapperStyle,
 } from '@components/orderBox/OrderboxStyle';
+import TextBtn from '@components/button/textBtn/TextBtn';
+import EmojiBtn from '@components/button/emojiBtn/EmojiBtn';
+import LikeBtn from '@components/button/likeBtn/LikeBtn';
 
 const OrderBox = () => (
 	<article css={orderBoxContinerStyle}>
@@ -78,6 +83,15 @@ const OrderBox = () => (
 					<IcCountupGray18 />
 				</div>
 			</div>
+			<section css={orderBtnWrapperStyle}>
+				<TextBtn btnText="바로 구매" color="red" size="large" />
+				<TextBtn btnText="장바구니 담기" color="black" size="large" />
+				<div css={emojiBtnWrapperStyle}>
+					<EmojiBtn type="seller" />
+					<EmojiBtn type="share" />
+					<LikeBtn />
+				</div>
+			</section>
 		</section>
 	</article>
 );

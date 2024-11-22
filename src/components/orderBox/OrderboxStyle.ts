@@ -3,7 +3,7 @@ import { css, Theme } from '@emotion/react';
 export const orderBoxContinerStyle = (theme: Theme) => css`
 	display: flex;
 	flex-direction: column;
-	gap: 1.7rem;
+	gap: 1.6rem;
 	box-sizing: border-box;
 	width: 30rem;
 	height: 38rem;
@@ -127,7 +127,7 @@ export const countButtonsStyle = css`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 0.8rem;
+	margin: 0.8rem 0 1.6rem;
 `;
 
 export const iconWrapperStyle = (theme: Theme) => css`
@@ -150,4 +150,19 @@ export const iconWrapperStyle = (theme: Theme) => css`
 
 export const engCaptionBoldStyle = (theme: Theme) => css`
 	${theme.fonts.eng.captionBold12}
+`;
+
+export const orderBtnWrapperStyle = css`
+	width: 100%;
+	height: 12.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+`;
+
+export const emojiBtnWrapperStyle = css`
+	width: 100%;
+	height: 3.6rem;
+	display: flex;
+	gap: 0.8rem;
 `;
