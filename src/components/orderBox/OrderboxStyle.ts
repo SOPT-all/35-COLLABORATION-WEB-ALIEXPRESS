@@ -23,7 +23,6 @@ export const dividerStyle = (theme: Theme) => css`
 export const orderInfoLayoutStyle = css`
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
 	width: 100%;
 	height: 14.6rem;
 `;
@@ -34,6 +33,7 @@ export const orderTitleWrapperStyle = css`
 	justify-content: space-between;
 	width: 100%;
 	height: 1.8rem;
+	margin-bottom: 1rem;
 `;
 
 export const korTitleStyle = (theme: Theme) => css`
@@ -53,9 +53,9 @@ export const adressStyle = (theme: Theme) => css`
 export const orderInfoLayouttyle = css`
 	display: flex;
 	flex-direction: column;
-	gap: 1.2rem;
 	width: 100%;
 	height: 10.8rem;
+	margin-top: 1rem;
 `;
 
 export const freeOrderInfoWrapperStyle = css`
