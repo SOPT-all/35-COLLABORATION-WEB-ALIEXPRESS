@@ -15,7 +15,7 @@ interface ReviewBtnProps {
 	clickedCount: number;
 }
 
-const ReviewBtn = ({ type, clickedCount }: ReviewBtnProps) => {
+function ReviewBtn({ type, clickedCount }: ReviewBtnProps) {
 	const [isClicked, setIsClicked] = useState(false);
 	const [count, setCount] = useState(clickedCount);
 	const handleClick = (): void => {
@@ -42,12 +42,12 @@ const ReviewBtn = ({ type, clickedCount }: ReviewBtnProps) => {
 	return (
 		<button css={btnStyleMap[isClicked ? 'true' : 'false']} onClick={handleClick}>
 			<div css={flexStyle}>
-				<div css={flexStyle}>{icon}</div>
-				<div css={flexStyle}>{btnText}</div>
+				{icon}
+				<div>{btnText}</div>
 				<div css={countStyle}>({formatCount(count)})</div>
 			</div>
 		</button>
 	);
-};
+}
 
 export default ReviewBtn;

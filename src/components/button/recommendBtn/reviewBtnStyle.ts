@@ -25,6 +25,7 @@ export const countStyle = (theme: Theme) => css`
 // 공통 버튼 스타일
 const commonBtnContainerStyle = css`
 	display: flex;
+	align-items: center;
 	box-sizing: border-box;
 	width: auto;
 	min-width: 9.2rem;
@@ -34,7 +35,7 @@ const commonBtnContainerStyle = css`
 	border-radius: 4px;
 `;
 
-//버튼 클릭이 됐을때 스타일
+// 버튼 클릭이 됐을때 스타일
 export const clickedBtnContainerStyle = (theme: Theme) => css`
 	${commonBtnContainerStyle};
 	color: ${theme.colors.notificationPrimary};
@@ -53,7 +54,7 @@ export const nonClickedBtnContainerStyle = (theme: Theme) => css`
 	color: ${theme.colors.gray9};
 
 	background-color: ${theme.colors.gray2};
-	border: none;
+	border: 1px solid ${theme.colors.gray2};
 
 	&:hover {
 		background-color: ${theme.colors.gray3};
