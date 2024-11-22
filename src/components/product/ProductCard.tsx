@@ -12,27 +12,27 @@ interface ProductProps {
 }
 
 const ProductCard = ({ image, name, price, discountRate, hasCoupon }: ProductProps) => (
-        <section css={productContainer}>
-            <article css={imageContainer}>
+        <article css={productContainer}>
+            <div css={imageContainer}>
                 <img css={imageStyle} src={image} alt={name} />
-            </article>
-            <article css={productInfoContainer}>
-                <article css={productInfoWrapper}>
+            </div>
+            <div css={productInfoContainer}>
+                <div css={productInfoWrapper}>
                     <p css={productNameStyle}>{name}</p>
                     <div css={priceContainer}>
-                        <p css={productWonStyle}>₩</p>
-                        <p css={productPriceStyle}>{price.toLocaleString()}</p>
+                        <span css={productWonStyle}>₩</span>
+                        <span css={productPriceStyle}>{price.toLocaleString()}</span>
                         <span css={productDiscountStyle}>{discountRate}%</span>
                     </div>
-                </article>               
-                <article css={tagContainer}>
+                </div>               
+                <div css={tagContainer}>
                     <FreeTag text='무료 배송' color='red'/>
                     <FreeTag text='무료 반품' color='gray'/>
-                </article>
-            </article>
+                </div>
+            </div>
             {hasCoupon && <button css={couponBtnStyle}>쿠폰 받기<IcArrowrightGray12/></button>}
 
-        </section>
+        </article>
 );
 
 export default ProductCard;
