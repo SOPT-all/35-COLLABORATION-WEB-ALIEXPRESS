@@ -58,13 +58,13 @@ const DeliveryStatusComponent = () => {
 			<div css={contentContainerStyle}>
 				<div css={textStatusContainerStyle}>
 					<div css={dateStatusContainerStyle}>
-						<p css={dateStringStyle}>{LAST_STATUS.steps.month}</p>
-						<p css={dateKorStringStyle}>월&nbsp;</p>
-						<p css={dateStringStyle}>{LAST_STATUS.steps.day}</p>
-						<p css={dateKorStringStyle}>일&nbsp;</p>
-						<p css={dateStringStyle}>{LAST_STATUS.steps.time}</p>
+						<p>
+							{LAST_STATUS.steps.month}월 {LAST_STATUS.steps.day}일 {LAST_STATUS.steps.time}
+						</p>
 					</div>
-					<p css={textStringStyle}>{LAST_STATUS.steps.message}</p>
+					<div>
+						<p css={textStringStyle}>{LAST_STATUS.steps.message}</p>
+					</div>
 				</div>
 				<div css={iconContainerStyle}>
 					<div css={eachIconContainerStyle}>

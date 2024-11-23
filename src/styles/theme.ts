@@ -304,6 +304,16 @@ const theme = {
 				line-height: 8px;
 			`,
 		},
+		both: {
+			captionBothMedium12: css`
+				font-weight: 500;
+				font-size: 1.2rem;
+				font-family: 'Apple SD Gothic Neo', 'TT Norms Pro', sans-serif;
+				line-height: 14px;
+				text-transform: lowercase;
+				vertical-align: middle;
+			`,
+		},
 	},
 };
 

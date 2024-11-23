@@ -5,24 +5,8 @@ export const headerStringStyle = (theme: Theme) => css`
 	color: ${theme.colors.gray6};
 `;
 
-export const dateStringStyle = (theme: Theme) => css`
-	${theme.fonts.eng.captionMedium12};
-	color: ${theme.colors.gray6};
-`;
-
-export const dateKorStringStyle = (theme: Theme) => css`
-	${theme.fonts.kor.captionMedium12};
-	color: ${theme.colors.gray6};
-`;
-
 export const textStringStyle = (theme: Theme) => css`
-	${theme.fonts.eng.titleBold20};
-`;
-
-export const dateStatusContainerStyle = css`
-	display: flex;
-	align-items: center;
-	height: 1.6rem;
+	${theme.fonts.kor.titleBold20};
 `;
 
 export const deliveryStatusContainserStyle = (theme: Theme) => css`
@@ -34,8 +18,8 @@ export const deliveryStatusContainserStyle = (theme: Theme) => css`
 	height: 35.7rem;
 	padding: 2rem 2.4rem 3rem;
 
-	background-color: ${theme.colors.white};
-	border: 1px solid black;
+	background-color: ${theme.colors.gray1};
+	border-radius: 8px;
 `;
 
 export const contentContainerStyle = css`
@@ -49,15 +33,25 @@ export const contentContainerStyle = css`
 export const textStatusContainerStyle = (theme: Theme) => css`
 	display: flex;
 	flex-direction: column;
-	gap: 0.8rem;
+	gap: 0.7rem;
 	align-items: center;
 	justify-content: center;
 	width: 43.7rem;
+	height: 7rem;
 	padding: 1.3rem 0;
 
 	background: ${theme.colors.gray2};
 	border: 1px solid ${theme.colors.gray3};
 	border-radius: 12px;
+`;
+
+export const dateStatusContainerStyle = (theme: Theme) => css`
+	display: flex;
+	align-items: center;
+	height: 1.6rem;
+
+	${theme.fonts.both.captionBothMedium12};
+	color: ${theme.colors.gray6};
 `;
 
 export const iconContainerStyle = css`
@@ -74,7 +68,6 @@ export const eachIconContainerStyle = (theme: Theme) => css`
 	align-items: center;
 	justify-content: center;
 
-	${theme.fonts.kor.captionMedium12};
 	color: ${theme.colors.gray6};
 `;
 
