@@ -26,6 +26,8 @@ import {
 	eachIconContainerStyle,
 	iconBoxStyle,
 	currentSpanStyle,
+	dateStatusContainerStyle,
+	dateKorStringStyle,
 } from './deliveryStatusStyle';
 
 type StatusName = '결제 완료' | '상품 준비' | '국제 운송' | '국내 입고' | '국내 배송' | '배송 완료';
@@ -55,7 +57,13 @@ const DeliveryStatusComponent = () => {
 			</header>
 			<div css={contentContainerStyle}>
 				<div css={textStatusContainerStyle}>
-					<p css={dateStringStyle}>{LAST_STATUS.steps.date}</p>
+					<div css={dateStatusContainerStyle}>
+						<p css={dateStringStyle}>{LAST_STATUS.steps.month}</p>
+						<p css={dateKorStringStyle}>월&nbsp;</p>
+						<p css={dateStringStyle}>{LAST_STATUS.steps.day}</p>
+						<p css={dateKorStringStyle}>일&nbsp;</p>
+						<p css={dateStringStyle}>{LAST_STATUS.steps.time}</p>
+					</div>
 					<p css={textStringStyle}>{LAST_STATUS.steps.message}</p>
 				</div>
 				<div css={iconContainerStyle}>

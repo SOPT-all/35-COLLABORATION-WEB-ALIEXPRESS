@@ -1,15 +1,28 @@
 import { Theme, css } from '@emotion/react';
 
 export const headerStringStyle = (theme: Theme) => css`
-	${theme.fonts.kor.bodyMediumGray14};
+	${theme.fonts.kor.bodyMedium14};
+	color: ${theme.colors.gray6};
 `;
 
 export const dateStringStyle = (theme: Theme) => css`
-	${theme.fonts.eng.captionMediumGray12};
+	${theme.fonts.eng.captionMedium12};
+	color: ${theme.colors.gray6};
+`;
+
+export const dateKorStringStyle = (theme: Theme) => css`
+	${theme.fonts.kor.captionMedium12};
+	color: ${theme.colors.gray6};
 `;
 
 export const textStringStyle = (theme: Theme) => css`
 	${theme.fonts.eng.titleBold20};
+`;
+
+export const dateStatusContainerStyle = css`
+	display: flex;
+	align-items: center;
+	height: 1.6rem;
 `;
 
 export const deliveryStatusContainserStyle = (theme: Theme) => css`
@@ -60,7 +73,9 @@ export const eachIconContainerStyle = (theme: Theme) => css`
 	gap: 1.6rem;
 	align-items: center;
 	justify-content: center;
-	${theme.fonts.kor.captionMediumGray12};
+
+	${theme.fonts.kor.captionMedium12};
+	color: ${theme.colors.gray6};
 `;
 
 export const iconBoxStyle = css`
