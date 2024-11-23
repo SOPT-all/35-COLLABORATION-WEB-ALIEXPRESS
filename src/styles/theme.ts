@@ -27,7 +27,7 @@ const theme = {
 		gray3: '#EBEBEB',
 		gray4: '#CCCCCC',
 		gray5: '#AFB2B4',
-		gray6: '#7C7C7F',
+		gray6: '#7C7E7F',
 		gray7: '#757575',
 		gray8: '#353639',
 		gray9: '#222222',
@@ -84,6 +84,13 @@ const theme = {
 				font-family: 'Apple SD Gothic Neo', sans-serif;
 				line-height: 17px;
 			`,
+			bodyMediumGray14: css`
+				color: #7c7e7f;
+				font-weight: 500;
+				font-size: 1.4rem;
+				font-family: 'Apple SD Gothic Neo', sans-serif;
+				line-height: 17px;
+			`,
 			bodyBold13: css`
 				font-weight: 700;
 				font-size: 1.3rem;
@@ -112,6 +119,14 @@ const theme = {
 				text-transform: lowercase;
 			`,
 			captionMedium12: css`
+				font-weight: 500;
+				font-size: 1.2rem;
+				font-family: 'Apple SD Gothic Neo', sans-serif;
+				line-height: 14px;
+				text-transform: lowercase;
+			`,
+			captionMediumGray12: css`
+				color: #afb2b4;
 				font-weight: 500;
 				font-size: 1.2rem;
 				font-family: 'Apple SD Gothic Neo', sans-serif;
@@ -260,6 +275,14 @@ const theme = {
 				font-size: 1.2rem;
 				font-family: 'TT Norms Pro', sans-serif;
 				line-height: 16px;
+			`,
+			captionMediumGray12: css`
+				color: #7c7e7f;
+				font-weight: 500;
+				font-size: 1.2rem;
+				font-family: 'TT Norms Pro', sans-serif;
+				line-height: 14px;
+				text-transform: lowercase;
 			`,
 			captionRegular12: css`
 				font-weight: 400;

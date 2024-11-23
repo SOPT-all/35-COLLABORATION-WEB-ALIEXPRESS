@@ -94,4 +94,12 @@ const ORDER_STATUS = {
 	},
 } as const;
 
-export default ORDER_STATUS;
+const LAST_STATUS = {
+	name: '배송 완료',
+	steps: {
+		message: '배송이 완료되었습니다.',
+		date: '8월 28일 10:29',
+	},
+} as const;
+
+export { ORDER_STATUS, LAST_STATUS };
