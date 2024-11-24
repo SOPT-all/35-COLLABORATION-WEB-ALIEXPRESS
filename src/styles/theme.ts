@@ -313,6 +313,14 @@ const theme = {
 				text-transform: lowercase;
 				vertical-align: middle;
 			`,
+			captionBothMedium10: css`
+				font-weight: 500;
+				font-size: 1rem;
+				font-family: 'Apple SD Gothic Neo', 'TT Norms Pro', sans-serif;
+				line-height: 12px;
+				text-transform: lowercase;
+				vertical-align: middle;
+			`,
 		},
 	},
 };

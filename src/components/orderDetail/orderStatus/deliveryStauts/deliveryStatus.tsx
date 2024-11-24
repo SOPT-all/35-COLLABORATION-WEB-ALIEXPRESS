@@ -17,7 +17,6 @@ import { LAST_STATUS } from '@constants/orderStatusList';
 
 import {
 	headerStringStyle,
-	dateStringStyle,
 	textStringStyle,
 	deliveryStatusContainserStyle,
 	contentContainerStyle,
@@ -27,7 +26,6 @@ import {
 	iconBoxStyle,
 	currentSpanStyle,
 	dateStatusContainerStyle,
-	dateKorStringStyle,
 } from './deliveryStatusStyle';
 
 type StatusName = '결제 완료' | '상품 준비' | '국제 운송' | '국내 입고' | '국내 배송' | '배송 완료';
