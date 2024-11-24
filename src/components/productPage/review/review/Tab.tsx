@@ -2,6 +2,7 @@ import { TabLayout, btnStyle } from '@components/productPage/review/review/TabSt
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 import ReviewTypeLabel from './ReviewTypeLabel';
+import CardList from './CardList';
 
 interface TabProps {
 	total: number;
@@ -9,10 +10,9 @@ interface TabProps {
 	negative: number;
 }
 
-const theme = useTheme();
-
 const Tab = ({ total, positive, negative }: TabProps) => {
 	const [activeTab, setActiveTab] = useState<string>('total');
+	const theme = useTheme();
 
 	const handleTab = (e: React.MouseEvent<HTMLButtonElement>) => {
 		setActiveTab(e.currentTarget.name);
@@ -21,7 +21,7 @@ const Tab = ({ total, positive, negative }: TabProps) => {
 	return (
 		<div>
 			<div css={TabLayout}>
-				<button type="button" name="total" css={btnStyle(theme, activeTab === 'total')}>
+				<button type="button" name="total" css={btnStyle(theme, activeTab === 'total')} onClick={handleTab}>
 					전체 리뷰 ({total})
 				</button>
 				<button type="button" name="positive" css={btnStyle(theme, activeTab === 'positive')} onClick={handleTab}>
@@ -31,8 +31,8 @@ const Tab = ({ total, positive, negative }: TabProps) => {
 					비판 리뷰 ({negative})
 				</button>
 			</div>
-
 			{activeTab === 'total' && <ReviewTypeLabel />}
+			<CardList />
 		</div>
 	);
 };
