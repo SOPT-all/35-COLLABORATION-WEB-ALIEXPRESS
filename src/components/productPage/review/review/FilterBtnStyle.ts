@@ -20,7 +20,7 @@ export const fontStyle = (theme: Theme) => css`
 
 export const dropDownLayoutStyle = (theme: Theme) => css`
 	position: absolute;
-	top: 3.2rem;
+	top: 5rem;
 	width: 15.4rem;
 
 	background-color: ${theme.colors.gray1};
