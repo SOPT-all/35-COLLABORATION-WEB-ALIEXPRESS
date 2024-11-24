@@ -73,13 +73,21 @@ export const colorStyle = (theme: Theme) => css`
 	color: ${theme.colors.gray6};
 	${theme.fonts.eng.captionMedium12};
 `;
-
 export const reviewStyle = (theme: Theme) => css`
+	/* 두 줄 말줄임표 스타일 */
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+
+	width: 39rem;
 	margin-top: 1.2rem;
-	${theme.colors.gray9}
+	overflow: hidden;
+
+	color: ${theme.colors.gray9};
+	text-overflow: ellipsis;
+	word-break: break-word;
 	${theme.fonts.eng.captionMedium12};
 `;
-
 export const imgWrapper = css`
 	display: flex;
 	gap: 0.8rem;
