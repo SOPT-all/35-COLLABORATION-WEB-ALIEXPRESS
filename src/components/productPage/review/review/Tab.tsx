@@ -32,7 +32,7 @@ const Tab = ({ total, positive, negative }: TabProps) => {
 				</button>
 			</div>
 			{activeTab === 'total' && <ReviewTypeLabel />}
-			<CardList />
+			<CardList activeTab={activeTab} />
 		</div>
 	);
 };
