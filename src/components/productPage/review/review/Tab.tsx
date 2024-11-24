@@ -1,6 +1,8 @@
 import { TabLayout, btnStyle } from '@components/productPage/review/review/TabStyle';
 import { useState } from 'react';
 
+import ReviewTypeLabel from './ReviewTypeLabel';
+
 interface TabProps {
 	total: number;
 	positive: number;
@@ -27,7 +29,8 @@ const Tab = ({ total, positive, negative }: TabProps) => {
 					비판 리뷰 ({negative})
 				</button>
 			</div>
-			{/* <div>추후 activeTab 상태에 따라 아래에 리뷰 렌더링</div> */}
+
+			{activeTab === 'total' && <ReviewTypeLabel />}
 		</div>
 	);
 };
