@@ -14,6 +14,7 @@ import {
 	frameDetailStyle,
 	frameDetailContentStyle,
 	frameContentStyle,
+	lineConnectorStyle,
 } from './detailStatusStyle';
 
 const DetailStatusComponent = () => {
@@ -25,7 +26,7 @@ const DetailStatusComponent = () => {
 			</header>
 			<div css={deliveryStatusCardStyle}>
 				{statuses.map((status, index) => (
-					<div css={frameContentStyle}>
+					<div css={[frameContentStyle, index !== statuses.length - 1 && lineConnectorStyle]}>
 						<div css={frameTitleStyle}>
 							<p css={titleDateStringStyle}>
 								{`${status.steps[status.steps.length - 1].month}월 ${status.steps[status.steps.length - 1].day}일`}

@@ -51,6 +51,23 @@ export const deliveryStatusCardStyle = (theme: Theme) => css`
 	}
 `;
 
+export const lineConnectorStyle = (theme: Theme) => css`
+	position: relative;
+
+	&::after {
+		position: absolute;
+		top: 1.6rem;
+		left: 6.5rem;
+		width: 0.2rem;
+		height: calc(100% + 0.7rem);
+
+		background-color: ${theme.colors.gray3};
+		transform: translateX(-50%);
+
+		content: '';
+	}
+`;
+
 export const statusNameStringStyle = (theme: Theme) => css`
 	${theme.fonts.kor.bodyBold13};
 	color: ${theme.colors.gray7};
@@ -82,25 +99,25 @@ export const titleDateStringStyle = (theme: Theme) => css`
 	${theme.fonts.both.captionBothMedium10};
 `;
 
-export const frameContentStyle = (theme: Theme) => css`
+export const frameContentStyle = css`
 	display: flex;
 	flex-direction: column;
 	min-width: 22.3rem;
 `;
 
-export const frameTitleStyle = (theme: Theme) => css`
+export const frameTitleStyle = css`
 	display: flex;
 	gap: 1.4rem;
 `;
 
-export const frameDetailStyle = (theme: Theme) => css`
+export const frameDetailStyle = css`
 	display: flex;
 	flex-direction: column;
 	gap: 0.8rem;
 	padding-left: 8.7rem;
 `;
 
-export const frameDetailContentStyle = (theme: Theme) => css`
+export const frameDetailContentStyle = css`
 	display: flex;
 	flex-direction: column;
 	gap: 0.4rem;
