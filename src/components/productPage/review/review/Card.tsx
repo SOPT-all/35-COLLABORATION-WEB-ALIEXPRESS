@@ -17,7 +17,7 @@ import {
 	reviewBtnWrapper,
 } from '@components/productPage/review/review/CardStyle';
 import RenderStar from '@components/productPage/review/review/RenderStar';
-import { Review } from '@constants/userReview'; // 리뷰 데이터 가져오기
+import { Review } from '@constants/userReview'; 
 import { useState } from 'react';
 
 interface CardProps {
