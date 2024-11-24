@@ -2,6 +2,7 @@ import { ImgUser2, IcShieldWhite12, IcMeatballLightgray20 } from '@assets/icons/
 import ReviewBtn from '@components/button/recommendBtn/reviewBtn';
 import UserReview from '@constants/userReview';
 import { Theme, css } from '@emotion/react';
+import { useState } from 'react';
 
 export const CardLayout = (theme: Theme) => css`
 	display: flex;
@@ -89,34 +90,57 @@ export const reviewBtnWrapper = css`
 	gap: 0.8rem;
 `;
 
-const Card = () => (
-	<div css={[CardLayout, relativeStyle]}>
-		<div>
-			<ImgUser2 />
-			<IcShieldWhite12 css={circleStyle} />
-		</div>
-		<div css={infoWrapper}>
-			<div css={cardTitleStyle}>
-				<span css={nameStyle}>{UserReview.username}</span>
-				<div css={nameRightStyle}>
-					<span css={dateStyle}>24.08.22</span>
-					<IcMeatballLightgray20 />
+export const reportBtnStyle = (theme: Theme) => css`
+	position: absolute;
+	top: 2.4rem;
+	right: 0;
+
+	width: 4.9rem;
+	height: 3.8rem;
+	padding: 1rem 1.4rem;
+
+	background-color: ${theme.colors.white};
+	border: 1px solid ${theme.colors.gray3};
+	${theme.fonts.kor.captionMedium10};
+	border-radius: 4px;
+`;
+
+const Card = () => {
+	const [isHovered, setIsHovered] = useState(false);
+	return (
+		<div css={[CardLayout, relativeStyle]}>
+			<div>
+				<ImgUser2 />
+				<IcShieldWhite12 css={circleStyle} />
+			</div>
+			<div css={infoWrapper}>
+				<div css={cardTitleStyle}>
+					<span css={nameStyle}>{UserReview.username}</span>
+					<div css={[nameRightStyle, relativeStyle]}>
+						<span css={dateStyle}>24.08.22</span>
+						<IcMeatballLightgray20 onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} />
+						{isHovered && (
+							<button type="button" css={reportBtnStyle}>
+								신고
+							</button>
+						)}
+					</div>
+				</div>
+				<span>{UserReview.rating}점</span>
+				<span css={colorStyle}>색상: 검정</span>
+				<p css={reviewStyle}>{UserReview.contentKorean}</p>
+				<div css={imgWrapper}>
+					<img src={UserReview.reviewImage} alt={`${UserReview.username}님의 리뷰 이미지`} />
+					<img src={UserReview.reviewImage} alt={`${UserReview.username}님의 리뷰 이미지`} />
+				</div>
+				<div css={reviewBtnWrapper}>
+					<ReviewBtn type="useful" clickedCount={UserReview.usefulCount} />
+					<ReviewBtn type="recommend" clickedCount={UserReview.recommendCount} />
+					<ReviewBtn type="like" clickedCount={UserReview.likeCount} />
 				</div>
 			</div>
-			<span>{UserReview.rating}점</span>
-			<span css={colorStyle}>색상: 검정</span>
-			<p css={reviewStyle}>{UserReview.contentKorean}</p>
-			<div css={imgWrapper}>
-				<img src={UserReview.reviewImage} alt={`${UserReview.username}님의 리뷰 이미지`} />
-				<img src={UserReview.reviewImage} alt={`${UserReview.username}님의 리뷰 이미지`} />
-			</div>
-			<div css={reviewBtnWrapper}>
-				<ReviewBtn type="useful" clickedCount={UserReview.usefulCount} />
-				<ReviewBtn type="recommend" clickedCount={UserReview.recommendCount} />
-				<ReviewBtn type="like" clickedCount={UserReview.likeCount} />
-			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 export default Card;
