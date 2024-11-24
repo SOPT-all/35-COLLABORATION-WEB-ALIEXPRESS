@@ -84,6 +84,13 @@ const theme = {
 				font-family: 'Apple SD Gothic Neo', sans-serif;
 				line-height: 17px;
 			`,
+			bodyMediumBlue14: css`
+				color: #3170ee;
+				font-weight: 500;
+				font-size: 1.4rem;
+				font-family: 'Apple SD Gothic Neo', sans-serif;
+				line-height: 17px;
+			`,
 			bodyBold13: css`
 				font-weight: 700;
 				font-size: 1.3rem;
@@ -235,6 +242,12 @@ const theme = {
 				font-size: 1.6rem;
 				font-family: 'TT Norms Pro', sans-serif;
 				line-height: 20px;
+			`,
+			bodyBold14: css`
+				font-weight: 700;
+				font-size: 1.4rem;
+				font-family: 'TT Norms Pro', sans-serif;
+				line-height: 17px;
 			`,
 			bodyBold13: css`
 				font-weight: 700;
