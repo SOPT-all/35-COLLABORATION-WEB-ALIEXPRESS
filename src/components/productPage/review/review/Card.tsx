@@ -17,20 +17,28 @@ import {
 	reviewBtnWrapper,
 } from '@components/productPage/review/review/CardStyle';
 import RenderStar from '@components/productPage/review/review/RenderStar';
-import UserReview from '@constants/userReview';
+import { Review } from '@constants/userReview'; // 리뷰 데이터 가져오기
 import { useState } from 'react';
 
-const Card = () => {
+interface CardProps {
+	review: Review;
+}
+
+const Card = ({ review }: CardProps) => {
 	const [isHovered, setIsHovered] = useState(false);
+
 	return (
 		<div css={[cardLayout, relativeStyle]}>
+			{/* 작성자 프로필 이미지 */}
 			<div>
 				<ImgUser2 />
 				<IcShieldWhite12 css={circleStyle} />
 			</div>
+			{/* 리뷰 상세 내용 */}
 			<div css={infoWrapper}>
+				{/* 작성자 정보, 신고기능 */}
 				<div css={cardTitleStyle}>
-					<span css={nameStyle}>{UserReview.username}</span>
+					<span css={nameStyle}>{review.username}</span>
 					<div css={[nameRightStyle, relativeStyle]}>
 						<span css={dateStyle}>24.08.22</span>
 						<IcMeatballLightgray20 onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} />
@@ -41,20 +49,28 @@ const Card = () => {
 						)}
 					</div>
 				</div>
-				<RenderStar rating={UserReview.rating} />
+
+				{/* 별점 렌더링 */}
+				<RenderStar rating={review.rating} />
 				<span css={colorStyle}>색상: 검정</span>
-				<p css={reviewStyle}>
-					{UserReview.isMonth === true && <div css={monthChipStyle}>한달사용리뷰</div>}
-					{UserReview.contentKorean}
-				</p>
-				<div css={imgWrapper}>
-					<img src={UserReview.reviewImage} alt={`${UserReview.username}님의 리뷰 이미지`} />
-					<img src={UserReview.reviewImage} alt={`${UserReview.username}님의 리뷰 이미지`} />
+
+				{/* 한달사용여부, 리뷰상세내용 */}
+				<div css={reviewStyle}>
+					{review.isMonth === true && <div css={monthChipStyle}>한달사용리뷰</div>}
+					{review.contentKorean}
 				</div>
+
+				{/* 리뷰 이미지 데이터 받아오면 한개로 줄일예정 */}
+				<div css={imgWrapper}>
+					<img src={review.reviewImage} alt={`${review.username}님의 리뷰 이미지`} />
+					<img src={review.reviewImage} alt={`${review.username}님의 리뷰 이미지`} />
+				</div>
+
+				{/* 좋아요 버튼 */}
 				<div css={reviewBtnWrapper}>
-					<ReviewBtn type="useful" clickedCount={UserReview.usefulCount} />
-					<ReviewBtn type="recommend" clickedCount={UserReview.recommendCount} />
-					<ReviewBtn type="like" clickedCount={UserReview.likeCount} />
+					<ReviewBtn type="useful" clickedCount={review.usefulCount} />
+					<ReviewBtn type="recommend" clickedCount={review.recommendCount} />
+					<ReviewBtn type="like" clickedCount={review.likeCount} />
 				</div>
 			</div>
 		</div>
