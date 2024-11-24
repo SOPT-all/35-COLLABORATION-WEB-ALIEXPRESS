@@ -71,6 +71,7 @@ export const colorStyle = (theme: Theme) => css`
 export const reviewStyle = (theme: Theme) => css`
 	display: -webkit-box;
 	width: 39rem;
+	height: 3.4rem;
 	margin-top: 1.2rem;
 	overflow: hidden;
 
