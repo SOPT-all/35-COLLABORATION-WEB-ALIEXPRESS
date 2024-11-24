@@ -1,6 +1,7 @@
 import { Theme, css } from '@emotion/react';
 
 export const FilterBtnContainer = (theme: Theme) => css`
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -14,11 +15,13 @@ export const FilterBtnContainer = (theme: Theme) => css`
 
 export const fontStyle = (theme: Theme) => css`
 	${theme.fonts.kor.captionMedium12}
+	z-index: 5;
 `;
 
 export const dropDownLayoutStyle = (theme: Theme) => css`
+	position: absolute;
+	top: 3.2rem;
 	width: 15.4rem;
-	margin-top: 0.2rem;
 
 	background-color: ${theme.colors.gray1};
 	border: 1px solid ${theme.colors.gray3};

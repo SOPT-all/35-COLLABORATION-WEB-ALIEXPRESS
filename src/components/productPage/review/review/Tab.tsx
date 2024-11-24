@@ -1,8 +1,8 @@
-import { TabLayout, btnStyle } from '@components/productPage/review/review/TabStyle';
-import { useState } from 'react';
+import CardList from '@components/productPage/review/review/CardList';
+import ReviewTypeLabel from '@components/productPage/review/review/ReviewTypeLabel';
+import { tabLayout, btnStyle } from '@components/productPage/review/review/TabStyle';
 import { useTheme } from '@emotion/react';
-import ReviewTypeLabel from './ReviewTypeLabel';
-import CardList from './CardList';
+import { useState } from 'react';
 
 interface TabProps {
 	total: number;
@@ -20,7 +20,7 @@ const Tab = ({ total, positive, negative }: TabProps) => {
 
 	return (
 		<div>
-			<div css={TabLayout}>
+			<div css={tabLayout(theme, activeTab === 'total')}>
 				<button type="button" name="total" css={btnStyle(theme, activeTab === 'total')} onClick={handleTab}>
 					전체 리뷰 ({total})
 				</button>

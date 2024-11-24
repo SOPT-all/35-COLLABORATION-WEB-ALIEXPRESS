@@ -1,11 +1,12 @@
 import { Theme, css } from '@emotion/react';
 
-export const TabLayout = (theme: Theme) => css`
+export const tabLayout = (theme: Theme, isActive: boolean) => css`
 	display: flex;
 	gap: 0.6rem;
 	align-items: center;
 	width: 96rem;
 	height: 5.6rem;
+	margin-bottom: ${isActive ? '0rem' : '2rem'};
 	padding: 0.4rem;
 
 	background-color: ${theme.colors.gray2};
