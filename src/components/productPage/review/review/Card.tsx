@@ -74,11 +74,7 @@ export const colorStyle = (theme: Theme) => css`
 	${theme.fonts.eng.captionMedium12};
 `;
 export const reviewStyle = (theme: Theme) => css`
-	/* 두 줄 말줄임표 스타일 */
 	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-
 	width: 39rem;
 	margin-top: 1.2rem;
 	overflow: hidden;
@@ -87,7 +83,28 @@ export const reviewStyle = (theme: Theme) => css`
 	text-overflow: ellipsis;
 	word-break: break-word;
 	${theme.fonts.eng.captionMedium12};
+
+	/* 말줄임표 처리 */
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
 `;
+
+export const monthChipStyle = (theme: Theme) => css`
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 7.5rem;
+	height: 2rem;
+	margin-right: 0.3rem;
+	padding: 0.2rem 0.4rem;
+
+	color: ${theme.colors.brandPrimary};
+
+	${theme.fonts.eng.captionMedium12};
+	background-color: ${theme.colors.brandBg};
+	border-radius: 2px;
+`;
+
 export const imgWrapper = css`
 	display: flex;
 	gap: 0.8rem;
@@ -137,7 +154,10 @@ const Card = () => {
 				</div>
 				<RenderStar rating={UserReview.rating} />
 				<span css={colorStyle}>색상: 검정</span>
-				<p css={reviewStyle}>{UserReview.contentKorean}</p>
+				<p css={reviewStyle}>
+					{UserReview.isMonth === true && <div css={monthChipStyle}>한달사용리뷰</div>}
+					{UserReview.contentKorean}
+				</p>
 				<div css={imgWrapper}>
 					<img src={UserReview.reviewImage} alt={`${UserReview.username}님의 리뷰 이미지`} />
 					<img src={UserReview.reviewImage} alt={`${UserReview.username}님의 리뷰 이미지`} />
