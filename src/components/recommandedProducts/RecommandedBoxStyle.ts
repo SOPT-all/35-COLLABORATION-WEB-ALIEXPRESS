@@ -1,6 +1,9 @@
 import { css, Theme } from '@emotion/react';
 
 export const recommandedBoxContainer = (theme: Theme) => css`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	box-sizing: border-box;
 	width: 127.7rem;
 	height: 6.2rem;
@@ -18,9 +21,6 @@ export const contentLayout = css`
 `;
 
 export const titleTextStyle = (theme: Theme) => css`
-	/* width: 100%;
-	height: 2.2rem; */
-
 	${theme.fonts.eng.titleBold18}
 	color: ${theme.colors.gray9};
 `;

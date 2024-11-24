@@ -1,3 +1,4 @@
+import InquiryBtn from '@components/button/inquiryBtn/InquiryBtn';
 import RecommanedBtn from '@components/button/recommendBtn/RecommanedBtn';
 import {
 	contentLayout,
@@ -21,6 +22,7 @@ const RecommandedBox = () => (
 				<p css={subTextStyle}>100,000+ 개 판매 완료</p>
 			</div>
 		</div>
+		<InquiryBtn />
 	</section>
 );
 
