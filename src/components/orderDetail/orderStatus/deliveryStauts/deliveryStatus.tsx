@@ -47,6 +47,7 @@ const getIconComponent = (status: StatusName, currentStatus: StatusName) => {
 
 const DeliveryStatusComponent = () => {
 	const currentStatus = LAST_STATUS.name;
+	const isCurrentStatus = (status: StatusName) => currentStatus === status;
 
 	return (
 		<div css={deliveryStatusContainserStyle}>
@@ -66,33 +67,33 @@ const DeliveryStatusComponent = () => {
 				</div>
 				<div css={iconContainerStyle}>
 					<div css={eachIconContainerStyle}>
-						<div css={[iconBoxStyle, currentStatus === '결제 완료' && currentSpanStyle]}>
+						<div css={[iconBoxStyle, isCurrentStatus('결제 완료') && currentSpanStyle]}>
 							{getIconComponent('결제 완료', currentStatus)}
 							<span>결제 완료</span>
 						</div>
 						<IcArrowrightGray24 />
-						<div css={[iconBoxStyle, currentStatus === '상품 준비' && currentSpanStyle]}>
+						<div css={[iconBoxStyle, isCurrentStatus('상품 준비') && currentSpanStyle]}>
 							{getIconComponent('상품 준비', currentStatus)}
 							<span>상품 준비</span>
 						</div>
 						<IcArrowrightGray24 />
-						<div css={[iconBoxStyle, currentStatus === '국제 운송' && currentSpanStyle]}>
+						<div css={[iconBoxStyle, isCurrentStatus('국제 운송') && currentSpanStyle]}>
 							{getIconComponent('국제 운송', currentStatus)}
 							<span>국제 운송</span>
 						</div>
 					</div>
 					<div css={eachIconContainerStyle}>
-						<div css={[iconBoxStyle, currentStatus === '국내 입고' && currentSpanStyle]}>
+						<div css={[iconBoxStyle, isCurrentStatus('국내 입고') && currentSpanStyle]}>
 							{getIconComponent('국내 입고', currentStatus)}
 							<span>국내 입고</span>
 						</div>
 						<IcArrowrightGray24 />
-						<div css={[iconBoxStyle, currentStatus === '국내 배송' && currentSpanStyle]}>
+						<div css={[iconBoxStyle, isCurrentStatus('국내 배송') && currentSpanStyle]}>
 							{getIconComponent('국내 배송', currentStatus)}
 							<span>국내 배송</span>
 						</div>
 						<IcArrowrightGray24 />
-						<div css={[iconBoxStyle, currentStatus === '배송 완료' && currentSpanStyle]}>
+						<div css={[iconBoxStyle, isCurrentStatus('배송 완료') && currentSpanStyle]}>
 							{getIconComponent('배송 완료', currentStatus)}
 							<span>배송 완료</span>
 						</div>
