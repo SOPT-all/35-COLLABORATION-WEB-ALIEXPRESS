@@ -1,5 +1,4 @@
 import { IcShieldWhite12, IcMeatballLightgray20 } from '@assets/icons/index';
-import profileImages from '@constants/userImg';
 import ReviewBtn from '@components/button/recommendBtn/reviewBtn';
 import {
 	cardLayout,
@@ -18,14 +17,16 @@ import {
 	reviewBtnWrapper,
 } from '@components/productPage/review/review/CardStyle';
 import RenderStar from '@components/productPage/review/review/RenderStar';
+import profileImages from '@constants/userImg';
 import { Review } from '@constants/userReview';
 import { useState } from 'react';
 
 interface CardProps {
 	review: Review;
+	isOriginal: boolean;
 }
 
-const Card = ({ review }: CardProps) => {
+const Card = ({ review, isOriginal }: CardProps) => {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
@@ -60,7 +61,7 @@ const Card = ({ review }: CardProps) => {
 				{/* 한달사용여부, 리뷰상세내용 */}
 				<div css={reviewStyle}>
 					{review.isMonth === true && <div css={monthChipStyle}>한달사용리뷰</div>}
-					{review.contentKorean}
+					{isOriginal ? review.contentOriginal : review.contentKorean}
 				</div>
 
 				{/* 리뷰 이미지 데이터 받아오면 한개로 줄일예정 */}

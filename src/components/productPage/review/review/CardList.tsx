@@ -4,9 +4,10 @@ import { data } from '@constants/userReview';
 
 interface CardListProps {
 	activeTab: string;
+	isOriginal: boolean;
 }
 
-const CardList = ({ activeTab }: CardListProps) => {
+const CardList = ({ activeTab, isOriginal }: CardListProps) => {
 	const { goodReviews, badReviews } = data;
 
 	return (
@@ -15,7 +16,7 @@ const CardList = ({ activeTab }: CardListProps) => {
 			{activeTab !== 'negative' && (
 				<div css={reviewLayout(activeTab)}>
 					{goodReviews.map((review) => (
-						<Card key={review.reviewId} review={review} />
+						<Card key={review.reviewId} review={review} isOriginal={isOriginal} />
 					))}
 				</div>
 			)}
@@ -24,7 +25,7 @@ const CardList = ({ activeTab }: CardListProps) => {
 			{activeTab !== 'positive' && (
 				<div css={reviewLayout(activeTab)}>
 					{badReviews.map((review) => (
-						<Card key={review.reviewId} review={review} />
+						<Card key={review.reviewId} review={review} isOriginal={isOriginal} />
 					))}
 				</div>
 			)}

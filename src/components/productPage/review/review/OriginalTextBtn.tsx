@@ -1,5 +1,4 @@
 import { Theme, css } from '@emotion/react';
-import { useState } from 'react';
 
 export const btnStyle = (theme: Theme) => css`
 	${theme.fonts.kor.captionMedium12}
@@ -9,13 +8,14 @@ export const btnStyle = (theme: Theme) => css`
 	border: none;
 `;
 
-const OriginalTextBtn = () => {
-	const [isClicked, setIsClicked] = useState(false);
-	return (
-		<button type="button" css={btnStyle}>
-			원문표시
-		</button>
-	);
-};
+interface OriginalTextBtnProps {
+	onClick: () => void;
+}
+
+const OriginalTextBtn = ({ onClick }: OriginalTextBtnProps) => (
+	<button type="button" css={btnStyle} onClick={onClick}>
+		원문표시
+	</button>
+);
 
 export default OriginalTextBtn;
