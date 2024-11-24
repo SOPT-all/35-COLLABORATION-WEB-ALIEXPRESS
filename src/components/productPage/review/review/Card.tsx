@@ -1,4 +1,5 @@
-import { ImgUser2, IcShieldWhite12, IcMeatballLightgray20 } from '@assets/icons/index';
+import { IcShieldWhite12, IcMeatballLightgray20 } from '@assets/icons/index';
+import profileImages from '@constants/userImg';
 import ReviewBtn from '@components/button/recommendBtn/reviewBtn';
 import {
 	cardLayout,
@@ -17,7 +18,7 @@ import {
 	reviewBtnWrapper,
 } from '@components/productPage/review/review/CardStyle';
 import RenderStar from '@components/productPage/review/review/RenderStar';
-import { Review } from '@constants/userReview'; 
+import { Review } from '@constants/userReview';
 import { useState } from 'react';
 
 interface CardProps {
@@ -31,7 +32,9 @@ const Card = ({ review }: CardProps) => {
 		<div css={[cardLayout, relativeStyle]}>
 			{/* 작성자 프로필 이미지 */}
 			<div>
-				<ImgUser2 />
+				{profileImages.map((Image, index) =>
+					index === review.reviewId % profileImages.length ? <Image key={index} /> : null,
+				)}
 				<IcShieldWhite12 css={circleStyle} />
 			</div>
 			{/* 리뷰 상세 내용 */}
