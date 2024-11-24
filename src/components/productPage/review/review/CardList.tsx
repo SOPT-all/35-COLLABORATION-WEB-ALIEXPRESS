@@ -1,21 +1,6 @@
 import Card from '@components/productPage/review/review/Card';
+import { reviewContainer, reviewLayout } from '@components/productPage/review/review/CardListStyle';
 import { data } from '@constants/userReview';
-import { css } from '@emotion/react';
-
-export const reviewContainer = css`
-	display: flex;
-	flex-wrap: wrap;
-	gap: 2rem;
-	width: 96rem;
-	height: 62rem;
-	overflow: hidden;
-`;
-
-export const reviewLayout = (activeTab: string) => css`
-	display: flex;
-	flex-flow: ${activeTab === 'total' ? 'column' : 'row'} wrap;
-	gap: 2rem;
-`;
 
 interface CardListProps {
 	activeTab: string;
