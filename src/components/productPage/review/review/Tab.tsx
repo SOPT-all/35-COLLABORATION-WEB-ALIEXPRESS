@@ -1,6 +1,6 @@
 import { TabLayout, btnStyle } from '@components/productPage/review/review/TabStyle';
 import { useState } from 'react';
-
+import { useTheme } from '@emotion/react';
 import ReviewTypeLabel from './ReviewTypeLabel';
 
 interface TabProps {
@@ -8,6 +8,8 @@ interface TabProps {
 	positive: number;
 	negative: number;
 }
+
+const theme = useTheme();
 
 const Tab = ({ total, positive, negative }: TabProps) => {
 	const [activeTab, setActiveTab] = useState<string>('total');
@@ -19,13 +21,13 @@ const Tab = ({ total, positive, negative }: TabProps) => {
 	return (
 		<div>
 			<div css={TabLayout}>
-				<button type="button" name="total" css={btnStyle(activeTab === 'total')} onClick={handleTab}>
+				<button type="button" name="total" css={btnStyle(theme, activeTab === 'total')}>
 					전체 리뷰 ({total})
 				</button>
-				<button type="button" name="positive" css={btnStyle(activeTab === 'positive')} onClick={handleTab}>
+				<button type="button" name="positive" css={btnStyle(theme, activeTab === 'positive')} onClick={handleTab}>
 					긍정 리뷰 ({positive})
 				</button>
-				<button type="button" name="negative" css={btnStyle(activeTab === 'negative')} onClick={handleTab}>
+				<button type="button" name="negative" css={btnStyle(theme, activeTab === 'negative')} onClick={handleTab}>
 					비판 리뷰 ({negative})
 				</button>
 			</div>

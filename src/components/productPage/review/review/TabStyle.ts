@@ -1,7 +1,6 @@
-import { css } from '@emotion/react';
-import theme from '@styles/theme';
+import { Theme, css } from '@emotion/react';
 
-export const TabLayout = css`
+export const TabLayout = (theme: Theme) => css`
 	display: flex;
 	gap: 0.6rem;
 	align-items: center;
@@ -13,7 +12,7 @@ export const TabLayout = css`
 	border-radius: 12px;
 `;
 
-export const btnStyle = (isActive: boolean) => css`
+export const btnStyle = (theme: Theme, isActive: boolean) => css`
 	width: 31.3rem;
 	height: 4.8rem;
 
