@@ -18,3 +18,10 @@ export const TitleLayout = (theme: Theme) => css`
 	color: ${theme.colors.gray9};
 	${theme.fonts.kor.bodyBold16}
 `;
+
+export const ProductWrapper = css`
+	display: flex;
+	gap: 1.3rem;
+	width: 100%;
+	height: 30rem;
+`;
