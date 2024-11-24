@@ -11,7 +11,7 @@ const FilterBtn = () => {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
-		<button type="button" css={fontStyle}>
+		<div css={fontStyle}>
 			<div css={FilterBtnContainer} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 				<p>최근 작성된 리뷰</p>
 				<IcArrowbottomGray12 />
@@ -24,7 +24,7 @@ const FilterBtn = () => {
 					<p css={listStyle}>재구매 리뷰</p>
 				</div>
 			)}
-		</button>
+		</div>
 	);
 };
 
