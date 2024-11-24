@@ -1,5 +1,6 @@
 import { ImgUser2, IcShieldWhite12, IcMeatballLightgray20 } from '@assets/icons/index';
 import ReviewBtn from '@components/button/recommendBtn/reviewBtn';
+import RenderStar from '@components/productPage/review/review/RenderStar';
 import UserReview from '@constants/userReview';
 import { Theme, css } from '@emotion/react';
 import { useState } from 'react';
@@ -126,7 +127,7 @@ const Card = () => {
 						)}
 					</div>
 				</div>
-				<span>{UserReview.rating}점</span>
+				<RenderStar rating={UserReview.rating} />
 				<span css={colorStyle}>색상: 검정</span>
 				<p css={reviewStyle}>{UserReview.contentKorean}</p>
 				<div css={imgWrapper}>
