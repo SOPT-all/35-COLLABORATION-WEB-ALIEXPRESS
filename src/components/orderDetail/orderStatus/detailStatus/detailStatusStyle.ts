@@ -75,10 +75,6 @@ export const statusNameStringStyle = (theme: Theme) => css`
 
 export const firstStringStyle = (theme: Theme) => css`
 	color: ${theme.colors.brandPrimary};
-
-	svg path {
-		fill: ${theme.colors.brandPrimary6};
-	}
 `;
 export const stepMessageStringStyle = (theme: Theme) => css`
 	${theme.fonts.kor.captionMedium10};

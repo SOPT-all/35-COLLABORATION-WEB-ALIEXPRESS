@@ -153,6 +153,7 @@ const LAST_STATUS = {
 		day: 28,
 		time: '10:29',
 	},
+	description: '받은 상품에 결함이 있거나 설명과 일치하지 않은 경우, 주문 후 90일 이내에 이의 제기를 하실 수 있습니다.',
 } as const;
 
 export { ORDER_STATUS, LAST_STATUS };
