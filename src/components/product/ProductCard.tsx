@@ -66,10 +66,12 @@ const ProductCard = ({
 				</ul>
 			</div>
 			{hasCoupon && (
-				<button css={couponBtnStyle}>
-					쿠폰 받기
-					<IcArrowrightGray12 />
-				</button>
+                <div css={(theme) => couponBtnStyle(theme, hoverLarge)}>
+                    <button>
+                        쿠폰 받기
+                        <IcArrowrightGray12 />
+                    </button>
+                </div>
 			)}
 		</div>
 	</article>

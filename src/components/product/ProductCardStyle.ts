@@ -109,19 +109,23 @@ export const tagContainer = css`
 	gap: 1rem;
 `;
 
-export const couponBtnStyle = (theme: Theme) => css`
-	display: flex;
-	gap: 0.8rem;
-	align-items: center;
-	justify-content: space-between;
+export const couponBtnStyle = (theme: Theme, hoverLarge: boolean) => css`
+	button {
+		display: flex;
+		gap: 0.8rem;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		height: 2.9rem;
+		padding: 0.8rem 1.2rem;
+
+		color: ${theme.colors.gray9};
+		${theme.fonts.kor.captionBold11};
+
+		background-color: ${theme.colors.gray2};
+		border: 0;
+		border-radius: 12px;
+	}
 	width: 100%;
-	height: 2.9rem;
-	padding: 0.8rem 1.2rem;
-
-	color: ${theme.colors.gray9};
-	${theme.fonts.kor.captionBold11};
-
-	background-color: ${theme.colors.gray2};
-	border: 0;
-	border-radius: 12px;
+	${!hoverLarge && `padding: 0 1.6rem;`}
 `;
