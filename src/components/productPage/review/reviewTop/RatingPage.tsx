@@ -1,6 +1,6 @@
 import RatingAverageCard from '@components/productPage/review/reviewTop/RatingAverageCard';
 import RatingCountCard from '@components/productPage/review/reviewTop/RatingCountCard';
-import RatingServiceCrad from '@components/productPage/review/reviewTop/RatingServiceCrad';
+import RatingServiceCard from '@components/productPage/review/reviewTop/RatingServiceCard';
 import { css } from '@emotion/react';
 
 export const AverageContainer = css`
@@ -12,7 +12,7 @@ const RatingPage = () => (
 	<div css={AverageContainer}>
 		<RatingAverageCard />
 		<RatingCountCard />
-		<RatingServiceCrad />
+		<RatingServiceCard />
 	</div>
 );
 
