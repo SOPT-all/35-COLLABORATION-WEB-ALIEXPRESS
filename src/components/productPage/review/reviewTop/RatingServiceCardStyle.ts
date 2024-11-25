@@ -29,3 +29,9 @@ export const cardBox = css`
 	flex-direction: column;
 	gap: 0.4rem;
 `;
+
+export const svgStyle = ({ width }: { width: number }) => css`
+	rect:last-of-type {
+		width: ${width}rem;
+	}
+`;

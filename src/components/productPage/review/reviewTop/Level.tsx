@@ -2,9 +2,8 @@ import { Theme, css } from '@emotion/react';
 
 export const levelContainer = css`
 	display: flex;
-	gap: 11.4rem;
-
-	/* justify-content: space-around; */
+	justify-content: space-between;
+	width: 27.6rem;
 `;
 
 export const fontStyle = (theme: Theme) => css`
