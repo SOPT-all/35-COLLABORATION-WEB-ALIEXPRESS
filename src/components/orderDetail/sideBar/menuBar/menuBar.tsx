@@ -29,7 +29,7 @@ export const MenuBarComponent = () => {
 				{menuItems.map((item) => {
 					if (item === '친구 초대') {
 						return (
-							<nav>
+							<nav key={item}>
 								<DividerSmall />
 								<li
 									key={item}
