@@ -1,7 +1,12 @@
 import { IcCometReviewStarFill18, IcCometReviewStarHalf18 } from '@assets/icons/index';
-import { cardLayout, numStyle, starWrapper, descStyle } from '@components/productPage/review/reviewTop/RatingAverageCardStyle';
+import {
+	cardLayout,
+	numStyle,
+	starWrapper,
+	descStyle,
+} from '@components/productPage/review/reviewTop/RatingAverageCardStyle';
 
-const AverageCard1 = () => (
+const RatingAverageCard = () => (
 	<div>
 		{/* 카드1 */}
 		<div css={cardLayout}>
@@ -17,4 +22,4 @@ const AverageCard1 = () => (
 	</div>
 );
 
-export default AverageCard1;
+export default RatingAverageCard;

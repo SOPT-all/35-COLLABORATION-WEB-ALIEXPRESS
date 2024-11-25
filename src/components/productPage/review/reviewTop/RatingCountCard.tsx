@@ -3,7 +3,7 @@ import { frameImg } from '@assets/images/frame';
 import { cardLayout, cardWrapper, fontStyle } from '@components/productPage/review/reviewTop/RatingCountCardStyle';
 import RenderStars from '@components/productPage/review/reviewTop/RenderStar';
 
-const AverageCard2 = () => (
+const RatingCountCard = () => (
 	<div css={[cardLayout]}>
 		<div css={cardWrapper}>
 			<RenderStars rating={5} />
@@ -32,4 +32,4 @@ const AverageCard2 = () => (
 		</div>
 	</div>
 );
-export default AverageCard2;
+export default RatingCountCard;

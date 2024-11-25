@@ -6,7 +6,7 @@ import {
 } from '@components/productPage/review/reviewTop/RatingServiceCardStyle';
 import Level from '@components/productPage/review/reviewTop/Level';
 
-const AverageCard3 = () => (
+const RatingServiceCrad = () => (
 	<div css={cardLayout}>
 		<div css={cardWrapper}>
 			<p css={titleStyle}>성능</p>
@@ -33,4 +33,4 @@ const AverageCard3 = () => (
 	</div>
 );
 
-export default AverageCard3;
+export default RatingServiceCrad;
