@@ -3,7 +3,7 @@ import {
 	cardWrapper,
 	titleStyle,
 	cardBox,
-} from '@components/productPage/review/reviewTop/AverageCard3Style';
+} from '@components/productPage/review/reviewTop/RatingServiceCardStyle';
 import Level from '@components/productPage/review/reviewTop/Level';
 
 const AverageCard3 = () => (

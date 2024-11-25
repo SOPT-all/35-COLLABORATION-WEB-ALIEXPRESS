@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { frameImg } from '@assets/images/frame';
-import { cardLayout, cardWrapper, fontStyle } from '@components/productPage/review/reviewTop/AverageCard2Style';
+import { cardLayout, cardWrapper, fontStyle } from '@components/productPage/review/reviewTop/RatingCountCardStyle';
 import RenderStars from '@components/productPage/review/reviewTop/RenderStar';
 
 const AverageCard2 = () => (

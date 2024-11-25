@@ -1,5 +1,5 @@
 import { IcCometReviewStarFill18, IcCometReviewStarHalf18 } from '@assets/icons/index';
-import { cardLayout, numStyle, starWrapper, descStyle } from '@components/productPage/review/reviewTop/Average1Style';
+import { cardLayout, numStyle, starWrapper, descStyle } from '@components/productPage/review/reviewTop/RatingAverageCardStyle';
 
 const AverageCard1 = () => (
 	<div>

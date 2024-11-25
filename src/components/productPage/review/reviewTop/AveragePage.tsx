@@ -1,6 +1,6 @@
-import AverageCard1 from '@components/productPage/review/reviewTop/AverageCard1';
-import AverageCard2 from '@components/productPage/review/reviewTop/AverageCard2';
-import AverageCard3 from '@components/productPage/review/reviewTop/AverageCard3';
+import AverageCard1 from '@components/productPage/review/reviewTop/RatingAverageCard';
+import AverageCard2 from '@components/productPage/review/reviewTop/RatingCountCard';
+import AverageCard3 from '@components/productPage/review/reviewTop/RatingServiceCrad';
 import { css } from '@emotion/react';
 
 export const AverageContainer = css`
