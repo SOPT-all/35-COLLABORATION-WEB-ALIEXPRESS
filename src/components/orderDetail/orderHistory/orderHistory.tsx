@@ -41,7 +41,7 @@ const OrderHistory = () => (
 					<p css={productTitleStyle}>{ORDER_HISTORYT.detail}</p>
 					<p>Clear</p>
 					<div css={productPriceStyle}>
-						<p>￦1,358</p>
+						<p>￦{ORDER_HISTORYT.price.toLocaleString()}</p>
 						<p>x{ORDER_HISTORYT.quantity}</p>
 					</div>
 				</div>
@@ -57,7 +57,7 @@ const OrderHistory = () => (
 			<div css={costRowStyle}>
 				<p css={costGrayLabelStyle}>합계</p>
 				<div css={costValueStyle}>
-					<p>￦{ORDER_HISTORYT.price}</p>
+					<p>￦{ORDER_HISTORYT.price.toLocaleString()}</p>
 					<IcArrowbottomGray12 />
 				</div>
 			</div>
