@@ -3,6 +3,7 @@ import { Theme, css } from '@emotion/react';
 export const LabelWrapper = css`
 	display: flex;
 	gap: 2rem;
+	margin: 1.4rem 0;
 `;
 
 export const fontBox = css`

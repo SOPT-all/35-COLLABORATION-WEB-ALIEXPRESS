@@ -1,19 +1,19 @@
-import { css } from '@emotion/react';
-import theme from '@styles/theme';
+import { Theme, css } from '@emotion/react';
 
-export const TabLayout = css`
+export const tabLayout = (theme: Theme, isActive: boolean) => css`
 	display: flex;
 	gap: 0.6rem;
 	align-items: center;
 	width: 96rem;
 	height: 5.6rem;
+	margin-bottom: ${isActive ? '0rem' : '2rem'};
 	padding: 0.4rem;
 
 	background-color: ${theme.colors.gray2};
 	border-radius: 12px;
 `;
 
-export const btnStyle = (isActive: boolean) => css`
+export const btnStyle = (theme: Theme, isActive: boolean) => css`
 	width: 31.3rem;
 	height: 4.8rem;
 
