@@ -27,7 +27,7 @@ const theme = {
 		gray3: '#EBEBEB',
 		gray4: '#CCCCCC',
 		gray5: '#AFB2B4',
-		gray6: '#7C7C7F',
+		gray6: '#7C7E7F',
 		gray7: '#757575',
 		gray8: '#353639',
 		gray9: '#222222',
@@ -302,6 +302,24 @@ const theme = {
 				font-size: 0.8rem;
 				font-family: 'TT Norms Pro', sans-serif;
 				line-height: 8px;
+			`,
+		},
+		both: {
+			captionBothMedium12: css`
+				font-weight: 500;
+				font-size: 1.2rem;
+				font-family: 'Apple SD Gothic Neo', 'TT Norms Pro', sans-serif;
+				line-height: 14px;
+				text-transform: lowercase;
+				vertical-align: middle;
+			`,
+			captionBothMedium10: css`
+				font-weight: 500;
+				font-size: 1rem;
+				font-family: 'Apple SD Gothic Neo', 'TT Norms Pro', sans-serif;
+				line-height: 12px;
+				text-transform: lowercase;
+				vertical-align: middle;
 			`,
 		},
 	},
