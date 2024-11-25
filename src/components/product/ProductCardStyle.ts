@@ -62,11 +62,12 @@ export const imageStyle = css`
 	object-fit: cover;
 `;
 
-export const productInfoContainer = (hoverLarge: boolean) => css`
+export const productInfoContainer = (width: string, hoverLarge: boolean) => css`
 	display: flex;
 	flex-direction: column;
 	gap: 0.8rem;
 	${!hoverLarge && `padding: 0 1.6rem;`}
+	width: ${width};
 `;
 
 export const productInfoWrapper = css`
@@ -76,8 +77,12 @@ export const productInfoWrapper = css`
 `;
 
 export const productNameStyle = (theme: Theme) => css`
+	overflow: hidden;
+
 	${theme.fonts.eng.bodyMedium13};
 	color: ${theme.colors.gray9};
+	white-space: nowrap;
+	text-overflow: ellipsis;
 `;
 
 export const priceContainer = css`

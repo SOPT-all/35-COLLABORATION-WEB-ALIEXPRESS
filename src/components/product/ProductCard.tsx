@@ -46,9 +46,9 @@ const ProductCard = ({
 			<div css={imageContainer(width)}>
 				<img css={imageStyle} src={image} alt={name} />
 			</div>
-			<div css={productInfoContainer(hoverLarge)}>
+			<div css={productInfoContainer(width, hoverLarge)}>
 				<div css={productInfoWrapper}>
-					<p css={productNameStyle}>{name}</p>
+					<span css={productNameStyle}>{name}</span>
 					<StarBtn rating={rating} reviewCount={reviewCount} isRatingVisible={false} />
 					<div css={priceContainer}>
 						<span css={productWonStyle}>₩</span>
