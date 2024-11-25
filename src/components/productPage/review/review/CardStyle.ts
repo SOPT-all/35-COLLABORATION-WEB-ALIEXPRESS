@@ -16,6 +16,11 @@ export const relativeStyle = css`
 	position: relative;
 `;
 
+export const sizeStyle = css`
+	width: 4rem;
+	height: 4rem;
+`;
+
 export const circleStyle = (theme: Theme) => css`
 	position: absolute;
 	top: 1.2rem;

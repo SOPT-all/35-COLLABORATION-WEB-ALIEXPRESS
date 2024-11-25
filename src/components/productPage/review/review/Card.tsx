@@ -6,6 +6,7 @@ import {
 	nameStyle,
 	dateStyle,
 	colorStyle,
+	sizeStyle,
 	circleStyle,
 	reviewStyle,
 	infoWrapper,
@@ -34,7 +35,7 @@ const Card = ({ review, isOriginal }: CardProps) => {
 			{/* 작성자 프로필 이미지 */}
 			<div>
 				{profileImages.map((Image, index) =>
-					index === review.reviewId % profileImages.length ? <Image key={index} /> : null,
+					index === review.reviewId % profileImages.length ? <Image key={index} css={sizeStyle} /> : null,
 				)}
 				<IcShieldWhite12 css={circleStyle} />
 			</div>
