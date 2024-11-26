@@ -1,5 +1,5 @@
 import { IcListBlack24 } from '@assets/icons';
-import { buyerInfo } from '@constants/buyerInfo';
+import BUYER_INFO from '@constants/buyerInfo';
 
 import {
 	purchaseInfoComponentStyle,
@@ -12,7 +12,7 @@ import {
 
 export const PurchaseInfoComponent = () => {
 	const handleCopyClick = () => {
-		const copyText = `${buyerInfo.orderId}`;
+		const copyText = `${BUYER_INFO.orderId}`;
 		navigator.clipboard.writeText(copyText);
 	};
 
@@ -23,18 +23,18 @@ export const PurchaseInfoComponent = () => {
 				<div>
 					<span css={korStringStyle}>주문 </span>
 					<span css={engStringStyle}>ID: </span>
-					<span css={engStringStyle}>{buyerInfo.orderId}</span>
+					<span css={engStringStyle}>{BUYER_INFO.orderId}</span>
 				</div>
 				<div>
 					<span css={korStringStyle}>주문일: </span>
-					<span css={engStringStyle}>{buyerInfo.orderYear}</span>
+					<span css={engStringStyle}>{BUYER_INFO.orderYear}</span>
 					<span css={korStringStyle}>년</span>
-					<span css={engStringStyle}> {buyerInfo.orderMonth}</span>
+					<span css={engStringStyle}> {BUYER_INFO.orderMonth}</span>
 					<span css={korStringStyle}>월</span>
-					<span css={engStringStyle}> {buyerInfo.orderDay}</span>
+					<span css={engStringStyle}> {BUYER_INFO.orderDay}</span>
 					<span css={korStringStyle}>일</span>
 				</div>
-				<span css={korStringStyle}>결제 수단: {buyerInfo.paymentMethod}</span>
+				<span css={korStringStyle}>결제 수단: {BUYER_INFO.paymentMethod}</span>
 			</div>
 			<div css={copyButtonStyle}>
 				<span id="copyTxt" onClick={handleCopyClick} css={copyStringStyle}>

@@ -1,4 +1,4 @@
-export const buyerInfo = {
+const BUYER_INFO = {
 	name: '데2걸',
 	phone: '+82 01029348372',
 	address: 'Jangan-gu, Suwon-si, Gyeonggi-do, Korea',
@@ -8,3 +8,5 @@ export const buyerInfo = {
 	orderDay: 22,
 	paymentMethod: '네이버페이',
 } as const;
+
+export default BUYER_INFO;
