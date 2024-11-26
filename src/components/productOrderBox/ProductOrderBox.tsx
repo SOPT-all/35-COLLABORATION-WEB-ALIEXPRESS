@@ -1,5 +1,5 @@
 import OrderBox from '@components/orderBox/OrderBox';
-import ProductInfo from '@components/productInfo/ProductInfo';
+import ProductInfo from '@components/ProductInfo/ProductInfo';
 import { css } from '@emotion/react';
 
 const ProductOrderBoxContainer = css`

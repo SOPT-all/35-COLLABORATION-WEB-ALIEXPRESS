@@ -25,7 +25,7 @@ import {
 	endSaleTiemStyle,
 	reviewBoxStyle,
 	columnflexStyle,
-} from '@components/productInfo/ProductInfoStyle';
+} from '@components/ProductInfo/ProductInfoStyle';
 
 const ProductInfo = () => (
 	<div css={columnflexStyle}>
