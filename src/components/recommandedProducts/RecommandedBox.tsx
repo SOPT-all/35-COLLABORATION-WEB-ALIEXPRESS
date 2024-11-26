@@ -1,5 +1,5 @@
-import InquiryBtn from '@components/button/inquiryBtn/InquiryBtn';
 import RecommanedBtn from '@components/button/recommendBtn/RecommanedBtn';
+import ContactBtn from '@components/button/contactBtn/ContactBtn';
 import {
 	contentLayout,
 	flexBoxStyle,
@@ -22,7 +22,7 @@ const RecommandedBox = () => (
 				<p css={subTextStyle}>100,000+ 개 판매 완료</p>
 			</div>
 		</div>
-		<InquiryBtn />
+		<ContactBtn />
 	</section>
 );
 

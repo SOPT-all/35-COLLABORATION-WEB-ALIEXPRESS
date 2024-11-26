@@ -12,11 +12,11 @@ export const buttonStyle = (theme: Theme) => css`
 	padding: 0.3rem 1.2rem;
 
 	background: none;
-	border: none;
+	border: 1px solid ${theme.colors.gray9};
+	border-radius: 999px;
 
 	&:hover {
 		border: 1px solid ${theme.colors.gray7};
-		border-radius: 999px;
 	}
 `;
 
