@@ -24,7 +24,7 @@ import {
 	discountPercentStyle,
 	endSaleTiemStyle,
 	reviewBoxStyle,
-} from '@components/ProductInfo/ProductInfoStyle';
+} from '@components/productInfo/ProductInfoStyle';
 
 const ProductInfo = () => (
 	<>
