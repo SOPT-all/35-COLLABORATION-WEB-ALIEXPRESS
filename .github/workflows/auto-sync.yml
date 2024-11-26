@@ -1,0 +1,55 @@
+name: Auto Sync
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  sync_push:
+    name: Sync forked repository on push or pull_request to main
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'push' || 
+      (github.event_name == 'pull_request' && github.base_ref == 'main')
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.AUTO_SYNC }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn run build
+
+      - name: Add remote URL
+        run: |
+          git remote add forked_repo https://seong-hui:${{ secrets.AUTO_SYNC }}@github.com/seong-hui/35-COLLABORATION-WEB-ALIEXPRESS
+          git config user.name seong-hui
+          git config user.email msh9980@naver.com
+
+      - name: Push Changes to forked_repo
+        run: |
+          git push -f forked_repo HEAD:main
+
+  sync_pr:
+    name: Build project on pull_request to develop
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.base_ref == 'develop'
+    steps:
+      - name: Checkout develop
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.AUTO_SYNC }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn run build

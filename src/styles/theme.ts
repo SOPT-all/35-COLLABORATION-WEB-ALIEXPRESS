@@ -189,6 +189,13 @@ const theme = {
 				line-height: 8px;
 				text-transform: lowercase;
 			`,
+			captionMedium9: css`
+				font-weight: 500;
+				font-size: 0.9rem;
+				font-family: 'Apple SD Gothic Neo', sans-serif;
+				line-height: 12px;
+				text-transform: lowercase;
+			`,
 		},
 		eng: {
 			// Head
@@ -222,6 +229,12 @@ const theme = {
 				font-size: 1.8rem;
 				font-family: 'TT Norms Pro', sans-serif;
 				line-height: 22px;
+			`,
+			titleBold16: css`
+				font-weight: 700;
+				font-size: 1.6rem;
+				font-family: 'TT Norms Pro', sans-serif;
+				line-height: 20px;
 			`,
 			// Body
 			bodyBold16: css`
