@@ -4,7 +4,7 @@ export const RecommandedListContainer = css`
 	display: flex;
 	flex-direction: column;
 	width: 127.7rem;
-	height: 34.5rem;
+	margin-bottom: 2.4rem;
 `;
 
 export const TitleLayout = (theme: Theme) => css`
@@ -24,4 +24,5 @@ export const ProductWrapper = css`
 	gap: 1.3rem;
 	width: 100%;
 	height: 30rem;
+	margin-bottom: 4.4rem;
 `;

@@ -1,5 +1,3 @@
-import Footer from '@components/footer/Footer';
-import ProductHeader from '@components/header/productHeader/ProductHeader';
 import ProductCardList from '@components/product/ProductCardList';
 import RecommandedList from '@components/product/RecommandedList';
 import ProductOrderBox from '@components/productOrderBox/ProductOrderBox';
