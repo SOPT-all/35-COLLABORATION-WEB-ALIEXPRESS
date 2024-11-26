@@ -57,10 +57,16 @@ export const productInfoStyle = css`
 	display: flex;
 	flex-direction: column;
 	gap: 0.9rem;
+	width: 56rem;
 `;
 
 export const productTitleStyle = (theme: Theme) => css`
 	${theme.fonts.kor.bodyBold13};
+	width: 56rem;
+	overflow: hidden;
+
+	white-space: nowrap;
+	text-overflow: ellipsis;
 `;
 
 export const productPriceStyle = css`
