@@ -1,6 +1,6 @@
 import ProductCardList from '@components/product/ProductCardList';
 import RecommandedList from '@components/product/RecommandedList';
-import ProductOrderBox from '@components/productOrderBox/ProductOrderBox';
+import ProductOrderBox from '@components/productOrderBox1/ProductOrderBox';
 import ReviewPage from '@components/productPage/review/review/ReviewPage';
 import Nav from '@components/productPage/review/reviewTop/Nav';
 import RatingPage from '@components/productPage/review/reviewTop/RatingPage';
