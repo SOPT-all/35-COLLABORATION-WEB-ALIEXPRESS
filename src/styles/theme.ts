@@ -27,7 +27,7 @@ const theme = {
 		gray3: '#EBEBEB',
 		gray4: '#CCCCCC',
 		gray5: '#AFB2B4',
-		gray6: '#7C7C7F',
+		gray6: '#7C7E7F',
 		gray7: '#757575',
 		gray8: '#353639',
 		gray9: '#222222',
