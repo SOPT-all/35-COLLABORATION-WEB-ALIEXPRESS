@@ -26,6 +26,7 @@ import {
 	iconBoxStyle,
 	currentSpanStyle,
 	dateStatusContainerStyle,
+	arrowContainerStyle
 } from './deliveryStatusStyle';
 
 type StatusName = '결제 완료' | '상품 준비' | '국제 운송' | '국내 입고' | '국내 배송' | '배송 완료';
@@ -44,6 +45,8 @@ const getIconComponent = (status: StatusName, currentStatus: StatusName) => {
 
 	return iconMap[status] || null;
 };
+
+const statusList: StatusName[] = ['결제 완료', '상품 준비', '국제 운송', '국내 입고', '국내 배송', '배송 완료'];
 
 const DeliveryStatusComponent = () => {
 	const currentStatus = LAST_STATUS.name;
@@ -67,36 +70,19 @@ const DeliveryStatusComponent = () => {
 				</div>
 				<div css={iconContainerStyle}>
 					<div css={eachIconContainerStyle}>
-						<div css={[iconBoxStyle, isCurrentStatus('결제 완료') && currentSpanStyle]}>
-							{getIconComponent('결제 완료', currentStatus)}
-							<span>결제 완료</span>
-						</div>
-						<IcArrowrightGray24 />
-						<div css={[iconBoxStyle, isCurrentStatus('상품 준비') && currentSpanStyle]}>
-							{getIconComponent('상품 준비', currentStatus)}
-							<span>상품 준비</span>
-						</div>
-						<IcArrowrightGray24 />
-						<div css={[iconBoxStyle, isCurrentStatus('국제 운송') && currentSpanStyle]}>
-							{getIconComponent('국제 운송', currentStatus)}
-							<span>국제 운송</span>
-						</div>
-					</div>
-					<div css={eachIconContainerStyle}>
-						<div css={[iconBoxStyle, isCurrentStatus('국내 입고') && currentSpanStyle]}>
-							{getIconComponent('국내 입고', currentStatus)}
-							<span>국내 입고</span>
-						</div>
-						<IcArrowrightGray24 />
-						<div css={[iconBoxStyle, isCurrentStatus('국내 배송') && currentSpanStyle]}>
-							{getIconComponent('국내 배송', currentStatus)}
-							<span>국내 배송</span>
-						</div>
-						<IcArrowrightGray24 />
-						<div css={[iconBoxStyle, isCurrentStatus('배송 완료') && currentSpanStyle]}>
-							{getIconComponent('배송 완료', currentStatus)}
-							<span>배송 완료</span>
-						</div>
+						{statusList.map((status, index) => (
+							<>
+								<div css={[iconBoxStyle, isCurrentStatus(status) && currentSpanStyle]} key={status}>
+									{getIconComponent(status, currentStatus)}
+									<span>{status}</span>
+								</div>
+								{index !== 2 && index < statusList.length - 1 && (
+									<div css={arrowContainerStyle}>
+										<IcArrowrightGray24 />
+									</div>
+								)}
+							</>
+						))}
 					</div>
 				</div>
 			</div>

@@ -63,10 +63,12 @@ export const iconContainerStyle = css`
 `;
 
 export const eachIconContainerStyle = (theme: Theme) => css`
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
 	gap: 1.6rem;
 	align-items: center;
-	justify-content: center;
+	width: 31.7rem;
+	height: 17.2rem;
 
 	color: ${theme.colors.gray6};
 `;
@@ -82,4 +84,9 @@ export const iconBoxStyle = css`
 export const currentSpanStyle = (theme: Theme) => css`
 	${theme.fonts.kor.captionBold12};
 	color: ${theme.colors.black};
+`;
+
+export const arrowContainerStyle = css`
+	display: flex;
+	justify-content: center;
 `;
