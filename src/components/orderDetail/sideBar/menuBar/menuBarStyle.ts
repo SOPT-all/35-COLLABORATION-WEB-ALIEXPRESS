@@ -52,7 +52,7 @@ export const selectedMenuItemStyle = (theme: Theme) => css`
 
 	background-color: ${theme.colors.gray2};
 
-	::after {
+	::before {
 		position: absolute;
 		left: 0;
 		display: block;
