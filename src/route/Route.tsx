@@ -1,4 +1,3 @@
-import Layout from '@constants/layout/Layout';
 import NotFoundPage from '@pages/NotFoundPage';
 import OrderPage from '@pages/OrderPage';
 import ProductPage from '@pages/ProductPage';
@@ -19,10 +18,6 @@ const router = createBrowserRouter([
 	},
 ]);
 
-const Route = () => (
-	<Layout>
-		<RouterProvider router={router} />
-	</Layout>
-);
+const Route = () => <RouterProvider router={router} />;
 
 export default Route;

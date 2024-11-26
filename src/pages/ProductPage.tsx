@@ -9,11 +9,11 @@ import RatingPage from '@components/productPage/review/reviewTop/RatingPage';
 import Title from '@components/productPage/review/reviewTop/Title';
 import ProductSummay from '@components/productSummary/ProductSummay';
 import RecommandedBox from '@components/recommandedProducts/RecommandedBox';
+import ProductLayout from '@constants/layout/ProductLayout';
 import SANPLE_PRODUCTS from '@constants/sampleProducts';
 
 const ProductPage = () => (
-	<>
-		<ProductHeader />
+	<ProductLayout>
 		<ProductOrderBox />
 		<Nav />
 		<Title />
@@ -23,8 +23,7 @@ const ProductPage = () => (
 		<RecommandedBox />
 		<RecommandedList />
 		<ProductCardList products={SANPLE_PRODUCTS} />
-		<Footer />
-	</>
+	</ProductLayout>
 );
 
 export default ProductPage;

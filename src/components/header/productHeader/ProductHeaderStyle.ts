@@ -8,7 +8,7 @@ export const headerStyle = (theme: Theme) => css`
 	display: flex;
 	gap: 1.6rem;
 	justify-content: space-between;
-	width: 100%;
+	width: 100vw;
 	height: 5.4rem;
 	padding: 0.5rem 5.6rem 0.5rem 2.6rem;
 
