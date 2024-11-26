@@ -1,7 +1,8 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from '@constants/layout/Layout';
+import NotFoundPage from '@pages/NotFoundPage';
 import OrderPage from '@pages/OrderPage';
 import ProductPage from '@pages/ProductPage';
-import NotFoundPage from '@pages/NotFoundPage';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
 	{
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
 	},
 ]);
 
-const Route = () => <RouterProvider router={router} />;
+const Route = () => (
+	<Layout>
+		<RouterProvider router={router} />
+	</Layout>
+);
 
 export default Route;
