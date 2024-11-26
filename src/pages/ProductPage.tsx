@@ -10,14 +10,12 @@ import RatingPage from '@components/productPage/review/reviewTop/RatingPage';
 import ProductSummay from '@components/productSummary/ProductSummay';
 import RecommandedBox from '@components/recommandedProducts/RecommandedBox';
 import SANPLE_PRODUCTS from '@constants/sampleProducts';
+import ProductOrderBox from '@components/productOrderBox/ProductOrderBox';
 
 const ProductPage = () => (
 	<>
 		<ProductHeader />
-		<div>
-			<ProductInfo />
-			<OrderBox />
-		</div>
+		<ProductOrderBox />
 		<Nav />
 		<RatingPage />
 		<ReviewPage />

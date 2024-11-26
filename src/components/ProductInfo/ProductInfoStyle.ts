@@ -165,3 +165,8 @@ export const warnDescriptionStyle = (theme: Theme) => css`
 	${theme.fonts.kor.captionMedium11}
 	color: ${theme.colors.gray6};
 `;
+
+export const columnflexStyle = css`
+	display: flex;
+	flex-direction: column;
+`;
