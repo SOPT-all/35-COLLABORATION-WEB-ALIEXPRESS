@@ -189,6 +189,13 @@ const theme = {
 				line-height: 8px;
 				text-transform: lowercase;
 			`,
+			captionMedium9: css`
+				font-weight: 500;
+				font-size: 0.9rem;
+				font-family: 'Apple SD Gothic Neo', sans-serif;
+				line-height: 12px;
+				text-transform: lowercase;
+			`,
 		},
 		eng: {
 			// Head
