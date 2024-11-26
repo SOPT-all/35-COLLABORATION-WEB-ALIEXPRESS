@@ -12,6 +12,15 @@ import {
 	IcGameBlack16,
 	IcWatchBlack16,
 	IcUnderwearBlack16,
+	IcDogBlack16,
+	IcShoesBlack16,
+	IcOfficesuppliesBlack16,
+	IcElectronicdevicesBlack16,
+	IcFurnitureBlack16,
+	IcToolBlack16,
+	IcHomecamBlack16,
+	IcManfashionBlack16,
+	IcWomanfashionBlack16,
 } from '@assets/icons/index';
 
 export const CATEGORIES = Object.freeze([
@@ -28,4 +37,13 @@ export const CATEGORIES = Object.freeze([
 	{ icon: IcUnderwearBlack16, label: '속옷/잠옷' },
 	{ icon: IcGameBlack16, label: '장난감/놀이' },
 	{ icon: IcWatchBlack16, label: '패션잡화' },
+	{ icon: IcDogBlack16, label: '반려동물' },
+	{ icon: IcShoesBlack16, label: '신발' },
+	{ icon: IcOfficesuppliesBlack16, label: '문구/사무용품' },
+	{ icon: IcElectronicdevicesBlack16, label: '디지털용품' },
+	{ icon: IcFurnitureBlack16, label: '가구' },
+	{ icon: IcToolBlack16, label: '공구/도구' },
+	{ icon: IcHomecamBlack16, label: '홈캠/도어룩' },
+	{ icon: IcManfashionBlack16, label: '남성패션' },
+	{ icon: IcWomanfashionBlack16, label: '여성패션' },
 ] as const);
