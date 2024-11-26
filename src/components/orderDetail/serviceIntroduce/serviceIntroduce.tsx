@@ -1,4 +1,4 @@
-import { IcBoxBlack24, IcReturnBlack24, IcHandshakeBlack24, DividerGray, IcArrowrightGray12 } from '@assets/icons';
+import { DividerGray, IcArrowrightGray12 } from '@assets/icons';
 import SERVICE_INTRODUCE_MSG from '@constants/serviceIntroduceMsg';
 
 import {
@@ -14,12 +14,7 @@ import {
 } from './serviceIntroduceStyle';
 
 const ServiceIntroduce = () => {
-	const contentData = [
-		{ icon: <IcBoxBlack24 />, message: SERVICE_INTRODUCE_MSG[0] },
-		{ icon: <IcReturnBlack24 />, message: SERVICE_INTRODUCE_MSG[1] },
-		{ icon: <IcHandshakeBlack24 />, message: SERVICE_INTRODUCE_MSG[2] },
-	];
-
+	const contentData = SERVICE_INTRODUCE_MSG;
 	return (
 		<div css={serviceIntroduceContainer}>
 			<header css={hedarTitleStyle}>
@@ -27,13 +22,13 @@ const ServiceIntroduce = () => {
 			</header>
 			<section css={sectionContainerStyle}>
 				{contentData.map((content, index) => (
-					<div key={content.message.title}>
+					<div key={content.title}>
 						<div css={contentContainerStyle}>
 							{content.icon}
 							<div css={contentBoxStyle}>
-								<p css={contentTitleStyle}>{content.message.title}</p>
+								<p css={contentTitleStyle}>{content.title}</p>
 								<div css={contentLineStyle}>
-									<p css={contentStyle}>{content.message.content}</p> <IcArrowrightGray12 />
+									<p css={contentStyle}>{content.content}</p> <IcArrowrightGray12 />
 								</div>
 							</div>
 						</div>
