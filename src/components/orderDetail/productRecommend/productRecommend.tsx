@@ -19,15 +19,12 @@ const ProductRecommendComponent = () => {
 	const handleScroll = (direction: 'prev' | 'next'): void => {
 		if (!scrollContainerRef.current) return;
 
-		if (direction === 'prev') {
-			scrollContainerRef.current.scrollTo({
-				left: scrollContainerRef.current.scrollLeft - scrollContainerRef.current.clientWidth * (3 / 5),
-			});
-		} else {
-			scrollContainerRef.current.scrollTo({
-				left: scrollContainerRef.current.scrollLeft + scrollContainerRef.current.clientWidth * (3 / 5),
-			});
-		}
+		const { scrollLeft, clientWidth } = scrollContainerRef.current;
+		const movedWidth = clientWidth * (3 / 5);
+
+		scrollContainerRef.current.scrollTo({
+			left: direction === 'prev' ? scrollLeft - movedWidth : scrollLeft + movedWidth,
+		});
 	};
 
 	return (
@@ -40,7 +37,7 @@ const ProductRecommendComponent = () => {
 				<div ref={scrollContainerRef} css={scrollContainerStyle}>
 					{products.map((product) => (
 						<ProductCard
-							key={product.name}
+							key={product.id}
 							image={product.image}
 							name={product.name}
 							price={product.price}
