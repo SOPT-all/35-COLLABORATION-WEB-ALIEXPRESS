@@ -1,3 +1,5 @@
+export { default as BtnLeftDefault } from './btn_left_defalut.svg';
+export { default as BtnRightDefault } from './btn_right_default.svg';
 export { default as CardDelieverStatus1 } from './card_deliverstatus_1_complete.svg';
 export { default as CardDelieverStatus2 } from './card_deliverstatus_2_complete.svg';
 export { default as CardDelieverStatus3 } from './card_deliverstatus_3_complete.svg';
