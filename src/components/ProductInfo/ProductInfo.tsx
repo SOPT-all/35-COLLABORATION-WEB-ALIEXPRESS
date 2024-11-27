@@ -24,10 +24,11 @@ import {
 	discountPercentStyle,
 	endSaleTiemStyle,
 	reviewBoxStyle,
+	columnflexStyle,
 } from '@components/ProductInfo/ProductInfoStyle';
 
 const ProductInfo = () => (
-	<>
+	<div css={columnflexStyle}>
 		<article css={productInfoContainerStyle}>
 			<section css={proudctImgLayoutStyle}>
 				<div css={detailImgBoxStyle}>
@@ -76,7 +77,7 @@ const ProductInfo = () => (
 				충전 및 보관 시 잠재적인 화재 위험을 유의하시고, 반드시 사용 설명서를 엄격히 준수해 주세요.
 			</div>
 		</section>
-	</>
+	</div>
 );
 
 export default ProductInfo;

@@ -6,6 +6,7 @@ import { css } from '@emotion/react';
 export const AverageContainer = css`
 	display: flex;
 	gap: 1.2rem;
+	width: 96rem;
 `;
 
 const RatingPage = () => (

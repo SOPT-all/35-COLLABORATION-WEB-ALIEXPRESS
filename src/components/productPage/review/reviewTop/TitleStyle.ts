@@ -7,7 +7,7 @@ export const relativeStyle = css`
 export const titleContainer = css`
 	display: flex;
 	align-items: center;
-	margin: 2.8rem 0 1.5rem;
+	margin: 1.8rem 0 1.5rem;
 `;
 
 export const fontKoStyle = (theme: Theme) => css`

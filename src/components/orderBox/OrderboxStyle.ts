@@ -122,22 +122,23 @@ export const orderButtonsLayoutStyle = css`
 `;
 
 export const countButtonsStyle = css`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	width: 6.7rem;
 	height: 1.8rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	margin: 0.8rem 0 1.6rem;
 `;
 
 export const iconWrapperStyle = (theme: Theme) => css`
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 1.8rem;
 	height: 1.8rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50px;
+
 	background-color: ${theme.colors.gray2};
+	border-radius: 50px;
 
 	&:hover {
 		background-color: ${theme.colors.gray4};
@@ -153,16 +154,16 @@ export const engCaptionBoldStyle = (theme: Theme) => css`
 `;
 
 export const orderBtnWrapperStyle = css`
-	width: 100%;
-	height: 12.5rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.8rem;
+	width: 100%;
+	height: 12.5rem;
 `;
 
 export const emojiBtnWrapperStyle = css`
-	width: 100%;
-	height: 3.6rem;
 	display: flex;
 	gap: 0.8rem;
+	width: 100%;
+	height: 3.6rem;
 `;

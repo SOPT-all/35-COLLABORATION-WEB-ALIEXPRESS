@@ -79,6 +79,7 @@ const GLOBALSTYLE = css`
 	html,
 	body {
 		width: 100%;
+		overflow-x: hidden;
 
 		font-size: 62.5%;
 		scroll-behavior: smooth;

@@ -1,13 +1,27 @@
+import ProductCardList from '@components/product/ProductCardList';
 import RecommandedList from '@components/product/RecommandedList';
-import ProductInfo from '@components/ProductInfo/ProductInfo';
+import ProductOrderBox from '@components/productOrderBox/ProductOrderBox';
+import ReviewPage from '@components/productPage/review/review/ReviewPage';
+import Nav from '@components/productPage/review/reviewTop/Nav';
+import RatingPage from '@components/productPage/review/reviewTop/RatingPage';
+import Title from '@components/productPage/review/reviewTop/Title';
+import ProductSummay from '@components/productSummary/ProductSummay';
 import RecommandedBox from '@components/recommandedProducts/RecommandedBox';
+import ProductLayout from 'layout/ProductLayout';
+import SANPLE_PRODUCTS from '@constants/sampleProducts';
 
 const ProductPage = () => (
-	<div>
-		<ProductInfo />
+	<ProductLayout>
+		<ProductOrderBox />
+		<Nav />
+		<Title />
+		<RatingPage />
+		<ReviewPage />
+		<ProductSummay />
 		<RecommandedBox />
 		<RecommandedList />
-	</div>
+		<ProductCardList products={SANPLE_PRODUCTS} />
+	</ProductLayout>
 );
 
 export default ProductPage;

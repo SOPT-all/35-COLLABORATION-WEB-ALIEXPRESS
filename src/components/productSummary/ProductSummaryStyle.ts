@@ -10,8 +10,7 @@ export const productInfoLayoutStyle = css`
 	gap: 2.4rem;
 	align-items: center;
 	width: 96rem;
-	height: 26rem;
-	margin-bottom: 2.4rem;
+	height: 27rem;
 `;
 
 export const productImgLayoutStyle = (theme: Theme) => css`
