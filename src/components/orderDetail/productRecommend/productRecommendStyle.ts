@@ -19,10 +19,17 @@ export const productListContainer = css`
 	position: relative;
 	display: flex;
 	justify-content: space-between;
-	width: 86.3rem;
+	width: 86.5rem;
 	height: 33rem;
 	padding: 0 1.3rem;
 	overflow: hidden;
+`;
+
+export const scrollContainerStyle = css`
+	display: flex;
+	gap: 1.3rem;
+	overflow: hidden;
+	scroll-behavior: smooth;
 `;
 
 export const navigationButtonStyle = css`
@@ -32,7 +39,6 @@ export const navigationButtonStyle = css`
 
 	transform: translateY(-50%);
 	cursor: pointer;
-
 `;
 
 export const btnLeftStyle = css`
