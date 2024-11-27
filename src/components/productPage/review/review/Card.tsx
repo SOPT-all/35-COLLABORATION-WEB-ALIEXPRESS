@@ -1,5 +1,5 @@
 import { IcShieldWhite12, IcMeatballLightgray20 } from '@assets/icons/index';
-import avata1 from '@assets/images/img_avata1.png';
+import profileImages from '@constants/profileImg';
 import ReviewBtn from '@components/button/recommendBtn/reviewBtn';
 import {
 	cardLayout,
@@ -46,17 +46,16 @@ const Card = ({ review, isOriginal }: CardProps) => {
 	return (
 		<div css={[cardLayout, relativeStyle]}>
 			{/* 작성자 프로필 이미지 */}
-			{/* <div>
-				{profileImages.map((Image, index) =>
-					index === review.reviewId % profileImages.length ? <Image key={index} css={sizeStyle} /> : null,
+			<div>
+				{profileImages.map((image, index) =>
+					index === review.reviewId % profileImages.length ? (
+						<img key={index} src={image} css={sizeStyle} alt={`${review.username}님의 프로필`} />
+					) : null,
 				)}
 				<IcShieldWhite12 css={circleStyle} />
-			</div> */}
-			{/* 리뷰 상세 내용 */}
-			<div>
-				<img src={avata1} css={sizeStyle} />
-				<IcShieldWhite12 css={circleStyle} />
 			</div>
+
+			{/* 리뷰 상세 내용 */}
 			<div css={infoWrapper}>
 				{/* 작성자 정보, 신고기능 */}
 				<div css={cardTitleStyle}>
