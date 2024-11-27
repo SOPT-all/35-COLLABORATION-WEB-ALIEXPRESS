@@ -40,7 +40,7 @@ export const navigationButtonStyle = css`
 	transform: translateY(-50%);
 	cursor: pointer;
 
-	rect:hover {
+	&:hover rect {
 		fill-opacity: 0.6;
 	}
 `;
@@ -53,8 +53,4 @@ export const btnLeftStyle = css`
 export const btnRightStyle = css`
 	${navigationButtonStyle}
 	right: 0;
-
-	rect:hover {
-		fill-opacity: 0.6;
-	}
 `;
