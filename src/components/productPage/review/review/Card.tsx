@@ -1,14 +1,14 @@
 import { IcShieldWhite12, IcMeatballLightgray20 } from '@assets/icons/index';
-import userImg from '@assets/images/userImg';
+import avata1 from '@assets/images/img_avata1.png';
 import ReviewBtn from '@components/button/recommendBtn/reviewBtn';
 import {
 	cardLayout,
 	relativeStyle,
 	nameStyle,
 	dateStyle,
-	colorStyle,
 	sizeStyle,
 	circleStyle,
+	colorStyle,
 	reviewStyle,
 	infoWrapper,
 	monthChipStyle,
@@ -17,10 +17,23 @@ import {
 	nameRightStyle,
 	imgWrapper,
 	reviewBtnWrapper,
+	reviewImgStyle,
 } from '@components/productPage/review/review/CardStyle';
 import RenderStar from '@components/productPage/review/review/RenderStar';
-import { Review } from '@constants/userReview';
 import { useState } from 'react';
+
+interface Review {
+	reviewId: number;
+	username: string;
+	rating: number;
+	isMonth: boolean;
+	contentKorean: string;
+	contentOriginal: string;
+	reviewImage: string;
+	usefulCount: number;
+	recommendCount: number;
+	likeCount: number;
+}
 
 interface CardProps {
 	review: Review;
@@ -33,15 +46,17 @@ const Card = ({ review, isOriginal }: CardProps) => {
 	return (
 		<div css={[cardLayout, relativeStyle]}>
 			{/* 작성자 프로필 이미지 */}
+			{/* <div>
+				{profileImages.map((Image, index) =>
+					index === review.reviewId % profileImages.length ? <Image key={index} css={sizeStyle} /> : null,
+				)}
+				<IcShieldWhite12 css={circleStyle} />
+			</div> */}
+			{/* 리뷰 상세 내용 */}
 			<div>
-				{userImg.map((image, index) =>
-					index === review.reviewId % userImg.length ? (
-						<img src={image} key={index} alt={`profile-${index}`} css={sizeStyle} />
-					) : null,
-				)}{' '}
+				<img src={avata1} css={sizeStyle} />
 				<IcShieldWhite12 css={circleStyle} />
 			</div>
-			{/* 리뷰 상세 내용 */}
 			<div css={infoWrapper}>
 				{/* 작성자 정보, 신고기능 */}
 				<div css={cardTitleStyle}>
@@ -69,8 +84,7 @@ const Card = ({ review, isOriginal }: CardProps) => {
 
 				{/* 리뷰 이미지 데이터 받아오면 한개로 줄일예정 */}
 				<div css={imgWrapper}>
-					<img src={review.reviewImage} alt={`${review.username}님의 리뷰 이미지`} />
-					<img src={review.reviewImage} alt={`${review.username}님의 리뷰 이미지`} />
+					<img src={review.reviewImage} alt={`${review.username}님의 리뷰 이미지`} css={reviewImgStyle} />
 				</div>
 
 				{/* 좋아요 버튼 */}

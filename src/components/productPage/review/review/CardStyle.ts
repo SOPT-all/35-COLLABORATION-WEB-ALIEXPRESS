@@ -131,3 +131,8 @@ export const reportBtnStyle = (theme: Theme) => css`
 	${theme.fonts.kor.captionMedium10};
 	border-radius: 4px;
 `;
+
+export const reviewImgStyle = css`
+	width: 8rem;
+	height: 8rem;
+`;
