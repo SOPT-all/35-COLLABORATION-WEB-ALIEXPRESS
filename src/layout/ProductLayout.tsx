@@ -1,6 +1,6 @@
 import Footer from '@components/footer/Footer';
 import ProductHeader from '@components/header/productHeader/ProductHeader';
-import { layoutContainer, mainStyle } from '@constants/layout/ProductLayoutStyle';
+import { layoutContainer, productMainStyle } from 'layout/layoutStyle';
 import { ReactNode } from 'react';
 
 interface LayoutProps {
@@ -10,7 +10,7 @@ interface LayoutProps {
 const ProductLayout = ({ children }: LayoutProps) => (
 	<div css={layoutContainer}>
 		<ProductHeader />
-		<main css={mainStyle}>{children}</main>
+		<main css={productMainStyle}>{children}</main>
 		<Footer />
 	</div>
 );

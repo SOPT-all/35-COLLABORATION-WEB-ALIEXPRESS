@@ -7,7 +7,7 @@ import RatingPage from '@components/productPage/review/reviewTop/RatingPage';
 import Title from '@components/productPage/review/reviewTop/Title';
 import ProductSummay from '@components/productSummary/ProductSummay';
 import RecommandedBox from '@components/recommandedProducts/RecommandedBox';
-import ProductLayout from '@constants/layout/ProductLayout';
+import ProductLayout from 'layout/ProductLayout';
 import SANPLE_PRODUCTS from '@constants/sampleProducts';
 
 const ProductPage = () => (

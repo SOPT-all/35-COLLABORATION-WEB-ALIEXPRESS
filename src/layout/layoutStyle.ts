@@ -5,7 +5,7 @@ export const layoutContainer = css`
 	margin: 0 auto;
 `;
 
-export const mainStyle = css`
+export const productMainStyle = css`
 	width: 127.7rem;
 	margin: 0 auto;
 `;
