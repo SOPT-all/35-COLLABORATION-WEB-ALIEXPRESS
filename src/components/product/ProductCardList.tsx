@@ -8,6 +8,7 @@ import {
 } from './ProductCardListStyle';
 import TextBtn from '@components/button/textBtn/TextBtn';
 import { AxiosError } from 'axios';
+import MESSAGE from '@constants/errorMessages';
 
 interface ProductCardListProps {
 	productId: number;
@@ -18,8 +19,8 @@ const ProductCardList = ({ productId }: ProductCardListProps) => {
 
 	if (isError) {
 		const axiosError = error as AxiosError<{ error: { message: string } }>;
-		const errorMessage = axiosError.response?.data?.error?.message || 'Unknown error';
-		console.log(errorMessage);
+		const errorMessage = axiosError.response?.data?.error?.message || MESSAGE.UNKNOWN_ERROR;
+		console.error(errorMessage);
 	}
 
 	return (
