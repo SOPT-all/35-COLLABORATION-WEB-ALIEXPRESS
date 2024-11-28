@@ -16,14 +16,10 @@ export const headerComponentStyle = (theme: Theme) => css`
 	min-height: 5.2rem;
 	padding-left: 2.1rem;
 	${theme.fonts.kor.titleBold20}
-
-	background-color: ${theme.colors.white};
 `;
 
-export const contentComponentStyle = (theme: Theme) => css`
+export const contentComponentStyle = css`
 	display: flex;
 	gap: 1.5rem;
 	width: 100%;
-
-	background-color: ${theme.colors.white};
 `;
