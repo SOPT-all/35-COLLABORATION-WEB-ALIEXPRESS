@@ -4,7 +4,7 @@ import FilterBtn from '@components/productPage/review/review/FilterBtn';
 import OriginalTextBtn from '@components/productPage/review/review/OriginalTextBtn';
 import { reviewContainer, flexStyle, commonBtnStyle } from '@components/productPage/review/review/ReviewPageStyle';
 import Tab from '@components/productPage/review/review/Tab';
-import reviewNum from '@constants/userReview';
+import { reviewNum } from '@constants/userReview';
 import { useState } from 'react';
 
 const ReviewPage = () => {
