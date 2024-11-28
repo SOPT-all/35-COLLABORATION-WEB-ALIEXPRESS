@@ -11,7 +11,7 @@ const ProductOrderBoxContainer = css`
 
 const ProductOrderBox = () => (
 	<div css={ProductOrderBoxContainer}>
-		<ProductInfo />
+		<ProductInfo productId={1} />
 		<OrderBox />
 	</div>
 );
