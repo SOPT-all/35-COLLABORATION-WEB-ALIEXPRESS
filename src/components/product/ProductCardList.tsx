@@ -1,4 +1,4 @@
-import useRelatedProducts from '@apis/productPage/product/relatedProductQueries';
+import useRelatedProducts from '@apis/productPage/product/relatedProductsQueries';
 import ProductCard from './ProductCard';
 import {
 	productListContainer,
