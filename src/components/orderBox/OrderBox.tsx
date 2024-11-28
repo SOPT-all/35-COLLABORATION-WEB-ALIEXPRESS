@@ -32,7 +32,9 @@ import {
 	engCaptionBoldStyle,
 	orderBtnWrapperStyle,
 	emojiBtnWrapperStyle,
+	freeDeliveryText,
 } from '@components/orderBox/OrderboxStyle';
+import FreeTag from '@components/product/FreeTag';
 import { useNavigate } from 'react-router-dom';
 
 const OrderBox = () => {
@@ -68,8 +70,8 @@ const OrderBox = () => {
 						<div css={freeOrderInfoWrapperStyle}>
 							<div css={flexBoxStyle}>
 								<IcDeliveryBlack20 />
-								<span css={korTitleStyle}>무료 배송</span>
-								{/* 영경이가 만든 무료 반품 버튼 넣기 */}
+								<span css={freeDeliveryText}>무료 배송</span>
+								<FreeTag text="무료 반품" color="gray" />
 							</div>
 							<IcArrowrightSBlack24 />
 						</div>

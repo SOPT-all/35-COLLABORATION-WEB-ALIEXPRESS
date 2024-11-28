@@ -40,6 +40,11 @@ export const korTitleStyle = (theme: Theme) => css`
 	${theme.fonts.kor.captionBold12}
 `;
 
+export const freeDeliveryText = (theme: Theme) => css`
+	margin-right: 0.6rem;
+	${theme.fonts.kor.captionBold12}
+`;
+
 export const engTitleStyle = (theme: Theme) => css`
 	${theme.fonts.eng.captionMedium12}
 `;
@@ -70,7 +75,7 @@ export const freeOrderInfoWrapperStyle = css`
 export const flexBoxStyle = css`
 	display: flex;
 	align-items: center;
-	height: 100%;
+	height: 2rem;
 `;
 
 export const arrivalDateWrapperStyle = css`
