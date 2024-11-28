@@ -1,6 +1,6 @@
-import { ReactElement } from 'react';
+import { defaultBtnStyle, btnSizeMap } from '@components/button/categoryItemBtn/CategoryItemBtnStyle';
 
-import { defaultBtnStyle, btnSizeMap } from './CategoryItemBtnStyle';
+import { ReactElement } from 'react';
 
 interface CategoryItemBtnProps {
 	btnText: string;
