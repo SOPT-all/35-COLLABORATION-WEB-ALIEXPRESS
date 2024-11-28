@@ -1,12 +1,14 @@
 import { Theme, css } from '@emotion/react';
 
-export const serviceIntroduceContainer = css`
+export const serviceIntroduceContainer = (theme: Theme) => css`
 	display: flex;
 	flex-direction: column;
 	gap: 1.6rem;
 	width: 91.1rem;
 	height: 28rem;
 	padding: 2.4rem 1.6rem;
+
+	background-color: ${theme.colors.white};
 `;
 
 export const hedarTitleStyle = (theme: Theme) => css`

@@ -1,6 +1,6 @@
 import { Theme, css } from '@emotion/react';
 
-export const orderStatusComponentStyle = css`
+export const orderStatusComponentStyle = (theme: Theme) => css`
 	display: flex;
 	flex-direction: column;
 	gap: 1.6rem;
@@ -8,6 +8,8 @@ export const orderStatusComponentStyle = css`
 	width: 91.1rem;
 	height: 47.1rem;
 	padding: 2.4rem;
+
+	background-color: ${theme.colors.white};
 `;
 
 export const headerComponentStyle = css`

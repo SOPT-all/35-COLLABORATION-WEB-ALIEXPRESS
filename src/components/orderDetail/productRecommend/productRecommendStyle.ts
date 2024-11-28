@@ -1,11 +1,13 @@
 import { Theme, css } from '@emotion/react';
 
-export const productRecommandContainer = css`
+export const productRecommandContainer = (theme: Theme) => css`
 	display: flex;
 	flex-direction: column;
 	gap: 0.4rem;
 	width: 91.1rem;
 	padding: 0.8rem 2.4rem 6.8rem;
+
+	background-color: ${theme.colors.white};
 `;
 
 export const headerStringStyle = (theme: Theme) => css`

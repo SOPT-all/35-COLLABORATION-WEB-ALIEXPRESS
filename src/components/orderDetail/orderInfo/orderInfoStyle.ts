@@ -6,6 +6,7 @@ export const orderInfoComponentStyle = css`
 	gap: 1.6rem;
 	width: 91.1rem;
 	height: 17.6rem;
+	margin-top: 4.8rem;
 `;
 
 export const headerComponentStyle = (theme: Theme) => css`
