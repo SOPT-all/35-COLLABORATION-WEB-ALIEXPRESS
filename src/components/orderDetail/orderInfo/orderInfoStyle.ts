@@ -6,6 +6,7 @@ export const orderInfoComponentStyle = css`
 	gap: 1.6rem;
 	width: 91.1rem;
 	height: 17.6rem;
+	margin-top: 4.8rem;
 `;
 
 export const headerComponentStyle = (theme: Theme) => css`
@@ -14,15 +15,13 @@ export const headerComponentStyle = (theme: Theme) => css`
 	width: 91.1rem;
 	min-height: 5.2rem;
 	padding-left: 2.1rem;
-	${theme.fonts.kor.titleBold20}
 
+	${theme.fonts.kor.titleBold20}
 	background-color: ${theme.colors.white};
 `;
 
-export const contentComponentStyle = (theme: Theme) => css`
+export const contentComponentStyle = css`
 	display: flex;
 	gap: 1.5rem;
 	width: 100%;
-
-	background-color: ${theme.colors.white};
 `;
