@@ -25,7 +25,7 @@ export interface GetReviewResponse {
 
 export const getReview = async (productId: number): Promise<GetReviewResponse> => {
 	try {
-		const response = await instance.get<GetReviewResponse>(`/products/${productId}/reviews`); // instance 사용
+		const response = await instance.get<GetReviewResponse>(`/api/products/${productId}/reviews`);
 		return response.data;
 	} catch (error) {
 		if (error instanceof AxiosError) {
