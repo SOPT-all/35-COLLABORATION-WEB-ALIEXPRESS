@@ -12,7 +12,9 @@ interface CardListProps {
 const CardList = ({ activeTab, isOriginal, productId }: CardListProps) => {
 	const { data, isError } = useReviewQueries({ productId });
 
-	if (isError) return console.log(isError);
+	if (isError) {
+		console.error(isError);
+	}
 
 	// 데이터가 없을 경우
 	const goodReviews = data?.data?.goodReviews || [];
