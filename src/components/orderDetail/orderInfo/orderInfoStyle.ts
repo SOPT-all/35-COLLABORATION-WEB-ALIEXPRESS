@@ -15,7 +15,9 @@ export const headerComponentStyle = (theme: Theme) => css`
 	width: 91.1rem;
 	min-height: 5.2rem;
 	padding-left: 2.1rem;
+
 	${theme.fonts.kor.titleBold20}
+	background-color: ${theme.colors.white};
 `;
 
 export const contentComponentStyle = css`
