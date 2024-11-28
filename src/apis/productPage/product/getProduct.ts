@@ -1,5 +1,16 @@
 import instance from '@apis/instance';
-import ProductInfoType from 'types/ProductInfoType';
+interface ProductInfoType {
+	productId: number;
+	productImage: string;
+	detail: string;
+	priceOriginal: number;
+	priceDiscount: number;
+	percent: number;
+	isCoupon: boolean;
+	categoryName: string;
+	reviewCount: number;
+	rating: number;
+}
 
 interface ProductResponse {
 	success: boolean;
