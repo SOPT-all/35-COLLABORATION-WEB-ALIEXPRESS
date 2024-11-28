@@ -1,3 +1,4 @@
+import useRelatedProducts from '@apis/productPage/product/productQueries';
 import ProductCard from './ProductCard';
 import {
 	productListContainer,
@@ -6,34 +7,35 @@ import {
 	relatedProductsStyle,
 } from './ProductCardListStyle';
 import TextBtn from '@components/button/textBtn/TextBtn';
-interface Product {
-	image: string;
-	name: string;
-	price: number;
-	discountRate: number;
-	hasCoupon?: boolean;
-	rating: number;
-	reviewCount: number;
-}
+import { AxiosError } from 'axios';
 
 interface ProductCardListProps {
-	products: Product[];
+	productId: number;
 }
 
-const ProductCardList = ({ products }: ProductCardListProps) => {
+const ProductCardList = ({ productId }: ProductCardListProps) => {
+	const { data, isError, error } = useRelatedProducts(productId);
+
+	if (isError) {
+		const axiosError = error as AxiosError<{ error: { message: string } }>;
+		const errorMessage = axiosError.response?.data?.error?.message || 'Unknown error';
+		console.log(errorMessage);
+	}
+
 	return (
 		<section css={relatedProductsContainer}>
 			<div css={relatedProductsHeaderStyle}>
 				<p css={relatedProductsStyle}>연관 상품</p>
 			</div>
 			<article css={productListContainer}>
-				{products.map((product) => (
+				{data.map((product) => (
 					<ProductCard
-						image={product.image}
-						name={product.name}
-						price={product.price}
-						discountRate={product.discountRate}
-						hasCoupon={product.hasCoupon}
+						key={product.productId}
+						image={product.productImage}
+						name={product.detail}
+						price={product.priceOriginal}
+						discountRate={product.percent}
+						hasCoupon={product.isCoupon}
 						rating={product.rating}
 						reviewCount={product.reviewCount}
 					/>

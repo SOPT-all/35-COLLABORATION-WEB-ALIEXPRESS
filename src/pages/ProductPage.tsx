@@ -20,7 +20,7 @@ const ProductPage = () => (
 		<ProductSummay />
 		<RecommandedBox />
 		<RecommandedList />
-		<ProductCardList products={SANPLE_PRODUCTS} />
+		<ProductCardList productId={0} />
 	</ProductLayout>
 );
 
