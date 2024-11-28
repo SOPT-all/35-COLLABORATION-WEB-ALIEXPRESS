@@ -8,7 +8,6 @@ import Title from '@components/productPage/review/reviewTop/Title';
 import ProductSummay from '@components/productSummary/ProductSummay';
 import RecommandedBox from '@components/recommandedProducts/RecommandedBox';
 import ProductLayout from 'layout/ProductLayout';
-import SANPLE_PRODUCTS from '@constants/sampleProducts';
 
 const ProductPage = () => (
 	<ProductLayout>
@@ -20,7 +19,7 @@ const ProductPage = () => (
 		<ProductSummay />
 		<RecommandedBox />
 		<RecommandedList />
-		<ProductCardList products={SANPLE_PRODUCTS} />
+		<ProductCardList productId={1} />
 	</ProductLayout>
 );
 
