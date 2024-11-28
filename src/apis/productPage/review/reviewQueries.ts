@@ -7,12 +7,12 @@ const useReviewQueries = ({ productId }: { productId: number }) => {
 		PRODUCT_REVIEW: 'review',
 	};
 
-	const { data, isError } = useQuery<GetReviewResponse>({
+	const { data, error } = useQuery<GetReviewResponse>({
 		queryKey: [QUERY_KEY.PRODUCT_REVIEW, productId],
 		queryFn: () => getReview(productId),
 	});
 
-	return { data, isError };
+	return { data, error };
 };
 
 export default useReviewQueries;
