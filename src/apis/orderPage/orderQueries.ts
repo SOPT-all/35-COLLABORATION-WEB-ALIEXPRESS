@@ -7,7 +7,6 @@ const useOrders = () =>
 	useQuery({
 		queryKey: ['orders'],
 		queryFn: () => fetchOrders(),
-		initialData: dummpyOrderHistory,
 	});
 
 export default useOrders;
