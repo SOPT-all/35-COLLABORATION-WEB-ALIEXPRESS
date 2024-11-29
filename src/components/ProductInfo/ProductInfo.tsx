@@ -41,7 +41,7 @@ const ProductInfo = ({ productId }: ProductInfoProps) => {
 		return null;
 	}
 
-	const { productImage, detail, priceOriginal, priceDiscount, percent } = data.data;
+	const { productImage, detail, priceOriginal, priceDiscount, percent, rating, reviewCount } = data.data;
 
 	return (
 		<div css={columnflexStyle}>
@@ -68,7 +68,11 @@ const ProductInfo = ({ productId }: ProductInfoProps) => {
 						</div>
 						<div css={productNameStyle}>{detail}</div>
 					</div>
-					<div css={reviewBoxStyle}>5,000+개 판매</div>
+					<div css={reivewBoxStyle}>
+						<StarBtn rating={rating} reviewCount={reviewCount} />
+						<IcDot />
+						<div css={reviewBoxStyle}>5,000+개 판매</div>
+					</div>
 					<div css={mediumDividerStyle} />
 					<div css={optionStyle}>색상: 검정</div>
 					<section css={optionImgStyle}>
@@ -81,18 +85,6 @@ const ProductInfo = ({ productId }: ProductInfoProps) => {
 						<p>가격 정보 더보기</p>
 						<IcInfoGray14 />
 					</div>
-				</div>
-				<div css={reivewBoxStyle}>
-					<StarBtn rating={4.8} reviewCount={123} />
-					<IcDot />
-					<div css={reviewBoxStyle}>5,000+개 판매</div>
-				</div>
-				<div css={mediumDividerStyle} />
-				<div css={optionStyle}>색상: 검정</div>
-				<section css={optionImgStyle}>
-					{productOptionImages.map((imgSrc, index) => (
-						<img key={`${imgSrc + index}`} src={imgSrc} alt="상품 옵션" />
-					))}
 				</section>
 			</article>
 			<section css={warnLayoutStyle}>
