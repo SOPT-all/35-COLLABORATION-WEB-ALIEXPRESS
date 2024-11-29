@@ -9,6 +9,12 @@ export const MyLayoutStyle = css`
 	gap: 0;
 	align-items: center;
 	justify-content: center;
+
+	box-shadow:
+		0 0.6rem 1.2rem 0 rgb(0 0 0 / 12%),
+		0 0.4rem 0.8rem 0 rgb(0 0 0 / 8%),
+		0 0 0.4rem 0 rgb(0 0 0 / 8%);
+	border-radius: 12px;
 `;
 
 export const MyContainerStyle = (theme: Theme) => css`

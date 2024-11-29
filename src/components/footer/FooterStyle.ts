@@ -25,9 +25,15 @@ export const footerStyle = (theme: Theme) => css`
 `;
 
 export const subtitleStyle = (theme: Theme) => css`
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
 	${theme.fonts.kor.bodyBold13}
+	color: ${theme.colors.gray10};
 `;
 
 export const desc = (theme: Theme) => css`
 	${theme.fonts.kor.captionMedium11};
+	color: ${theme.colors.gray7};
 `;
