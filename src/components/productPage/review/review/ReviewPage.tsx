@@ -1,9 +1,9 @@
 import { DividerMedium } from '@assets/icons/index';
 import TextBtn from '@components/button/textBtn/TextBtn';
 import FilterBtn from '@components/productPage/review/review/FilterBtn';
-import Tab from '@components/productPage/review/review/Tab';
 import OriginalTextBtn from '@components/productPage/review/review/OriginalTextBtn';
 import { reviewContainer, flexStyle, commonBtnStyle } from '@components/productPage/review/review/ReviewPageStyle';
+import Tab from '@components/productPage/review/review/Tab';
 import { reviewNum } from '@constants/userReview';
 import { useState } from 'react';
 

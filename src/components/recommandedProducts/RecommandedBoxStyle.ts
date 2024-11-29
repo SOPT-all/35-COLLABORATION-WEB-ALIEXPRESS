@@ -10,6 +10,7 @@ export const recommandedBoxContainer = (theme: Theme) => css`
 	padding: 1rem 1.8rem;
 
 	background-color: ${theme.colors.brandBg};
+	border-radius: 8px;
 `;
 
 export const contentLayout = css`
@@ -46,4 +47,5 @@ export const lineStyle = (theme: Theme) => css`
 export const flexBoxStyle = css`
 	display: flex;
 	gap: 0.8rem;
+	width: 32rem;
 `;

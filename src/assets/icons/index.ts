@@ -140,3 +140,4 @@ export { default as ImgLine } from '../images/Line 18.svg';
 export { default as ImgVector7192 } from '../images/Vector 7192.svg';
 export { default as ImgProfile30 } from '../images/img_profile_30.svg';
 export { default as ImgGraph } from '@assets/images/img_graph.svg';
+export { default as IcDot } from './ic_dot.svg';

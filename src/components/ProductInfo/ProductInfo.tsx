@@ -1,7 +1,8 @@
 import useProductDetail from '@apis/productPage/product/productQueries';
-import { IcInfoGray14, IcWarningBrandYellow16 } from '@assets/icons';
+import { IcInfoGray14, IcWarningBrandYellow16, IcDot } from '@assets/icons';
 import bannerRewordImg from '@assets/images/img_banner_reward.png';
 import { productOptionImages, productSubImages } from '@assets/images/productDetailImages';
+import StarBtn from '@components/button/starBtn/StarBtn';
 import {
 	productInfoContainerStyle,
 	proudctImgLayoutStyle,
@@ -25,6 +26,7 @@ import {
 	endSaleTiemStyle,
 	reviewBoxStyle,
 	columnflexStyle,
+	reivewBoxStyle,
 } from '@components/ProductInfo/ProductInfoStyle';
 
 interface ProductInfoProps {
@@ -79,6 +81,18 @@ const ProductInfo = ({ productId }: ProductInfoProps) => {
 						<p>가격 정보 더보기</p>
 						<IcInfoGray14 />
 					</div>
+				</div>
+				<div css={reivewBoxStyle}>
+					<StarBtn rating={4.8} reviewCount={123} />
+					<IcDot />
+					<div css={reviewBoxStyle}>5,000+개 판매</div>
+				</div>
+				<div css={mediumDividerStyle} />
+				<div css={optionStyle}>색상: 검정</div>
+				<section css={optionImgStyle}>
+					{productOptionImages.map((imgSrc, index) => (
+						<img key={`${imgSrc + index}`} src={imgSrc} alt="상품 옵션" />
+					))}
 				</section>
 			</article>
 			<section css={warnLayoutStyle}>
