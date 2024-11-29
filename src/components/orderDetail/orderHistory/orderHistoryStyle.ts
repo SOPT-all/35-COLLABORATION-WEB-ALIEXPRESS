@@ -74,6 +74,8 @@ export const productTitleStyle = (theme: Theme) => css`
 
 	white-space: nowrap;
 	text-overflow: ellipsis;
+
+	cursor: pointer;
 `;
 
 export const productPriceStyle = css`

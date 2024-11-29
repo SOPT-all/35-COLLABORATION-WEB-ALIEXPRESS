@@ -3,6 +3,7 @@ import { IcArrowrightGray12, IcChatBlack24, IcArrowbottomGray12, IcCameraBlack24
 import OutlineTextBtn from '@components/button/outlineTextBtn/OutlineTextBtn';
 import MESSAGE from '@constants/errorMessages';
 import { AxiosError } from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 import {
 	orderHistoryContainerStyle,
@@ -27,16 +28,17 @@ import {
 
 const OrderHistory = () => {
 	const { data, error } = useOrders();
-
-	if (!data) {
-		return null;
-	}
+	const navigate = useNavigate();
 
 	if (error) {
 		const axiosError = error as AxiosError<{ error: { message: string } }>;
 		const errorMessage = axiosError.response?.data?.error?.message || MESSAGE.UNKNOWN_ERROR;
 		console.log(errorMessage);
 	}
+
+	const handleProductTitleClick = () => {
+		navigate('/');
+	};
 
 	return (
 		<div css={orderHistoryContainerStyle}>
@@ -53,7 +55,9 @@ const OrderHistory = () => {
 				</div>
 				<div css={productInfoContainerStyle}>
 					<div css={productInfoStyle}>
-						<p css={productTitleStyle}>{data.data.detail}</p>
+						<p css={productTitleStyle} onClick={handleProductTitleClick}>
+							{data.data.detail}
+						</p>
 						<p>Clear</p>
 						<div css={productPriceStyle}>
 							<p>￦{data.data.price.toLocaleString()}</p>
