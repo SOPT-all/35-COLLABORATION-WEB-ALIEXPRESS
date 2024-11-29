@@ -85,7 +85,8 @@
 
 ## 🌳 구현 View
 ### 🌿 상품구매 View
-<img width="1512" alt="KakaoTalk_20241130_004952323" src="https://github.com/user-attachments/assets/87c07b64-eecc-4884-81ba-483db513435c">
+<img width="1512" alt="KakaoTalk_20241130_004952323" src="https://github.com/user-attachments/assets/f47a4c58-4b48-4e0c-858c-d39192f3c629">
+
 
 ### 🌿 주문상세 View
 ![FireShot Capture 002 - AliExpress Korea - AND SOPT 35 - localhost](https://github.com/user-attachments/assets/fd11e1e0-f4f9-43ba-b050-e31964d88058)
