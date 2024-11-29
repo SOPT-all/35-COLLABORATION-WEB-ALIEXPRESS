@@ -1,11 +1,22 @@
-import { useQuery } from '@tanstack/react-query';
+import instance from '@apis/instance';
 
-import fetchOrders from './orderQueries';
+interface OrderResponse {
+	productId: number;
+	productImage: string;
+	detail: string;
+	price: number;
+	quantity: number;
+}
 
-const useOrders = (productId: number) =>
-	useQuery({
-		queryKey: ['orders', productId],
-		queryFn: () => fetchOrders(),
-	});
+interface OrderHistoryResponse {
+	success: boolean;
+	data: OrderResponse;
+	error: string | null;
+}
 
-export default useOrders;
+const fetchOrders = async (): Promise<OrderHistoryResponse> => {
+	const response = await instance.get<OrderHistoryResponse>(`/api/orders`);
+	return response.data;
+};
+
+export default fetchOrders;
