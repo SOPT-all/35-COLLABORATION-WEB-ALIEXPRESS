@@ -1,29 +1,26 @@
 import instance from '@apis/instance';
-
-interface ProductResponse {
+interface ProductInfoType {
 	productId: number;
 	productImage: string;
 	detail: string;
 	priceOriginal: number;
-	percent: number;
 	priceDiscount: number;
+	percent: number;
 	isCoupon: boolean;
 	categoryName: string;
 	reviewCount: number;
 	rating: number;
 }
 
-interface RelatedProductsResponse {
+interface ProductResponse {
 	success: boolean;
-	data: {
-		products: ProductResponse[];
-	};
+	data: ProductInfoType;
 	error: string | null;
 }
 
-const fetchRelatedProducts = async (productId: number): Promise<ProductResponse[]> => {
-	const response = await instance.get<RelatedProductsResponse>(`/api/products/${productId}/related`);
-	return response.data.data.products;
+const fetchProduct = async (productId: number): Promise<ProductResponse> => {
+	const response = await instance.get<ProductResponse>(`/api/products/${productId}`);
+	return response.data;
 };
 
-export default fetchRelatedProducts;
+export default fetchProduct;
