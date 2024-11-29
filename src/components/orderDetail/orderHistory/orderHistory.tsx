@@ -50,18 +50,18 @@ const OrderHistory = () => {
 			</div>
 			<div css={productContentStyle}>
 				<div css={productImageStyle}>
-					<img src={data.data.productImage} alt="상품 이미지" />
+					<img src={data?.data.productImage} alt="상품 이미지" />
 					<IcCameraBlack24 />
 				</div>
 				<div css={productInfoContainerStyle}>
 					<div css={productInfoStyle}>
 						<p css={productTitleStyle} onClick={handleProductTitleClick}>
-							{data.data.detail}
+							{data?.data.detail}
 						</p>
 						<p>Clear</p>
 						<div css={productPriceStyle}>
-							<p>￦{data.data.price.toLocaleString()}</p>
-							<p>x{data.data.quantity}</p>
+							<p>￦{data?.data.price.toLocaleString()}</p>
+							<p>x{data?.data.quantity}</p>
 						</div>
 					</div>
 					<p css={blueInfoStyle}>빠른 배송 · 무료 반품 · 배송 약속</p>
@@ -76,7 +76,7 @@ const OrderHistory = () => {
 				<div css={costRowStyle}>
 					<p css={costGrayLabelStyle}>합계</p>
 					<div css={costValueStyle}>
-						<p>￦{(data.data.price * data.data.quantity).toLocaleString()}</p>
+						<p>￦{(data?.data.price * data?.data.quantity).toLocaleString()}</p>
 						<IcArrowbottomGray12 />
 					</div>
 				</div>
