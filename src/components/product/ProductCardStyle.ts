@@ -8,6 +8,10 @@ export const productContainer = (theme: Theme, width: string, hoverLarge: boolea
 	background-color: ${theme.colors.white};
 	border-radius: ${hoverLarge ? '12px' : '16px'};
 
+	transition:
+		transform 0.2s ease-in-out,
+		box-shadow 0.2s ease-in-out;
+
 	&:hover {
 		z-index: 1;
 
@@ -18,7 +22,6 @@ export const productContainer = (theme: Theme, width: string, hoverLarge: boolea
 		${hoverLarge
 			? `
             transform: scale(1.13, 1.065);
-            transform-origin: top center; /* 상단의 시작 지점을 고정 */
             border-radius: 16px;
             `
 			: `
