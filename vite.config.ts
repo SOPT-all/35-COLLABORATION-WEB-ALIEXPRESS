@@ -16,4 +16,9 @@ export default defineConfig({
 		}),
 	],
 	assetsInclude: ['**/*.ttf', '**/*.otf'],
+	server: {
+		fs: {
+			allow: ['src/assets/fonts'],
+		},
+	},
 });
