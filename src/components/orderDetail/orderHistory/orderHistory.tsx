@@ -40,6 +40,8 @@ const OrderHistory = () => {
 		navigate('/');
 	};
 
+	const priceSum = (data?.data?.price ?? 0) * (data?.data?.quantity ?? 0);
+
 	return (
 		<div css={orderHistoryContainerStyle}>
 			<header css={headerStyle}>주문 내역</header>
@@ -76,7 +78,7 @@ const OrderHistory = () => {
 				<div css={costRowStyle}>
 					<p css={costGrayLabelStyle}>합계</p>
 					<div css={costValueStyle}>
-						<p>￦{(data?.data.price * data?.data.quantity).toLocaleString()}</p>
+						<p>￦{priceSum.toLocaleString()}</p>
 						<IcArrowbottomGray12 />
 					</div>
 				</div>
