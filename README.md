@@ -2,10 +2,11 @@
 
 # 🧞 알리 익스프레스 🧞
 
+### 링크: (https://35-collaboration-web-aliexpress.vercel.app/)
 
 <br />
 
-![표지](https://github.com/user-attachments/assets/cd9ddfad-d39c-402d-8d87-b29764bede56)
+![표지](https://github.com/user-attachments/assets/7f9546e9-35b4-45ff-a7cb-b5eeec8c2bf6)
 
 </div>
 
