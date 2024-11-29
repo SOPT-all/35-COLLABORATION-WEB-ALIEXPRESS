@@ -1,4 +1,3 @@
-import dummpyOrderHistory from '@constants/dummyOrderHistory';
 import { useQuery } from '@tanstack/react-query';
 
 import fetchOrders from './getOrders';
