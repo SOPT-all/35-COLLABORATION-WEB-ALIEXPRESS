@@ -10,6 +10,7 @@ export const productInfoContainerStyle = css`
 
 export const proudctImgLayoutStyle = css`
 	display: flex;
+	gap: 1.3rem;
 	width: 43.1rem;
 	height: 36.8rem;
 `;
@@ -30,7 +31,7 @@ export const productImgStyle = css`
 export const productDetailLayoutStyle = css`
 	display: flex;
 	flex-direction: column;
-	gap: 1.6rem;
+	gap: 1.5rem;
 	width: 50.9rem;
 	height: 39.7rem;
 `;
@@ -179,4 +180,3 @@ export const reivewBoxStyle = css`
 	align-items: center;
 	height: 2rem;
 `;
-
