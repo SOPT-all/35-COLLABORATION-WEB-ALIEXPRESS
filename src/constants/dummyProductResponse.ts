@@ -2,16 +2,16 @@ const dummyProductResponse = {
 	success: true,
 	data: {
 		productId: 1,
-		productImage: 'https://ae01.alicdn.com/kf/S709d4d4778ea430c87c0bf0a6574fa8dz.jpg_220x220q75.jpg_.webp',
+		productImage: 'https://github.com/user-attachments/assets/b9e6d9e9-d5f6-4250-bfeb-fe58cadf02ae',
 		detail:
-			'Toocki C타입 to C타입 케이블, 100W PD 고속 충전 충전기, USB C to USB C 디스플레이 케이블, 샤오미 POCO F3 리얼미 맥북 아이패드용',
-		priceOriginal: 6812,
-		percent: 60,
-		priceDiscount: 2700,
+			'Toocki GaN USB C 충전기, 맥쿡 아이폰 15, 14, 13, 12 프로 맥스, 삼성, 샤오미 포코용, 멀티 컬러, 고속 충전, 67W',
+		priceOriginal: 17955,
+		percent: 66,
+		priceDiscount: 6070,
 		isCoupon: true,
 		categoryName: 'Electronics',
-		reviewCount: 8,
-		rating: 3.25,
+		reviewCount: 9,
+		rating: 3.1,
 	},
 	error: null,
 };

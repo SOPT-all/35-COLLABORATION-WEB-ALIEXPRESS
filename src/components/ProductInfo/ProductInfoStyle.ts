@@ -31,7 +31,7 @@ export const productImgStyle = css`
 export const productDetailLayoutStyle = css`
 	display: flex;
 	flex-direction: column;
-	gap: 1.6rem;
+	gap: 1.5rem;
 	width: 50.9rem;
 	height: 39.7rem;
 `;
