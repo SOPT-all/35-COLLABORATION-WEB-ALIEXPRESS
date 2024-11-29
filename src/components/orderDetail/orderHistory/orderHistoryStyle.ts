@@ -5,12 +5,14 @@ const flexCenter = css`
 	align-items: center;
 `;
 
-export const orderHistoryContainerStyle = css`
+export const orderHistoryContainerStyle = (theme: Theme) => css`
 	display: flex;
 	flex-direction: column;
 	width: 91.1rem;
 	height: 29.4rem;
 	padding: 2.4rem 2.1rem;
+
+	background-color: ${theme.colors.white};
 `;
 
 export const headerStyle = (theme: Theme) => css`

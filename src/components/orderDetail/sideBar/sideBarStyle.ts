@@ -5,7 +5,7 @@ export const sideBarComponentStyle = (theme: Theme) => css`
 	flex-direction: column;
 	align-items: center;
 	align-items: flex-end;
-	width: 36rem;
+	width: 28rem;
 	height: 133.4rem;
 	padding-right: 1.1rem;
 
