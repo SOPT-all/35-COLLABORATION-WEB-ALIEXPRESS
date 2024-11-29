@@ -1,4 +1,4 @@
-import reviewImage from '@assets/images/img_review_4.png'; // 이미지 import
+import reviewImage from '@assets/images/img_review_4.png';
 
 export interface Review {
 	reviewId: number;

@@ -12,6 +12,8 @@ interface TabProps {
 }
 
 const Tab = ({ total, positive, negative, isOriginal }: TabProps) => {
+	const productId = 1;
+
 	const [activeTab, setActiveTab] = useState<string>('total');
 	const theme = useTheme();
 
@@ -33,7 +35,7 @@ const Tab = ({ total, positive, negative, isOriginal }: TabProps) => {
 				</button>
 			</div>
 			{activeTab === 'total' && <ReviewTypeLabel />}
-			<CardList activeTab={activeTab} isOriginal={isOriginal} />
+			<CardList activeTab={activeTab} isOriginal={isOriginal} productId={productId} />
 		</div>
 	);
 };
