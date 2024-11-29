@@ -34,7 +34,7 @@ const ProductSummay = () => (
 				</p>
 				<p css={textStyle}>
 					<IcAskBlack20 />
-					제품의 총 전력이 67W인지 궁금합니다.
+					해당 제품은 발열이 어느 정도 발생하나요? 또 휴대성이 편리한지 알고 싶어여.
 				</p>
 			</div>
 		</section>
@@ -42,7 +42,7 @@ const ProductSummay = () => (
 			<h1 css={titleStyle}>구매대행 서비스 안내</h1>
 			<p css={textStyle}>
 				<IcHandshakeGray20 />
-				해당 제품은 구매대행을 통하여 유통되는 제품입니다.「전기용품 및 생활용품 안전관리법」에 따라 안전관리대상
+				해당 제품은 구매대행을 통하여 유통되는 제품입니다. 「전기용품 및 생활용품 안전관리법」에 따라 안전관리대상
 				제품으로 분류됩니다.
 			</p>
 		</section>
