@@ -11,7 +11,7 @@ const GLOBALSTYLE = css`
 		font-family: 'Apple SD Gothic Neo';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/AppleSDGothicNeo-Bold.ttf') format('truetype');
+		src: url('/fonts/AppleSDGothicNeo-Bold.ttf') format('truetype');
 		unicode-range: U+AC00-D7A3;
 	}
 
@@ -20,7 +20,7 @@ const GLOBALSTYLE = css`
 		font-family: 'Apple SD Gothic Neo';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/AppleSDGothicNeo-SemiBold.ttf') format('truetype');
+		src: url('/fonts/AppleSDGothicNeo-SemiBold.ttf') format('truetype');
 		unicode-range: U+AC00-D7A3;
 	}
 
@@ -29,7 +29,7 @@ const GLOBALSTYLE = css`
 		font-family: 'Apple SD Gothic Neo';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/AppleSDGothicNeo-Medium.ttf') format('truetype');
+		src: url('/fonts/AppleSDGothicNeo-Medium.ttf') format('truetype');
 		unicode-range: U+AC00-D7A3;
 	}
 
@@ -38,7 +38,7 @@ const GLOBALSTYLE = css`
 		font-family: 'Apple SD Gothic Neo';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/AppleSDGothicNeo-Regular.ttf') format('truetype');
+		src: url('/fonts/AppleSDGothicNeo-Regular.ttf') format('truetype');
 		unicode-range: U+AC00-D7A3;
 	}
 
@@ -48,7 +48,7 @@ const GLOBALSTYLE = css`
 		font-family: 'TT Norms Pro';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/TT Norms Pro Bold.otf') format('opentype');
+		src: url('/fonts/TT Norms Pro Bold.otf') format('opentype');
 		unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 	}
 
@@ -57,7 +57,7 @@ const GLOBALSTYLE = css`
 		font-family: 'TT Norms Pro';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/TT Norms Pro Medium.otf') format('opentype');
+		src: url('/fonts/TT Norms Pro Medium.otf') format('opentype');
 		unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 	}
 
@@ -66,7 +66,7 @@ const GLOBALSTYLE = css`
 		font-family: 'TT Norms Pro';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/TT Norms Pro Regular.otf') format('opentype');
+		src: url('/fonts/TT Norms Pro Regular.otf') format('opentype');
 		unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 	}
 

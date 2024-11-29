@@ -16,4 +16,7 @@ export default defineConfig({
 		}),
 	],
 	assetsInclude: ['**/*.ttf', '**/*.otf'],
+	build: {
+        assetsDir: 'assets',
+    },
 });
