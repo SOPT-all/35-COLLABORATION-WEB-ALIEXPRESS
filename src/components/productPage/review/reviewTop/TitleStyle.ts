@@ -19,11 +19,6 @@ export const fontEnStyle = (theme: Theme) => css`
 	${theme.fonts.eng.titleBold20}
 `;
 
-export const alignStyle = css`
-	margin-top: 0.2rem;
-
-	cursor: pointer;
-`;
 export const toolStyle = (theme: Theme) => css`
 	position: absolute;
 	top: 2.8rem;

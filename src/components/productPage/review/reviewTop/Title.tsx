@@ -4,7 +4,6 @@ import {
 	titleContainer,
 	fontKoStyle,
 	fontEnStyle,
-	alignStyle,
 	toolStyle,
 } from '@components/productPage/review/reviewTop/TitleStyle';
 import { useState } from 'react';
@@ -20,7 +19,7 @@ const Title = () => {
 		<div css={[titleContainer, relativeStyle]}>
 			<p css={fontKoStyle}>리뷰</p>
 			<p css={fontEnStyle}>(497)</p>
-			<IcHelpGray20 css={alignStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+			<IcHelpGray20 onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
 			{isHovered && <div css={toolStyle}>{TOOL_MSG}</div>}
 		</div>
 	);

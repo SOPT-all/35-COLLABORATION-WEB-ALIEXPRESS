@@ -1,5 +1,6 @@
 import { IcArrowbottomGray12 } from '@assets/icons/index';
 import {
+	relativeStyle,
 	fontStyle,
 	FilterBtnContainer,
 	dropDownLayoutStyle,
@@ -11,7 +12,7 @@ const FilterBtn = () => {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
-		<div css={fontStyle}>
+		<div css={[fontStyle, relativeStyle]}>
 			<div css={FilterBtnContainer} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 				<p>최근 작성된 리뷰</p>
 				<IcArrowbottomGray12 />
