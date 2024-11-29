@@ -1,13 +1,17 @@
 import { css, Theme } from '@emotion/react';
 
-export const starBtnContainerStyle = css`
+const flexBoxStyle = css`
 	display: flex;
 	align-items: center;
-	width: 11.5rem;
 	height: 2rem;
+`;
+
+export const starBtnContainerStyle = css`
+	width: 11.5rem;
 
 	background-color: transparent;
 	border: none;
+	${flexBoxStyle}
 `;
 
 export const startIconBoxStyle = css`
@@ -20,10 +24,12 @@ export const ratingStyle = (theme: Theme) => css`
 	margin-left: 0.6rem;
 
 	${theme.fonts.eng.captionBold11};
+	${flexBoxStyle}
 `;
 
 export const reviewCountSTyle = (theme: Theme) => css`
 	margin-left: 0.4rem;
 
+	${flexBoxStyle}
 	${theme.fonts.eng.captionMedium12};
 `;

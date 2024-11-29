@@ -103,6 +103,8 @@ export const productNameStyle = (theme: Theme) => css`
 `;
 
 export const reviewBoxStyle = (theme: Theme) => css`
+	display: flex;
+	align-items: center;
 	width: 100%;
 	height: 2rem;
 
@@ -170,3 +172,11 @@ export const columnflexStyle = css`
 	display: flex;
 	flex-direction: column;
 `;
+
+export const reivewBoxStyle = css`
+	display: flex;
+	gap: 0.6rem;
+	align-items: center;
+	height: 2rem;
+`;
+

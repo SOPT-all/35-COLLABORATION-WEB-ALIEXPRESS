@@ -1,7 +1,8 @@
-import { IcInfoGray14, IcWarningBrandYellow16 } from '@assets/icons';
+import { IcInfoGray14, IcWarningBrandYellow16, IcDot } from '@assets/icons';
 import bannerRewordImg from '@assets/images/img_banner_reward.png';
 import productSubImg1 from '@assets/images/img_product_sub1.png';
 import { productOptionImages, productSubImages } from '@assets/images/productDetailImages';
+import StarBtn from '@components/button/starBtn/StarBtn';
 import {
 	productInfoContainerStyle,
 	proudctImgLayoutStyle,
@@ -25,6 +26,7 @@ import {
 	endSaleTiemStyle,
 	reviewBoxStyle,
 	columnflexStyle,
+	reivewBoxStyle,
 } from '@components/ProductInfo/ProductInfoStyle';
 
 const ProductInfo = () => (
@@ -55,7 +57,11 @@ const ProductInfo = () => (
 						67W
 					</div>
 				</div>
-				<div css={reviewBoxStyle}>5,000+개 판매</div>
+				<div css={reivewBoxStyle}>
+					<StarBtn rating={4.8} reviewCount={123} />
+					<IcDot />
+					<div css={reviewBoxStyle}>5,000+개 판매</div>
+				</div>
 				<div css={mediumDividerStyle} />
 				<div css={optionStyle}>색상: 검정</div>
 				<section css={optionImgStyle}>
