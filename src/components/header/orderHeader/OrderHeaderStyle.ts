@@ -2,6 +2,7 @@ import { Theme, css } from '@emotion/react';
 
 export const headerStyle = (theme: Theme) => css`
 	display: flex;
+	gap: 1.6rem;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
