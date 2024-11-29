@@ -44,6 +44,16 @@
 | Deployment           | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)                                                                                                                                                                                                                           |
 
 </div>
+
+<br />
+
+## 🌳 구현 View
+### 🌿 상품구매 View
+<img width="1512" alt="KakaoTalk_20241130_004952323" src="https://github.com/user-attachments/assets/87c07b64-eecc-4884-81ba-483db513435c">
+
+### 🌿 주문상세 View
+![FireShot Capture 002 - AliExpress Korea - AND SOPT 35 - localhost](https://github.com/user-attachments/assets/fd11e1e0-f4f9-43ba-b050-e31964d88058)
+
 <br />
 
 ## [📚 컨벤션](https://unnamedwritings.notion.site/4428b3ba2d4b48f4b5e9e0c1eac53535?pvs=4)
