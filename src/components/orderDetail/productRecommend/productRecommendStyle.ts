@@ -22,7 +22,7 @@ export const productListContainer = css`
 	display: flex;
 	justify-content: space-between;
 	width: 86.5rem;
-	height: 33rem;
+	height: 34rem;
 	padding: 0 1.3rem;
 	overflow: hidden;
 `;
