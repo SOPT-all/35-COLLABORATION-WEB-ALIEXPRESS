@@ -2,9 +2,9 @@ import { Theme, css } from '@emotion/react';
 
 export const headerStyle = (theme: Theme) => css`
 	display: flex;
-	gap: 1.6rem;
+	gap: 78rem;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	width: 100%;
 	height: 5.4rem;
 	padding: 0.9rem 5.2rem;
