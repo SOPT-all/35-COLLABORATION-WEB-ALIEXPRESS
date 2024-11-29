@@ -44,3 +44,43 @@
 
 </div>
 <br />
+
+<h2> 📁 폴더 구조 </h2>
+
+```
+|-- 📁 .github
+|-- 📁 .husky
+|-- 📁 node_modules
+|-- 📁 public
+|-- 📁 src
+  |-- 📁 apis
+  |-- 📁 assets
+  |-- 📁 components
+  |-- 📁 constants
+  |-- 📁 layout
+  |-- 📁 pages
+  |-- 📁 route
+  |-- 📁 styles
+  |-- 📁 types
+  |-- App.tsx
+  |-- main.tsx
+  |-- queryClient.ts
+  |-- svg.d.ts
+  |-- vite-env.d.ts
+|-- .env
+|-- .eslintrc.json
+|-- .gitignore
+|-- .prettierrc
+|-- .stylelintignore
+|-- .stylelintrc.json
+|-- index.html
+|-- package.json
+|-- README.md
+|-- tsconfig.app.json
+|-- tsconfig.json
+|-- tsconfig.node.json
+|-- vercel.json
+|-- vite.config.ts
+|-- yarn.lock
+```
+<br />
