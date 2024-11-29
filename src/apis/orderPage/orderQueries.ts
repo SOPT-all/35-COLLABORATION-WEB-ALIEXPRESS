@@ -1,4 +1,5 @@
 import instance from '@apis/instance';
+import { AxiosError } from 'axios';
 
 interface OrderResponse {
 	productId: number;
@@ -8,15 +9,22 @@ interface OrderResponse {
 	quantity: number;
 }
 
-interface RelatedOrderResponse {
+interface OrderHistoryResponse {
 	success: boolean;
 	data: OrderResponse[];
 	error: string | null;
 }
 
-const fetchRelatedOrders = async (): Promise<OrderResponse[]> => {
-	const response = await instance.get<RelatedOrderResponse>(`/api/orders`);
-	return response.data.data;
+const fetchOrders = async (): Promise<OrderResponse[]> => {
+	try {
+		const response = await instance.get<OrderHistoryResponse>(`/api/orders`);
+		return response.data.data;
+	} catch (error) {
+		if (error instanceof AxiosError) {
+			throw error.response?.data || new Error('An error occurred');
+		}
+		throw error;
+	}
 };
 
-export default fetchRelatedOrders;
+export default fetchOrders;
