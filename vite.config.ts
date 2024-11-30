@@ -15,8 +15,5 @@ export default defineConfig({
 			include: '**/*.svg',
 		}),
 	],
-	assetsInclude: ['**/*.ttf', '**/*.otf'],
-	build: {
-        assetsDir: 'assets',
-    },
+	assetsInclude: ['**/*.woff2', '**/*.otf'],
 });
