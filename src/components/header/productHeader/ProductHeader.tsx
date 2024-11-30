@@ -71,48 +71,50 @@ const ProductHeader = () => {
 
 			{/* 유틸리티 섹션 */}
 			{/* 앱 다운로드 */}
-			<section css={appLogLayout} aria-labelledby="app-download">
-				<IcQrcodeWhite24 />
-				<div css={textContainer}>
-					<p css={fontEnAppStyle}>AliExpress</p>
-					<p css={fontMStyle}>앱 다운로드</p>
-				</div>
-			</section>
-
-			{/* 국가 및 통화 */}
-			<section css={flagLayout} aria-labelledby="language-currency">
-				<ImgFlagKorL />
-				<div css={flagContainer}>
+			<div>
+				<section css={appLogLayout} aria-labelledby="app-download">
+					<IcQrcodeWhite24 />
 					<div css={textContainer}>
-						<p css={fontEnAppStyle}>KO/</p>
-						<p css={fontKRWStyle}>KRW</p>
+						<p css={fontEnAppStyle}>AliExpress</p>
+						<p css={fontMStyle}>앱 다운로드</p>
 					</div>
-					<IcArrowbottomSWhite12 css={arrowStyle} />
-				</div>
-			</section>
+				</section>
 
-			{/* 사용자 계정 */}
-			<section css={[appLogLayout, relativeStyle]} aria-labelledby="user-account" onClick={() => togglePopup('info')}>
-				<IcUserWhite24 />
-				<div css={flagContainer}>
+				{/* 국가 및 통화 */}
+				<section css={flagLayout} aria-labelledby="language-currency">
+					<ImgFlagKorL />
+					<div css={flagContainer}>
+						<div css={textContainer}>
+							<p css={fontEnAppStyle}>KO/</p>
+							<p css={fontKRWStyle}>KRW</p>
+						</div>
+						<IcArrowbottomSWhite12 css={arrowStyle} />
+					</div>
+				</section>
+
+				{/* 사용자 계정 */}
+				<section css={[appLogLayout, relativeStyle]} aria-labelledby="user-account" onClick={() => togglePopup('info')}>
+					<IcUserWhite24 />
+					<div css={flagContainer}>
+						<div css={textContainer}>
+							<p css={fontMStyle}>환영합니다!/</p>
+							<p css={fontBStyle}>로그인/회원가입</p>
+						</div>
+						<IcArrowbottomSWhite12 css={arrowStyle} />
+					</div>
+					{/* 카테고리 팝업 */}
+					{activePopup === 'info' && <MyList />}
+				</section>
+
+				{/* 장바구니 */}
+				<section css={cartLayout} aria-labelledby="cart">
+					<IcCartWhite24 />
 					<div css={textContainer}>
-						<p css={fontMStyle}>환영합니다!/</p>
-						<p css={fontBStyle}>로그인/회원가입</p>
+						<p css={[fontKRWStyle, numBackStyle]}>0</p>
+						<p css={fontMStyle}>장바구니</p>
 					</div>
-					<IcArrowbottomSWhite12 css={arrowStyle} />
-				</div>
-				{/* 카테고리 팝업 */}
-				{activePopup === 'info' && <MyList />}
-			</section>
-
-			{/* 장바구니 */}
-			<section css={cartLayout} aria-labelledby="cart">
-				<IcCartWhite24 />
-				<div css={textContainer}>
-					<p css={[fontKRWStyle, numBackStyle]}>0</p>
-					<p css={fontMStyle}>장바구니</p>
-				</div>
-			</section>
+				</section>
+			</div>
 		</header>
 	);
 };

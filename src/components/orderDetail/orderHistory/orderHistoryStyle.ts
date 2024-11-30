@@ -39,6 +39,11 @@ export const productImageStyle = css`
 	position: relative;
 	margin-right: 1.4rem;
 
+	img {
+		width: 11.3rem;
+		height: 11.3rem;
+	}
+
 	svg {
 		position: absolute;
 		right: 0;
@@ -69,6 +74,8 @@ export const productTitleStyle = (theme: Theme) => css`
 
 	white-space: nowrap;
 	text-overflow: ellipsis;
+
+	cursor: pointer;
 `;
 
 export const productPriceStyle = css`
