@@ -11,7 +11,7 @@ const GLOBALSTYLE = css`
 		font-family: 'Apple SD Gothic Neo';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/AppleSDGothicNeo-Bold.woff2') format('woff2');
+		src: url('/src/assets/fonts/AppleSDGothicNeo-Bold.woff2') format('font-woff2');
 		unicode-range: U+AC00-D7A3;
 	}
 
@@ -20,7 +20,7 @@ const GLOBALSTYLE = css`
 		font-family: 'Apple SD Gothic Neo';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/AppleSDGothicNeo-SemiBold.woff2') format('woff2');
+		src: url('/src/assets/fonts/AppleSDGothicNeo-SemiBold.woff2') format('font-woff2');
 		unicode-range: U+AC00-D7A3;
 	}
 
@@ -29,7 +29,7 @@ const GLOBALSTYLE = css`
 		font-family: 'Apple SD Gothic Neo';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/AppleSDGothicNeo-Medium.woff2') format('woff2');
+		src: url('/src/assets/fonts/AppleSDGothicNeo-Medium.woff2') format('font-woff2');
 		unicode-range: U+AC00-D7A3;
 	}
 
@@ -38,7 +38,7 @@ const GLOBALSTYLE = css`
 		font-family: 'Apple SD Gothic Neo';
 		font-style: normal;
 		letter-spacing: 0;
-		src: url('/src/assets/fonts/AppleSDGothicNeo-Regular.woff2') format('woff2');
+		src: url('/src/assets/fonts/AppleSDGothicNeo-Regular.woff2') format('font-woff2');
 		unicode-range: U+AC00-D7A3;
 	}
 
